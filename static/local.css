@@ -85,6 +85,16 @@ h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
 .article-comment-btn {margin-top: 10px; }
 .post-sep {margin-bottom: 0px; }
 
+/* Styling for posts */
+.page-title { margin-top: 15px; margin-bottom: 10px;}
+.page-info p {
+    color: #999 ;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-variant: small-caps;
+}
+.page-content { margin-bottom: 5px; }
+
 /* Styling for the "other entries" section */
 /* Metadata */
 .well.small { padding: 6px 6px 4px; }
