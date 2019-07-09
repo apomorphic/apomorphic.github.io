@@ -1,0 +1,38 @@
+<!-- Specialised pages (about, contact, etc.) -->
+{% extends "base.html" %}
+
+<!-- Modify page title (on tab etc.) -->
+{% block title %}{{page.title}} - {{ SITENAME }}{%endblock%}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Title -->
+<div class="row-fluid">
+    <div class="page-title span10 offset1">
+        <a href="{{ SITEURL }}/{{ page.url }}"><h1>{{ page.title }}</h1></a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="page-info span10 offset1">
+        <p>Posted on {{page.locale_date}} by {{page.author}}</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="page-content span10 offset1">
+        {{page.content}}
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="page-info span10 offset1">
+        <p>Posted in <a href="{{SITEURL}}/{{page.category.url}}">{{page.category}}</a> | Last updated on {{page.locale_date}}</p>
+    </div>
+</div>
+
+{% endblock %}
