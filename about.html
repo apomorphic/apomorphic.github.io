@@ -1,33 +1,26 @@
+<!-- Specialised pages (about, contact, etc.) -->
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="en">
     <head>
-        {% block head %}
 
         <meta charset="utf-8">
-        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+        <title>About - Apomorphic</title>
         <meta name="description" content="">
-        <meta name="author" content="{{ AUTHOR }}">
+        <meta name="author" content="Will Bradshaw">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
-            <script src="{{ SITEURL }}/theme/html5.js"></script>
+            <script src="https://apomorphic.com/theme/html5.js"></script>
         <![endif]-->
 
-        {% if FEED_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-        {% endif %}
-        {% if FEED_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
-        {% endif %}
 
         <!-- Le styles -->
         <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/font-awesome.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/local.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/pygments.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/font-awesome.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
 
-        {% endblock head %}
     </head>
 
     <body>
@@ -38,11 +31,11 @@
                         <div class="container">
                             <!-- Website headline -->
                             <div class="row-fluid">
-                                <a href="{{ SITEURL }}" class="brand">{{SITENAME}}</a>
+                                <a href="https://apomorphic.com" class="brand">Apomorphic</a>
                             </div>
                             <!-- Website tagline/subtitle -->
                             <div class="row-fluid">
-                                <span class="tagline">{{TAGLINE}}</span>
+                                <span class="tagline">A blog about biology, self-improvement, and the future</span>
                             </div>
                         </div>
                     </div>
@@ -50,11 +43,7 @@
                     <!-- Pages in links on right -->
                     <div class="span4" id="blog-nav">
                         <ul class="nav nav-pills pull-right">
-                            {% if DISPLAY_PAGES_ON_MENU %}
-                            {% for page in pages %}
-                            <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                            {% endfor %}
-                            {% endif %}
+                            <li><a href="https://apomorphic.com/about">About</a></li>
                         </ul>
                     </div>
                 </div> <!-- End of fluid row-->
@@ -67,18 +56,41 @@
             <div class="content">
                 <div class="row-fluid">
                     <div class="span12">
-                        {% block content %}{% endblock %}
+
+<!-- Title -->
+<div class="row-fluid">
+    <div class="page-title span10 offset1">
+        <a href="https://apomorphic.com/about"><h1>About</h1></a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="page-info span10 offset1">
+        <p>Last updated on Tue 09 July 2019 by Will Bradshaw</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="page-content span10 offset1">
+        <p>Bonjour, wilkommen a kono&nbsp;blog.</p>
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="page-info span10 offset1">
+        <p>Posted in <a href="https://apomorphic.com/category/pages.html">pages</a> | Last updated on Tue 09 July 2019 by Will Bradshaw</p>
+    </div>
+</div>
+
                     </div>
-                </div> {# End row #}
-            </div> {# End content #}
-        </div>
+                </div>             </div>         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 
-        {% if GOOGLE_ANALYTICS %}
-        <script>var _gaq=[['_setAccount','{{GOOGLE_ANALYTICS}}'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-        {% endif %}
 
     </body>
 </html>
