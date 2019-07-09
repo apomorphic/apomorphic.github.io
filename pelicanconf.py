@@ -7,7 +7,7 @@ THEME = "."
 
 AUTHOR = 'Will Bradshaw'
 SITENAME = 'Apomorphic'
-SITEURL = ''
+SITEURL = '.'
 TAGLINE = "A blog about biology, self-improvement, and the future"
 
 
