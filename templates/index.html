@@ -10,13 +10,15 @@
 {% if articles %}
 {% for article in articles_page.object_list %}
 {% include "article-content.html" %}
+{% if DISQUS_SITENAME %}
 <div class="row-fluid">
-    <div class="article-content span8">
+    <div class="article-comment-btn span10 offset1">
     <a class="btn btn-mini xsmall" href="{{ SITEURL }}/{{ article.url }}">
         <i class="icon-comment"></i> Comment </a>
-    <hr />
     </div>
 </div>
+{% endif %}
+<hr class="post-sep"/>
 
 {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
 {% include 'pagination.html' %}

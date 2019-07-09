@@ -47,9 +47,9 @@ TYPOGRIFY = True
 # Articles
 PATH = 'content'
 ARTICLE_PATHS = ['posts',]
-ARTICLE_SAVE_AS = '{date:%Y}/{date:%M}/{date:%d}/{slug}'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%M}/{date:%d}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{date:%M}/{date:%d}/{slug}'
 
 # Pages
-PAGE_SAVE_AS = '{slug}'
+PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}'

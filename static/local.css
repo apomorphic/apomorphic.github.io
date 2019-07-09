@@ -2,7 +2,7 @@
 
 .blog-header {
   position: relative;
-  padding: 16px 0;
+  padding: 18px 0;
   background-color:#222;
 }
 
@@ -34,7 +34,7 @@ a.brand:hover {
 
 #blog-nav{
     padding: 5px 0;
-    font-size:16px;
+    font-size:18px;
     margin-top: 10px;
 }
 
@@ -42,8 +42,8 @@ ul#sitelinks.nav.nav-list > li > a >i {
     color: #1f334b;}
 /* Styling for elements */
 a {color: #0A5693} 
-body {font-family: 'Gudea', 'Gill Sans', 'Arial'; font-size: 16px; line-height: 1.2em}
-p { font-family: 'Gudea', 'Gill Sans', 'Arial'; font-size: 16px; line-height: 1.2em; margin-top: 0.8em; margin-bottom: 0.8em; text-align: justify}
+body {font-family: 'Gudea', 'Gill Sans', 'Arial'; font-size: 18px; line-height: 1.2em}
+p { font-family: 'Gudea', 'Gill Sans', 'Arial'; font-size: 18px; line-height: 1.2em; margin-top: 0.8em; margin-bottom: 0.8em; text-align: justify}
 li { line-height: 1.6em; }
 h3 { font-family: 'Alegreya SC', 'Garamond', 'Georgia'; font-weight: normal}
 h2 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal;}
@@ -74,6 +74,16 @@ h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
 /* Styling for articles */
 .article { padding-bottom:15px; padding-right: 40px; }
 .content-title { margin-bottom: 30px; }
+.article-title { margin-top: 15px; margin-bottom: 10px;}
+.article-info p {
+    color: #999 ;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-variant: small-caps;
+}
+.article-content { margin-bottom: 5px; }
+.article-comment-btn {margin-top: 10px; }
+.post-sep {margin-bottom: 0px; }
 
 /* Styling for the "other entries" section */
 /* Metadata */
@@ -90,7 +100,7 @@ h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
 }
 
 /* Article summary */
-.summary { margin-bottom: 2em; margin-top: 0.8em; font-size: 16px; line-height: 1.2em }
+.summary { margin-bottom: 2em; margin-top: 0.8em; font-size: 18px; line-height: 1.2em }
 .summary pre { display: none; }
 
 /* Styling for Sidebar 

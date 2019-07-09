@@ -1,7 +1,6 @@
 Title: Test Post With A Much Longer Title
-Date: 1997-08-30 02:14
+Date: 2019-07-09 13:22
 Tags: testtag, testtag1
-Author: My Name
 Summary: This is an article
 Slug: test2
 
