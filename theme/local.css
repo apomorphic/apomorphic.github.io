@@ -121,4 +121,19 @@ h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
 #sitelinks { display: table-footer-group;}
 }
 
-
+.archive-title {
+    height: 80px;
+    line-height: 80px;
+    margin-top: 20px;
+    padding-top: 5px;
+    background-color: #FFF;
+    border-width: 1px;
+    border-style: solid none;
+    border-color: #AAA;
+}
+.archive-title h1 {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 40px;
+}
