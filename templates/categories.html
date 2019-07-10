@@ -1,0 +1,18 @@
+<!-- List of categories -->
+{% extends "base.html" %}
+
+<!-- Modify page title (on tab etc.) -->
+{% block title %}Categories - {{ SITENAME }}{%endblock%}
+
+{% block content %}
+<div class="row-fluid archive-title">
+    <div class="page-title span10 offset1">
+        <h1>Categories</h1>
+    </div>
+</div>
+<ul>
+{% for category, articles in categories %}
+	<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category|capitalize }}</li>
+{% endfor %}
+</ul>
+{% endblock content %}
