@@ -137,3 +137,24 @@ h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
     color: #333;
     font-size: 40px;
 }
+
+blockquote {
+    padding: 0 0 0 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eeeeee;
+}
+
+blockquote p {
+    font-size: 20px;
+    color: #222;
+}
+
+.quote-attrib {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.quote-attrib::before {
+    content: " — ";
+    font-size: 20px;
+}
