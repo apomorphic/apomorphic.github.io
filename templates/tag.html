@@ -1,0 +1,17 @@
+<!-- tag archives -->
+{% extends "index.html" %}
+
+<!-- Modify page title (on tab etc.) -->
+{% block title %}{{tag|capitalize}} - {{ SITENAME }}{%endblock%}
+
+<!-- Title -->
+{% block content %}
+<div class="row-fluid archive-title">
+    <div class="page-title span10 offset1">
+        <h1>Tag archive: {{tag|capitalize}}</h1>
+    </div>
+</div>
+{{super()}}
+{% endblock content %}
+
+<!-- TODO: Make archive title prettier -->
