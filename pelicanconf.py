@@ -37,7 +37,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 # Extra options
-STATIC_PATHS = ['extra/CNAME', 'extra/robots.txt']
+STATIC_PATHS = ['extra/CNAME', 'extra/robots.txt', 'images']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
         'extra/robots.txt': {'path': 'robots.txt'},
         }
@@ -48,6 +48,8 @@ PATH = 'content'
 ARTICLE_PATHS = ['posts',]
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}'
+DRAFT_SAVE_AS = 'drafts/{slug}.html'
+DRAFT_URL = 'drafts/{slug}'
 
 # Pages
 PAGE_SAVE_AS = '{slug}.html'
