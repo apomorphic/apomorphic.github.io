@@ -166,4 +166,7 @@ img {
     margin: 0 auto;
 }
 
-p
+div.container {
+    padding-left: 0;
+    padding-right: 0;
+}
