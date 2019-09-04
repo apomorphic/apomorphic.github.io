@@ -1,27 +1,27 @@
 <!-- Post title -->
 <div class="row-fluid">
-    <div class="article-title span10 col-offset-sm-1">
+    <div class="article-title col-sm-10 offset-sm-1">
         <a href="{{ SITEURL }}/{{ article.url }}"><h1>{{ article.title }}</h1></a>
     </div>
 </div>
 
 <!-- Post info -->
 <div class="row-fluid">
-    <div class="article-info span10 col-offset-sm-1">
+    <div class="article-info col-sm-10 offset-sm-1">
         <p>Posted on {{article.locale_date}} by {{article.author}}</p>
     </div>
 </div>
 
 <!-- Post content -->
 <div class="row-fluid">
-    <div class="article-content span10 col-offset-sm-1">
+    <div class="article-content col-sm-10 offset-sm-1">
         {{article.content}}
     </div>
 </div>
 
 <!-- Tags and categories -->
 <div class="row-fluid">
-    <div class="article-info span10 col-offset-sm-1">
+    <div class="article-info col-sm-10 offset-sm-1">
         <p>Posted in <a href="{{SITEURL}}/{{article.category.url}}">{{article.category}}</a> {% if article.tags %} | Tagged as {% for tag in article.tags %}<a href="{{SITEURL}}/{{tag.url}}">{{tag}}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</p>
     </div>
 </div>
