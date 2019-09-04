@@ -72,7 +72,7 @@ h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
 }
 
 /* Styling for articles */
-.article { padding-bottom:15px; padding-right: 40px; }
+.article { padding-bottom:15px }
 .content-title { margin-bottom: 30px; }
 .article-title { margin-top: 15px; margin-bottom: 10px;}
 .article-info p {
