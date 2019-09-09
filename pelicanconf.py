@@ -54,3 +54,7 @@ DRAFT_URL = 'drafts/{slug}'
 # Pages
 PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}'
+
+# Plugins
+PLUGIN_PATHS=['./plugins']
+PLUGINS = ['render_math']
