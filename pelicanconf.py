@@ -58,3 +58,6 @@ PAGE_URL = '{slug}'
 # Plugins
 PLUGIN_PATHS=['./plugins']
 PLUGINS = ['render_math']
+
+# Disqus comments
+DISQUS_SITENAME = "apomorphic"
