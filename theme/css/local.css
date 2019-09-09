@@ -170,3 +170,7 @@ div.container {
     padding-left: 0;
     padding-right: 0;
 }
+
+#disqus_title {
+    margin-bottom: 1ex;
+}
