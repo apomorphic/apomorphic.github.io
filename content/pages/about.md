@@ -6,3 +6,5 @@ Date: 2019-07-10
 > all our preconceptions must be re-cast.
 
 <span class="quote-attrib">D'Arcy Wentworth Thompson, *On Growth and Form*</span>
+
+<a class="icon-large icon-rss-sign" href="feeds/all.rss.xml"></a>
