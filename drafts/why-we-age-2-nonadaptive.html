@@ -1,0 +1,222 @@
+<!-- Single article page with comments -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>Why We Age, Part 2: Non-adaptive theories - Apomorphic</title>
+        <meta name="description" content="">
+        <meta name="author" content="Will Bradshaw">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+            <script src="https://apomorphic.com/theme/html5.js"></script>
+        <![endif]-->
+
+
+        <!-- Le styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link href="https://apomorphic.com/theme/local.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/pygments.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/font-awesome.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+        <header class="blog-header">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="col-sm-8">
+                        <div class="container">
+                            <!-- Website headline -->
+                            <div class="row-fluid">
+                                <a href="https://apomorphic.com" class="brand">Apomorphic</a>
+                            </div>
+                            <!-- Website tagline/subtitle -->
+                            <div class="row-fluid">
+                                <span class="tagline">A blog about biology, self-improvement, and the future</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pages in links on right -->
+                    <div class="col-sm-4" id="blog-nav">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="https://apomorphic.com/about">About</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- End of fluid row-->
+            </div>   <!-- End of Container-->
+        </header>
+
+        <main>
+        <! -- Main content of page, depending on page type -->
+        <div class="container">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="col-sm-12">
+<!-- Main article content (as on homepage) -->
+<!-- Post title -->
+<div class="row-fluid">
+    <div class="article-title col-sm-10 col-sm-offset-1">
+        <a href="https://apomorphic.com/drafts/why-we-age-2-nonadaptive"><h1>Why We Age, Part 2: Non-adaptive&nbsp;theories</h1></a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="article-info col-sm-10 col-sm-offset-1">
+        <p>Posted on Wed 04 September 2019 by Will Bradshaw</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="article-content col-sm-10 col-sm-offset-1">
+        <p><a href="...">Last time</a>, I introduced three puzzles in the evolution of&nbsp;ageing: </p>
+<blockquote>
+<p>This, then, is the threefold puzzle of ageing. Why should a process that appears to be so deleterious to the individuals experiencing it have evolved to be so widespread in nature? Given this ubiquity, which implies there is some compelling evolutionary reason for ageing to exist, why do different animals vary so much in their lifespans? And how, when ageing has either evolved or been retained in so many different lineages, have some animals evolved to escape&nbsp;it?</p>
+</blockquote>
+<p>I divided existing theories of the evolution of ageing into two groups, adaptive and nonadaptive, and discussed why one commonly believed nonadaptive theory &#8212; namely, simple wear and tear &#8212; could not adequately answer these&nbsp;questions.</p>
+<p>In this post I&#8217;ll discuss other, more sophisticated non-adaptive theories. These theories are characterised by their assertion that ageing provides no fitness benefit to organisms, but rather evolves <em>despite</em> being deleterious to reproductive success. Despite the apparent paradoxicality of this notion, I would estimate that non-adaptive theories are the most widely-believed group of explanations among scholars studying the evolution of ageing; it is also the group of explanations I personally put the most credence in at the time of&nbsp;writing.</p>
+<p>How can this be? How can something non-adaptive &#8212; even deleterious &#8212; have evolved so reliably across the animal kingdom? To answer this question, we need to understand a few important concepts from evolutionary biology, including relaxed purifying selection, genetic drift, and the crucial difference between mortality and&nbsp;survivorship.</p>
+<h2>Mortality, survivorship, and&nbsp;fitness</h2>
+<p>Imagine a race of beautiful, immortal, ageless beings &#8212; let&#8217;s call them elves. Unlike we frail humans, elves of any age always exhibit the same (low) probability of dying per unit time: they have <em>constant mortality</em>. The also have <em>constant fecundity</em>: the average number of children an elf has per unit time also remains unchanged as it gets older. [Compare human and elven mortality&nbsp;curves]</p>
+<p>Given constant mortality, how does the survivorship&nbsp;of </p>
+<p>The mortality curve of a population describes the probability of individuals in that population dying <em>at</em> any particular age. In contrast, the survivorship curve describes the probability of an individual <em>reaching</em> a given age; that is to say, of not dying at any point <em>before</em> the age in question. In discrete time, the survival probability <span class="math">\(s\)</span> at an age <span class="math">\(a\)</span> is given by the product of the mortality probabilities of all ages up to <span class="math">\(a\)</span>:</p>
+<p><span class="math">\(s_a = \prod_{i=0}^a \mu_i\)</span>
+[this is wrong, fix&nbsp;it]</p>
+<p>Crucially, this means that, while mortality can remain constant, rise or even fall over time, <em>survivorship must always decrease</em>: you can&#8217;t be alive at age <span class="math">\(a\)</span> if you died at age <span class="math">\(a-1\)</span>. Even in the safest society, your probability of surviving to adulthood is lower that your probability of surviving infancy, and your probability of surviving to middle age is lower than your probability of surviving to adulthood. This obvious-seeming fact is crucial to understanding the evolution of ageing under non-adaptive&nbsp;theories.</p>
+<p>Back to the elves. Since they have constant mortality with time, their survivorship curve declines geometrically (in the discrete-time case) or exponentially (in continuous time). Now let&#8217;s assume that, in addition to constant mortality, our elves also exhibit <em>constant fecundity</em>: regardless of its age, a living elf always produces a constant average number of children per unit time. Now for the key question: out of all the children produced in the population in a given time period, what proportion of them will be sired&nbsp;by </p>
+<p>It might seem that we&#8217;ve already answered this question: we already specified that the fecundity of these elves is constant with time, right? But in fact there&#8217;s a crucial distinction that&#8217;s fundamental to understanding non-adaptive theories of ageing
+The age-specific fecundity <span class="math">\(f_a\)</span> of a population gives the expected number of offspring produced by an individual of age <span class="math">\(a\)</span>. But to produce offspring at age <span class="math">\(a\)</span> at all, an individual must first survive long enough to <em>be</em> age <span class="math">\(a\)</span> in the first place. That means&nbsp;that</p>
+<p>[I think I&#8217;m belabouring the point a bit too much&nbsp;here]</p>
+<p>The age-specific mortality of a population describes the probability of dying <em>at</em> a particular age. Survivorship, meanwhile, is the probability of not dying at any age <em>before</em> </p>
+<p>Unlike we frail humans, elves exhibit constant mortality and fecundity with time: no matter how old they are, their probability of dying at any given time remains a constant value <span class="math">\(m\)</span>, and the average number of offspring they produce per unit time also remains unchanged. In this happy state, the probability of an individual surviving <em>to</em> a given age <span class="math">\(a\)</span> declines <em>exponentially</em> (survival is the [product integral][product_integral] of mortality). But what about reproductive output? How many children will be produced by adults aged 100 years? 200?&nbsp;500?</p>
+<p>The key insight here is that while average reproductive output <em>conditional on survival</em> is constant with age, actual expected output is not &#8212; you have to survive to a given age to reproduce at that age, so if survival declines exponentially, so does the expected number of offspring. Since survival always declines monotonically with age, your probability of reproducing at a given age must also decline, even if you&#8217;d be just as good at reproducing once you got to that age. As a result, in terms of your reproductive fitness, the earliest parts of your life are always the most valuable, even if you don&#8217;t age. [footnote - The only way to escape this is for fecundity to increase with age after reproductive&nbsp;maturation].</p>
+<p>[Show survival and reproduction equations in discrete time, note equivalents in continuous&nbsp;time]</p>
+<p>This concept sounds fiddly when explained in this way but becomes much clearer with an example. Imagine that two mutations arose in our population of elves. The first caused individuals bearing it to become infertile at age 100 &#8212; a mere stripling by elvish standards &#8212; while the second has the same effect at a ripe old age of 10,000 years. Both of these mutations totally curtail an individual&#8217;s reproductive future, but they have very different effects on fitness. The first mutation is disastrous, destroying almost all of the individual&#8217;s expected reproductive output. The probability of an individual surviving to (and well past) 100 is high, so the expected number of children lost is large. Conversely, the chances of an individual still being alive at 10,000 is minimal anyway, so that mutation probably won&#8217;t make any difference to the number of offspring that individual has &#8212; its fitness effect is negligible. Mutations taking effect at intermediate ages will have intermediate effects; mutations that merely reduce, rather than totally destroy, reproductive output will have commensurately smaller&nbsp;impacts.</p>
+<p>The intuition that I&#8217;m trying to get across here is that, as far as natural selection is concerned, the fitness of a given genotype depends far more strongly on its health at younger ages than at older ones. Even when mortality is constant, older ages are just less valuable than younger ones, simply because the chance of getting to those older ages is lower. As a result, the fitness effect of deleterious mutations affecting health in old age is much smaller than that of mutations affecting health in young adults &#8212; and mutations that affect the health of juveniles are worst of all, because those affect <em>all</em> of an individual&#8217;s lifetime reproductive output. To put it in economic terms, the selective value of each additional marginal year of life is less than the previous&nbsp;one.</p>
+<p>Okay, so we&#8217;ve established that, because of declining cumulative survival, later stages of life are less valuable to natural selection than earlier stages. But why should that matter? Even if these later stages of life are <em>less</em> valuable, they are still valuable &#8212; the selective effect of a mutation at these later ages is still negative. So they should still be removed by natural selection, right? Well, not necessarily. There are two different prominent answers to this question, each of which constitutes one of the two major non-adaptive theories of the evolution of&nbsp;ageing.</p>
+<h1>Natural selection is not infinitely&nbsp;strong</h1>
+<p>In the end, evolution is just statistics. Individuals breed and reproduce, and some individuals end up having more surviving offspring than average and others have fewer. Somtimes, this difference is due to differences in fitness, resulting in a directional shift in the genetic composition of the population &#8212; we call this <em>natural selection</em>. But even in the absence of selection, some individuals will end up having more offspring than others through sheer random chance, leading to changes in the genetic composition of the population that have nothing to do with how fit the lucky parents are &#8212; we call this non-adaptive, non-selective evolution <em>genetic drift</em>. As a result of genetic drift, the frequencies of different gene variants in the population can vary in ways that have little to do with their effect on fitness: given enough time, even a neutral mutation must eventually either die out or reach fixation, but thanks to genetic drift even a highly beneficial mutation can die out before it has a chance to spread, and even a deleterious one can spread until it is present in the entire&nbsp;population.</p>
+<p>[footnote on the founder&nbsp;effect]</p>
+<p>Conversely, when selection dominates drift, beneficial&nbsp;mutations </p>
+<p>What determines whether natural selection or genetic drift is&nbsp;strongest</p>
+<p>Put simply, selection is stronger when population sizes are large and/or selection coefficients are&nbsp;strong. </p>
+<p>There are&nbsp;various </p>
+<p>When a new mutation arises in a closed population, therefore, there are two ways in which its frequency in that population can change: it can rise or fall through natural selection, based on its effect on the fitness of the organisms that carry it, or it can rise or fall at random through genetic drift. The stronger selection is relative to drift, the greater the chance that the eventual fate of that variant matches its effect on fitness: beneficial mutations are fixed, and deleterious mutations (the vast majority) are&nbsp;removed.</p>
+<p>[selection shadows = older ages are more drifty]
+[this mainly applies to mutation accumulation - <span class="caps">AP</span> can work even when drift is&nbsp;weak]</p>
+<p>The combination of the 
+gives rise to the &#8220;mutation accumulation&#8221; theory of ageing. Over time, inevitably, mutations occur. Most of these will be deleterious, and different deleterious mutations will exert their effects at different ages. Deleterious mutations affecting childhood and early adulthood will be strongly opposed by natural selection and efficiently removed from the population, while those affecting later life will be largely ignored by natural selection and accumulate in the population over time. Put another way, the minimum size of effect natural selection can &#8220;see&#8221; will increase as age increases, allowing more and more larger and larger mutations to get through and impair the health of older individuals: the population will start to&nbsp;age.</p>
+<h1>Trade-offs everywhere: antagonistic&nbsp;pleiotropy</h1>
+<p>In the mutation-accumulation theory, ageing is an entirely passive, unselected process: natural selection can only efficiently remove mutations above some effect threshold, mutations affecting old age have smaller effects on fitness, therefore mutations affecting old age accumulate. There is a second theory of ageing, however, that also relies on the differential selective 
+value of different ages, but according to which ageing occurs as a consequence of selection, not drift. According to this
+&#8220;antagonistic pleiotropy&#8221; theory of ageing, ageing occurs as a side effect of mutations that improve health and fitness at other
+points in&nbsp;life.</p>
+<p>Pleiotropy is the ability of a gene to exert multiple distinct effects on the biology of an organism. A mutation in a pleiotropic gene could cause changes in diverse parts of the body, metabolic pathways, organ systems&#8230;or at different points in life. <em>Antagonistic</em> pleiotropy implies that these different effects have opposite effects on fitness: one beneficial, another deleterious. In the case of ageing, the proposed mutation would have a positive fitness effect early in life (by increasing the rate of growth, say) at the cost of a negative fitness effect later in&nbsp;life.</p>
+<p>All else equal, a positive fitness effect in one place and a negative effect in another place should balance out, but as we have already seen, different ages are <em>not</em> equal in terms of their selective value. Because early life counts for so much more in terms of the fitness effect of a mutation, even a very small gain in early-life health and fitness could potentially outweigh a much larger fitness penalty applied much later. Because of the difference in selective value, natural selection is willing to accept fitness tradeoffs between different ages that leave the minority of individuals that reach old age far worse off than they otherwise would&nbsp;be.</p>
+<p>It is important to understand that, despite its reliance on natural selection, antagonistic pleiotropy is still considered a non-adaptive theory of ageing. While the mutations that cause ageing under this theory are selectively beneficial, their effects on old age are not. The negative side effects of these mutations are still negative, and a mutation that did not have those side effects would be better &#8212; but they are not negative enough to outweigh the benefits, and so the mutation is selected for overall. This is in contrast with adaptive theories of ageing, where the decline in survival at older ages is considered to be <em>per se</em> selectively&nbsp;advantageous.</p>
+<h1>&#8230;</h1>
+<p>Armed with our two non-adaptive theories of ageing &#8212; mutation accumulation and antagonistic pleiotropy &#8212; we can return to the puzzles I introduced in part 1 of this series: why is ageing so ubiquitious in the animal kingdom, why do the details of the ageing process differ so much from species to species, and&nbsp;&#8230;?</p>
+<p>Both theories give very similar answers to these&nbsp;questions</p>
+<p>In answering these questions, both theories rely on the same crucial observation: the near-inevitable decline in the selective value of older ages relative to young adulthood. Because of this difference, selection against negative health impacts at older ages is reduced, leading to fixation of deleterious mutations acting in late-life (mutation accumulation) and/or of mutations that trade health in early life for decrepitude in old age (antagonistic pleiotropy). The assumptions underlying these conclusions are sufficiently weak that we should <em>expect</em> to see ageing evolve in a very wide range of different cases, so the fact that ageing is so widespread is no great&nbsp;surprise.</p>
+<p>Why, then, do different groups of animals differ so much in their life expectancies? Again, the answer given by both theories is the same. While the decline in selective value with age is near-inevitable, the rate of this decline depends on how quickly the probability of survival declines with age. This in turn depends on the intensity of <em>extrinsic mortality</em> (predation, disease, starvation, etc.) a species is exposed to. Higher mortality means a lower probability of surviving to older ages and hence a more rapid drop-off in selective value of those later stages of life. [Figure for this] As a result, species exposed to intense extrinsic mortality will live fast and die young, evolving rapid ageing and short median lifespans even when kept in captivity (the turquoise killifish, the model organism I worked on during my PhD, is a great example of this); in contrast, individuals for whom extrinsic mortality is low will get a larger gain in fitness from being healthy in later life, resulting in the evolution of slower ageing and longer&nbsp;lifespans.</p>
+<p>Under non-adaptive theories of ageing, therefore, we should expect animals that adopt low-mortality life strategies to evolve slower ageing and longer lifespans. If you can avoid or resist predators, find food reliably, and generally have a good chance of surviving to next year, natural selection has far more incentive to keep you fit, healthy and producing plenty of&nbsp;offspring.</p>
+<p>So, why do bats live so much longer than mice? Somewhat anticlimactically, a big part of the answer may simply be that they can&nbsp;fly.</p>
+<p>Next time in this series, we&#8217;ll talk about the other major group of theories of ageing: adaptive ageing theories. This post will probably be quite a long time coming since I don&#8217;t know anything about adaptive theories right now and will have to actually do some research. So expect a few other posts on different topics before I get around to talking about the more heterodox side of the theoretical biology of&nbsp;ageing.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:continuous_survival">
+<p>In continuous time, survival is given by the integral over the instantaneous mortality for all ages up to <span class="math">\(a\)</span>.&#160;<a class="footnote-backref" href="#fnref:continuous_survival" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:discrete">
+<p>For mathematical comprehensibility I&#8217;m working in discrete time here. For&#160;<a class="footnote-backref" href="#fnref:discrete" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="article-info col-sm-10 col-sm-offset-1">
+        <p>Posted in <a href="https://apomorphic.com/category/drafts.html">drafts</a>  | Tagged as <a href="https://apomorphic.com/tag/ageing.html">ageing</a>, <a href="https://apomorphic.com/tag/science.html">science</a>, <a href="https://apomorphic.com/tag/evolution.html">evolution</a></p>
+    </div>
+</div>
+<! -- Comments -->
+
+                    </div>
+                </div>             </div>         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
