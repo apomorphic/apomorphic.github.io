@@ -1,10 +1,10 @@
-<!-- tag archives -->
+<!-- Single article page with comments -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
 
         <meta charset="utf-8">
-        <title>Ageing - Apomorphic</title>
+        <title>Assessing biomarkers of ageing as measures of cumulative animal welfare - Apomorphic</title>
         <meta name="description" content="">
         <meta name="author" content="Will Bradshaw">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,13 +56,7 @@
             <div class="content">
                 <div class="row-fluid">
                     <div class="col-sm-12">
-<div class="row-fluid archive-title">
-    <div class="page-title col-sm-10 col-sm-offset-1">
-        <h1>Tag archive: Ageing</h1>
-    </div>
-</div>
-
-<!-- Show articles in date order -->
+<!-- Main article content (as on homepage) -->
 <!-- Post title -->
 <div class="row-fluid">
     <div class="article-title col-sm-10 col-sm-offset-1">
@@ -257,170 +251,22 @@
     <div class="article-info col-sm-10 col-sm-offset-1">
         <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/ageing.html">ageing</a>, <a href="https://apomorphic.com/tag/science.html">science</a>, <a href="https://apomorphic.com/tag/animal-welfare.html">animal welfare</a></p>
     </div>
-</div><div class="row-fluid">
-    <div class="article-comment-btn col-sm-10 col-sm-offset-1">
-    <a class="btn btn-mini xsmall" href="https://apomorphic.com/2019/09/27/ageing-biomarkers-welfare">
-        <i class="icon-comment"></i> Comment </a>
-    </div>
 </div>
-<hr class="post-sep"/>
+<! -- Comments -->
+<div class="article-comments col-sm-10">
+    <h3 id="disqus_title">Comments</h3>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'apomorphic'; 
 
-
-<!-- Post title -->
-<div class="row-fluid">
-    <div class="article-title col-sm-10 col-sm-offset-1">
-        <a href="https://apomorphic.com/2019/09/09/why-we-age-1-intro"><h1>Why We Age, Part 1: What ageing is and is&nbsp;not</h1></a>
-    </div>
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-
-<!-- Post info -->
-<div class="row-fluid">
-    <div class="article-info col-sm-10 col-sm-offset-1">
-        <p>Posted on Mon 09 September 2019 by Will Bradshaw</p>
-    </div>
-</div>
-
-<!-- Post content -->
-<div class="row-fluid">
-    <div class="article-content col-sm-10 col-sm-offset-1">
-        <p><em>At the LessWrong European Community Weekend 2018, I gave a talk explaining the intuition behind non-adaptive theories of the evolution of ageing. This blog post and its followup are adapted from that&nbsp;presentation.</em></p>
-<p>When people find out that I did my PhD in the biology of ageing, they tend to ask one of two questions. First, they ask what they can do to live longer. Second, they ask why people age in the first place. My answer to the first question is unfortunately fairly boring at present &#8212; don&#8217;t smoke, eat well, get enough exercise, get enough sleep, <em>et cetera</em> &#8212; but when it comes to the second I think I have more of interest to say. To get this blog rolling (see what I did there), let&#8217;s dive into the important and fractious question of why we&nbsp;age.</p>
-<h2>What is&nbsp;ageing?</h2>
-<blockquote>
-<p>It is a curious thing that there is no word in the English language that stands for the mere increase of years; that is, for ageing without its connotations of increasing deterioration and&nbsp;decay.</p>
-<p><em>—Peter Medawar, &#8220;An Unsolved Problem in&nbsp;Biology&#8221;</em></p>
-</blockquote>
-<p>When people talk about &#8220;ageing&#8221;, there are broadly speaking three different things they might mean<sup id="fnref:popage"><a class="footnote-ref" href="#fn:popage">1</a></sup>. Firstly, there is the simple process of getting older &#8212; of the amount of time since you were born inexorably increasing. Let&#8217;s call this process &#8220;temporal ageing&#8221;. Ageing in this way has a lot of benefits: more memories, more experience, and with luck more self-knowledge and more&nbsp;wisdom.</p>
-<p>Unfortunately, the benefits conferred by temporal ageing are currently inextricably tied to the physical changes denoted by the second meaning of &#8220;ageing&#8221;: a generalised physiological deterioration, characterised by a wide range of unfortunate symptoms affecting almost every system of the body. As a result of this second kind of ageing, we become slower, more fragile, more prone to disease, and generally more likely to experience impaired health and wellbeing as we get older, eventually leading to death. As we as a civilisation have gradually eliminated more and more extrinsic forms of suffering and death, the depredations of ageing have gradually become the primary cause of ill health and death in developed countries by an overwhelming margin. This is the kind of ageing people mean when they worry about getting cancer or dementia, buy &#8220;anti-ageing&#8221; skin cream, or invest in real anti-ageing research; it&#8217;s the province of doctors, physiologists, and molecular biologists. Let&#8217;s call it &#8220;physiological&nbsp;ageing&#8221;.</p>
-<p>Finally, the individual changes taking place due to physiological ageing give rise to a distinctive statistical pattern at the level of entire populations of humans or other animals: a progressive increase in mortality (probability of dying) and decrease in fecundity (expected number of offspring) in older age cohorts. This pattern is what gives rise to plots like the ones below, and it&#8217;s what demographers, actuaries and evolutionary biologists generally mean when they talk about &#8220;ageing&#8221;. From this perspective, the specific functional changes underlying these changes in survival and reproduction are less important than the high-level functional changes that result: changes in the rates of reproduction, illness, disability, and death. From an evolutionary perspective it is the first and last of these, reproduction and death rates, that are the most important. We can call this final meaning of the word ageing &#8220;demographic&nbsp;ageing&#8221;.</p>
-<p><img alt="Alt Text" src="https://apomorphic.com/images/gompertz.png"></p>
-<p><em>Logarithmic mortality curves for British and American populations at different points in the 20th century. The <span class="math">\(y\)</span>-axes give the log-probability of dying for individuals in a given age-class in the year and country indicated. Source: <span class="caps">US</span> Office of Retirement and Disability&nbsp;Policy</em></p>
-<p>These two phenomena, of physiological and demographic ageing, are tightly interlinked in any given population but are nevertheless conceptually distinct: two different species (an insect and a mammal, say) could undergo very different physiological ageing processes but exhibit very similar patterns of demographic ageing. Physiological and demographic ageing also give us very different perspectives on the question of why we age. From the perspective of physiological ageing, the question is generally asking about the specific genetic, molecular, histological or physiological mechanisms underlying the changes we observe: what particular aspect of our biology is causing our bodies to deteriorate with age in this or that particular way? From the perspective of demographic ageing, the relevant <em>why</em> question is simpler and more fundamental: given that ageing appears to be pretty deleterious to the survival and reproduction chances of any individual experiencing it, how could we have evolved to exhibit declining functionality with age <em>at all</em>?</p>
-<p>In these posts, I&#8217;ll be focusing on the second kind of <em>why</em> question, discussing the evolutionary teleology of the ageing process. As we&#8217;ll see, from that perspective, ageing is frankly pretty&nbsp;weird.</p>
-<h2>Three puzzles of&nbsp;ageing</h2>
-<p>When we look at nature, or at ourselves, we observe something surprising: animals get old. In many, many different species, old age is accompanied by a progressive decline in functionality, leading to higher rates of death<sup id="fnref:mortality"><a class="footnote-ref" href="#fn:mortality">2</a></sup> and lower rates of reproduction. This pattern is seen almost everywhere you look in the animal kingdom, suggesting that it has either evolved again and again independently or been retained after inheritance from a common ancestor. Yet despite this commonality, there is profound variation in the details of the ageing process: even closely related species can differ dramatically in how quickly they age and how long they tend to live. And here and there, we see species that seem to have escaped the iron grip of ageing, exhibiting mortality that stays constant or even declines over&nbsp;time.</p>
-<p><img alt="Alt Text" src="https://apomorphic.com/images/bats_mice.png"></p>
-<p><em>Distribution of lifespans across all mouse and bat species from the AnAge database (accessed 2018-09-01). Despite their relatively close relationship, similar size, and similar metabolic rates, bats live dramatically longer than&nbsp;mice.</em></p>
-<p>This, then, is the threefold puzzle of ageing. Why should a process that appears to be so deleterious to the individuals experiencing it have evolved to be so widespread in nature? Given this ubiquity, which implies there is some compelling evolutionary reason for ageing to exist, why do different animals vary so much in their lifespans? And how, when ageing has either evolved or been retained in so many different lineages, have some animals evolved to escape&nbsp;it?</p>
-<p>Any successful theory of the evolution of ageing must be able to convincingly answer all these questions. A number of attempts have been made over the years, none of which has managed to capture the consensus of the academic community. These attempted explanations can be broadly divided into two groups: those that propose with some reason why ageing, which seems so deleterious, is adaptive after all, and those that accept that ageing is deleterious and attempt to explain why it might evolve anyway. I&#8217;ll discuss the main representatives of each group in separate blog posts, but first I want to tackle one simple non-adaptive theory that doesn&#8217;t quite manage to do the&nbsp;job.</p>
-<h2>Why ageing is not (just) wear and&nbsp;tear</h2>
-<blockquote>
-<p>The senescence of human organs consists not of their wearing out but of their lack of replacement when worn&nbsp;out.</p>
-<p><em>George C. Williams, &#8220;Pleiotropy, Natural Selection, and the Evolution of&nbsp;Senescence&#8221;</em></p>
-</blockquote>
-<p>One common folk theory of ageing is that it is simply wear and tear: like a car, the body is a machine, and like any machine it wears out over time. Exposure to the environment naturally leads to the accumulation of damage, which progressively impairs the function of the machine until it breaks down (i.e. we die). Any imperfection in the machine&#8217;s components will hasten this process, either by generating more damage or by becoming progressively more dysfunctional over time. This progressive degradation is inevitable: we can keep a car in working order with regular maintenance and repair, but we are not (yet) capable of doing this for the kinds of wear and tear that accumulate in the body. Hence,&nbsp;ageing.</p>
-<p>This explanation of ageing is intuitive, and parts of it are true as far as they go. There are certainly various kinds of damage and dysregulation that accumulate in the body with age: genetic mutations, senescent cells, shortened telomeres, cross-linked chemical aggregates, degraded stem-cell niches, and on and on. If we could remove and correct some or all of these issues the way we can replace a dodgy spark plug, we&#8217;d go a long way towards addressing the problem of physiological&nbsp;ageing. </p>
-<p>But as an explanation of why ageing exists in the first place, &#8220;wear and tear is inevitable&#8221; just doesn&#8217;t cut it, because a living body is not like a car. Where a car is dead matter shaped by external tools, a body is a dynamic, self-generating system with incredible powers of self-repair. These self-repair processes are awe-inspiringly good: of the <em>tens of thousands</em> of genetic mutations that occur per cell every day in the human body, virtually all are accurately repaired. Our bodies can repair wounds, fight off infections, kill and replace malfunctioning cells, partially regrow (some) organs, even remodel their bones to best respond to the forces they experience. Many of these regenerative processes decline as we age, but that decline is itself part of the ageing process: young children are amazingly good at healing without scarring, for&nbsp;example.</p>
-<p>So while bodily damage is inevitable as part of the daily business of living, our bodies successfully repair almost all of it, especially when we&#8217;re young. Evolutionarily speaking, the question is not why the damage occurs, but why it is <em>permitted to accumulate</em>. It seems our bodies&#8217; repair processes are not quite perfect, and allow damage and dysregulation to progressively accumulate over time. Why aren&#8217;t they&nbsp;better?</p>
-<p>Could our bodies&#8217; repair systems be better? They could certainly be worse: there are many, many mammal species with much shorter lifespans than humans&#8217;, even when kept in very safe conditions. These animals age faster than humans because they accumulate damage and dysregulation faster; for whatever reason, their monitoring and repair systems have evolved to be that much sloppier than ours<sup id="fnref:mrate"><a class="footnote-ref" href="#fn:mrate">3</a></sup>. Conversely, there are at least a few mammals (such as bowhead whales) that live longer than we do; clearly they have something going for them that we don&#8217;t, but why? And that&#8217;s without going into animals like <a href="https://en.wikipedia.org/wiki/Hydra_viridissima">green hydra</a> or <a href="https://en.wikipedia.org/wiki/Naked_mole-rat">naked mole rats</a> that don&#8217;t seem to age at all: if they can do it, why can&#8217;t&nbsp;we?</p>
-<p>Because it&#8217;s not an evolutionary theory, wear-and-tear is incapable of addressing these questions. Yes, damage is inevitable, but why does this result in such different rates of ageing in different species? If one species can evolve to remove this damage so efficiently that it doesn&#8217;t age at all, what is preventing most other species from doing the same? The answers to these questions don&#8217;t lie in the eternal inevitability of molecular damage, but in the selective pressures each species is exposed to across evolutionary time. In the rest of this series, I&#8217;ll address theories of ageing that attempt to explain ageing in these&nbsp;terms.</p>
-<div class="footnote">
-<hr>
-<ol>
-<li id="fn:popage">
-<p>Actually, there&#8217;s a fourth meaning that gets used in the media quite a lot: &#8220;population ageing&#8221;, by which is meant an increase in the median age of a population and the proportion of old people due to changes in social conditions. This is distinct from my &#8220;demographic ageing&#8221; in that the former is looking at the age composition of the whole population, while the latter is comparing different age groups within the population. I don&#8217;t plan on talking about population ageing here.&#160;<a class="footnote-backref" href="#fnref:popage" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:mortality">
-<p>This increase in death rate is both intrinsic and extrinsic: older individuals are more likely to die from heart attack, stroke, cancer and so on, but are also more vulnerable to predation, starvation and disease.&#160;<a class="footnote-backref" href="#fnref:mortality" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-<li id="fn:mrate">
-<p>I&#8217;ve left out an important consideration here, which is that rather than worse repair systems, these other mammals might be experiencing higher rates of damage, perhaps due to a higher metabolic rate. A repair system with the same stringency that is exposed to a higher level of damage will let more damage events through. Even if this is true, though, the question remains of why these animals haven&#8217;t evolved better repair mechanisms to cope with this higher rate of damage.&#160;<a class="footnote-backref" href="#fnref:mrate" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:whales">
-<p>In addition to being longer-lived than humans, bowhead whales are also larger. This also raises the classic <a href="https://en.wikipedia.org/wiki/Peto%27s_paradox">&#8220;why don&#8217;t all whales get cancer&#8221;</a> problem: if cancer is a matter of mutations, mutations are a matter of chance, and whales have more cells in which the right mutations can accumulate, why don&#8217;t they all get horrible tumours? There are various theories about this problem, too, none of which I intend to discuss here.&#160;<a class="footnote-backref" href="#fnref:whales" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-    </div>
-</div>
-
-<!-- Tags and categories -->
-<div class="row-fluid">
-    <div class="article-info col-sm-10 col-sm-offset-1">
-        <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/ageing.html">ageing</a>, <a href="https://apomorphic.com/tag/science.html">science</a>, <a href="https://apomorphic.com/tag/evolution.html">evolution</a></p>
-    </div>
-</div><div class="row-fluid">
-    <div class="article-comment-btn col-sm-10 col-sm-offset-1">
-    <a class="btn btn-mini xsmall" href="https://apomorphic.com/2019/09/09/why-we-age-1-intro">
-        <i class="icon-comment"></i> Comment </a>
-    </div>
-</div>
-<hr class="post-sep"/>
-
-<div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="https://apomorphic.com/tag/ageing.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>
-
-  
 
                     </div>
                 </div>             </div>         </div>
