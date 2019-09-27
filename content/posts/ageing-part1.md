@@ -1,9 +1,9 @@
 Title: Why We Age, Part 1: What ageing is and is not
-Date: 2019-09-03
+Date: 2019-09-09
 Tags: ageing, science, evolution
 Slug: why-we-age-1-intro
 
-*At the LessWrong European Community Weekend 2019, I gave a talk explaining the intuition behind non-adaptive theories of the evolution of ageing. This blog post and its followup are adapted from that presentation.*
+*At the LessWrong European Community Weekend 2018, I gave a talk explaining the intuition behind non-adaptive theories of the evolution of ageing. This blog post and its followup are adapted from that presentation.*
 
 When people find out that I did my PhD in the biology of ageing, they tend to ask one of two questions. First, they ask what they can do to live longer. Second, they ask why people age in the first place. My answer to the first question is unfortunately fairly boring at present -- don't smoke, eat well, get enough exercise, get enough sleep, *et cetera* -- but when it comes to the second I think I have more of interest to say. To get this blog rolling (see what I did there), let's dive into the important and fractious question of why we age.
 
@@ -37,7 +37,7 @@ When we look at nature, or at ourselves, we observe something surprising: animal
 
 ![Alt Text]({static}/images/bats_mice.png)
 
-*Distribution of lifespans for mouse and bat species from the AnAge database (accessed 2018-09-01). Despite their relatively close relationship, similar size, and similar metabolic rates, bats live dramatically longer than mice.*
+*Distribution of lifespans across all mouse and bat species from the AnAge database (accessed 2018-09-01). Despite their relatively close relationship, similar size, and similar metabolic rates, bats live dramatically longer than mice.*
 
 This, then, is the threefold puzzle of ageing. Why should a process that appears to be so deleterious to the individuals experiencing it have evolved to be so widespread in nature? Given this ubiquity, which implies there is some compelling evolutionary reason for ageing to exist, why do different animals vary so much in their lifespans? And how, when ageing has either evolved or been retained in so many different lineages, have some animals evolved to escape it?
 

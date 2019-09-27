@@ -1,5 +1,5 @@
 Title: Why We Age, Part 2: Non-adaptive theories
-Date: 2019-09-04
+Date: 2019-09-12
 Tags: ageing, science, evolution
 Slug: why-we-age-2-nonadaptive
 Status: draft
@@ -14,80 +14,104 @@ I divided existing theories of the evolution of ageing into two groups, adaptive
 
 In this post I'll discuss other, more sophisticated non-adaptive theories. These theories are characterised by their assertion that ageing provides no fitness benefit to organisms, but rather evolves *despite* being deleterious to reproductive success. Despite the apparent paradoxicality of this notion, I would estimate that non-adaptive theories are the most widely-believed group of explanations among scholars studying the evolution of ageing; it is also the group of explanations I personally put the most credence in at the time of writing.
 
-How can this be? How can something non-adaptive -- even deleterious -- have evolved so reliably across the animal kingdom? To answer this question, we need to understand a few important concepts from evolutionary biology, including relaxed purifying selection, genetic drift, and the crucial difference between mortality and survivorship.
+How can this be? How can something non-adaptive -- even deleterious -- have evolved so reliably across the animal kingdom? To answer this question, we need to understand a few important concepts from evolutionary biology, including relaxed purifying selection, pleiotropy, and genetic drift. 
 
-## Mortality, survivorship, and fitness
+First, though, we need to clarify some important 
 
-Imagine a race of beautiful, immortal, ageless beings -- let's call them elves. Unlike we frail humans, elves of any age always exhibit the same (low) probability of dying per unit time: they have *constant mortality*. The also have *constant fecundity*: the average number of children an elf has per unit time also remains unchanged as it gets older. [Compare human and elven mortality curves]
+## Mortality, survivorship, and fecundity
 
-Given constant mortality, how does the survivorship of 
+For the purposes of this post, a **cohort** is a group of individuals from the same population who were all born at the same time, i.e. they are of the same age. The **survivorship** of a cohort at a given age is the percentage of individuals surviving *to* that age, or equivalently the probability of any given individual surviving at least that long. Conversely, the **mortality** of a cohort at a given age is the probability of an individual from that cohort dying *at* that age, and not before or after. Note the key distinction between these concepts: survivorship is the result of accumulating mortality at *all* ages from birth to the age of interest[^survmort]. As a result, the mortality and survivorship curves of a cohort will almost always look very different; while mortality can increase, decrease or stay the same over time, survivorship must always decrease. In particular, constant mortality will give rise to an *exponential* decline in survivorship[^exponential]. Ageing is in part defined as an increase in *mortality* over time, and hence as a more rapid decrease in survivorship than would be produced by constant mortality: an ageing population will die off superexponentially as chronological age increases.
 
-The mortality curve of a population describes the probability of individuals in that population dying *at* any particular age. In contrast, the survivorship curve describes the probability of an individual *reaching* a given age; that is to say, of not dying at any point *before* the age in question. In discrete time, the survival probability $s$ at an age $a$ is given by the product of the mortality probabilities of all ages up to $a$:
+[^survmort]: In discrete time, the survivorship function of a cohort will be the product of instantaneous survival over all preceding time stages; in continuous time, it is the [product integral][prodint] of instantaneous survival up to the age of interest. Instantaneous survival is the probability of surviving at a given age, and thus is equal to 1 minus the mortality at that age.
 
-$s_a = \prod_{i=0}^a \mu_i$
-[this is wrong, fix it]
+[prodint]: https://en.wikipedia.org/wiki/Product_integral
 
-[^continuous_survival]: In continuous time, survival is given by the integral over the instantaneous mortality for all ages up to $a$.
+[^exponential]: Exponential in continuous time; geometric in discrete time.
 
-Crucially, this means that, while mortality can remain constant, rise or even fall over time, *survivorship must always decrease*: you can't be alive at age $a$ if you died at age $a-1$. Even in the safest society, your probability of surviving to adulthood is lower that your probability of surviving infancy, and your probability of surviving to middle age is lower than your probability of surviving to adulthood. This obvious-seeming fact is crucial to understanding the evolution of ageing under non-adaptive theories.
 
-Back to the elves. Since they have constant mortality with time, their survivorship curve declines geometrically (in the discrete-time case) or exponentially (in continuous time). Now let's assume that, in addition to constant mortality, our elves also exhibit *constant fecundity*: regardless of its age, a living elf always produces a constant average number of children per unit time. Now for the key question: out of all the children produced in the population in a given time period, what proportion of them will be sired by 
+[TODO: Figure of some mortality curves and their corresponding survivorship curves]
 
-It might seem that we've already answered this question: we already specified that the fecundity of these elves is constant with time, right? But in fact there's a crucial distinction that's fundamental to understanding non-adaptive theories of ageing
-The age-specific fecundity $f_a$ of a population gives the expected number of offspring produced by an individual of age $a$. But to produce offspring at age $a$ at all, an individual must first survive long enough to *be* age $a$ in the first place. That means that
+In evolutionary terms, survival is only important insofar as it leads to reproduction. The age-specific **fecundity** of a cohort is the average number of offspring produced by an individual of that cohort at that age. Crucially, you need to survive to reproduce, so the actual expected number of offspring produced at a given age (call this the **reproductive output**) is equal to the age-specific fecundity multiplied by the probability of surviving that long. Since this depends on survivorship, not mortality, it will tend to decline with age: a population with constant mortality and constant fecundity (i.e. no demographic ageing) will show reproductive output that declines exponentially along with survivorship.
 
-[I think I'm belabouring the point a bit too much here]
+[^repout]: The reproductive output $r_a$ at some age $a$ is therefore equal to $f_a \cdot s_a$, where $f$ is fecundity and $s$ is survivorship. Since survivorship is determined by mortality, reproductive output can also be expressed as $r_a = f_a \cdot \int_0^a m_x \:\mathrm{d}x$ (in continuous time) or $r_a = f_a \cdot \prod_{k=0}^am_k$ (in discrete time). 
 
-The age-specific mortality of a population describes the probability of dying *at* a particular age. Survivorship, meanwhile, is the probability of not dying at any age *before* 
+[TODO: Figure of some mortality/fecundity curves and their corresponding reproductive-output curves]
 
-[^discrete]: For mathematical comprehensibility I'm working in discrete time here. For 
+The fitness of an individual is determined by their lifetime reproductive output (i.e. the total number of offspring they produce over their entire lifespan) [^lro] and the average quality of their offspring (i.e. their own chances of surviving and reproducing in their turn). Mutations that significantly decrease lifetime reproductive output will affect both of these parameters, and so be strongly opposed by natural selection. It seems mutations leading to ageing (i.e. an increase in mortality and decrease in fecundity with time) should be in that category. So why does ageing evolve?
 
-Unlike we frail humans, elves exhibit constant mortality and fecundity with time: no matter how old they are, their probability of dying at any given time remains a constant value $m$, and the average number of offspring they produce per unit time also remains unchanged. In this happy state, the probability of an individual surviving *to* a given age $a$ declines *exponentially* (survival is the [product integral][product_integral] of mortality). But what about reproductive output? How many children will be produced by adults aged 100 years? 200? 500?
+[^lro]: Lifetime reproductive output is equal to $\int_0^\infty r_a \:\mathrm{d}a$ (in continuous time) or $\sum_{a=0}^\infty r_a$ (in discrete time).
 
-The key insight here is that while average reproductive output *conditional on survival* is constant with age, actual expected output is not -- you have to survive to a given age to reproduce at that age, so if survival declines exponentially, so does the expected number of offspring. Since survival always declines monotonically with age, your probability of reproducing at a given age must also decline, even if you'd be just as good at reproducing once you got to that age. As a result, in terms of your reproductive fitness, the earliest parts of your life are always the most valuable, even if you don't age. [footnote - The only way to escape this is for fecundity to increase with age after reproductive maturation].
+## What good is immortality?
 
-[Show survival and reproduction equations in discrete time, note equivalents in continuous time]
+Imagine a race of beautiful, immortal, ageless beings -- let's call them elves. Unlike we frail humans, elves don't age: they exhibit constant mortality and constant fecundity. As a result, their age-specific survivorship and reproductive output both fall off exponentially with increasing age -- far more slowly, in other words, than occurs in humans.
 
-This concept sounds fiddly when explained in this way but becomes much clearer with an example. Imagine that two mutations arose in our population of elves. The first caused individuals bearing it to become infertile at age 100 -- a mere stripling by elvish standards -- while the second has the same effect at a ripe old age of 10,000 years. Both of these mutations totally curtail an individual's reproductive future, but they have very different effects on fitness. The first mutation is disastrous, destroying almost all of the individual's expected reproductive output. The probability of an individual surviving to (and well past) 100 is high, so the expected number of children lost is large. Conversely, the chances of an individual still being alive at 10,000 is minimal anyway, so that mutation probably won't make any difference to the number of offspring that individual has -- its fitness effect is negligible. Mutations taking effect at intermediate ages will have intermediate effects; mutations that merely reduce, rather than totally destroy, reproductive output will have commensurately smaller impacts.
+[^juv]: I've simplified the model even further here by assuming that elves spring from the womb fully-formed and ready to reproduce. Adding a non-reproductive childhood of, say, 100 years will ... [TODO: complete and reference this]
 
-The intuition that I'm trying to get across here is that, as far as natural selection is concerned, the fitness of a given genotype depends far more strongly on its health at younger ages than at older ones. Even when mortality is constant, older ages are just less valuable than younger ones, simply because the chance of getting to those older ages is lower. As a result, the fitness effect of deleterious mutations affecting health in old age is much smaller than that of mutations affecting health in young adults -- and mutations that affect the health of juveniles are worst of all, because those affect *all* of an individual's lifetime reproductive output. To put it in economic terms, the selective value of each additional marginal year of life is less than the previous one.
+[TODO: Compare human and elven mortality/survivorship/etc. curves]
 
-Okay, so we've established that, because of declining cumulative survival, later stages of life are less valuable to natural selection than earlier stages. But why should that matter? Even if these later stages of life are *less* valuable, they are still valuable -- the selective effect of a mutation at these later ages is still negative. So they should still be removed by natural selection, right? Well, not necessarily. There are two different prominent answers to this question, each of which constitutes one of the two major non-adaptive theories of the evolution of ageing.
+Under the parameters I've used here (1% fecundity, 0.1% mortality), an elf has about a 50% chance of making it to 700 years old and a 10% chance of living to the spry old age of 2,300. An elf that makes it that far will have an average of 23 children over its life; 7 if it only makes it to the median lifespan of 700.
 
-# Natural selection is not infinitely strong
+Since fecundity and mortality are constant, an elf that makes it to 3,000 will be just as fit and healthy then as they were as a mere stripling of 500, and will most likely still have a long and bright future ahead of them. Nevertheless, the chance of any given *newborn* elf making it that far is small (about 5%). This means that, even though an old elf could in principle have as many children as a much younger individual elf, the actual offspring in the population are mainly produced by younger individuals. Just over 50% of the lifetime expected reproductive output of a newborn elf is concentrated into its first 700 years; even though it could in principle live for millennia, producing children at the same rate all the while, its odds of reproducing are best early in life. You can, after all, only breed when you're living.
 
-In the end, evolution is just statistics. Individuals breed and reproduce, and some individuals end up having more surviving offspring than average and others have fewer. Somtimes, this difference is due to differences in fitness, resulting in a directional shift in the genetic composition of the population -- we call this *natural selection*. But even in the absence of selection, some individuals will end up having more offspring than others through sheer random chance, leading to changes in the genetic composition of the population that have nothing to do with how fit the lucky parents are -- we call this non-adaptive, non-selective evolution *genetic drift*. As a result of genetic drift, the frequencies of different gene variants in the population can vary in ways that have little to do with their effect on fitness: given enough time, even a neutral mutation must eventually either die out or reach fixation, but thanks to genetic drift even a highly beneficial mutation can die out before it has a chance to spread, and even a deleterious one can spread until it is present in the entire population.
+This fact -- that reproductive output is concentrated in early life even in the absence of ageing -- has one very important consequence: natural selection cares much more about you when you're young.
 
-[footnote on the founder effect]
+[TODO: Footnote explaining difference between output conditional on survival, and output]
 
-Conversely, when selection dominates drift, beneficial mutations 
+# 
 
-What determines whether natural selection or genetic drift is strongest
+No genome is totally stable -- mutations always occur. 
 
-Put simply, selection is stronger when population sizes are large and/or selection coefficients are strong. 
+Let's imagine that three mutations arise in our elven population. Each is fatal to its bearer, but with a time delay, analogous to [Huntington's disease][huntington] or some other congenital diseases in humans. Each mutation has a different time delay, taking effect respectively at 100, 1000, and 10000 years of age. What effect will these mutations have on their bearers' fitness, and how well will they spread in the population?
 
-There are various 
+[huntington]: https://en.wikipedia.org/wiki/Huntington%27s_disease
 
-When a new mutation arises in a closed population, therefore, there are two ways in which its frequency in that population can change: it can rise or fall through natural selection, based on its effect on the fitness of the organisms that carry it, or it can rise or fall at random through genetic drift. The stronger selection is relative to drift, the greater the chance that the eventual fate of that variant matches its effect on fitness: beneficial mutations are fixed, and deleterious mutations (the vast majority) are removed.
+Although all three mutations have similar impacts on an individual who lives long enough to experience them, from a fitness perspective they are very different. The first mutation is disastrous: almost 90% of wild-type individuals (those without the mutation) live past age 100, and a guaranteed death at that age would eliminate almost 90% of your expected lifetime reproductive output. The second mutation is still pretty bad, but less so: a bit over a third of wild-type individuals live to age 1000, and dying at that age would eliminate a similar proportion of your expected lifetime reproductive output. The third mutation, by contrast, has almost no expected effect: less than 0.005% of individuals make it to that age, and the effect on expected lifetime reproductive output is close to zero. In terms of fitness, the first mutation would be strenuously opposed by natural selection and would be unlikely to spread far; the second would be at a significant disadvantage and would probably be quickly outcompeted by wild-type individuals; and the third would be virtually neutral.
 
-[selection shadows = older ages are more drifty]
-[this mainly applies to mutation accumulation - AP can work even when drift is weak]
+This extreme example illustrates a general principle: "The impact of a mutation on the fitness of an organism depends on both the magnitude of its effect and the proportion of total reproductive output affected"[^williams]. Mutations that take effect later in life affect a smaller proportion of total expected reproductive output and so have a smaller selective impact, even if the size of the effect when they do take effect is just as strong. The same principle applies to mutations with less dramatic effects: those that affect early-life survival and reproduction have a big effect on fitness and will be strongly selected for or against, while those that take effect later will have progressively less effect on fitness and will thus be exposed to correspondingly weaker selection pressure. 
 
-The combination of the 
-gives rise to the "mutation accumulation" theory of ageing. Over time, inevitably, mutations occur. Most of these will be deleterious, and different deleterious mutations will exert their effects at different ages. Deleterious mutations affecting childhood and early adulthood will be strongly opposed by natural selection and efficiently removed from the population, while those affecting later life will be largely ignored by natural selection and accumulate in the population over time. Put another way, the minimum size of effect natural selection can "see" will increase as age increases, allowing more and more larger and larger mutations to get through and impair the health of older individuals: the population will start to age.
+[^williams]: Williams (1957) *Evolution* 11(4): 398-411.
 
-# Trade-offs everywhere: antagonistic pleiotropy
+When a mutation arises in a population, its frequency rises and falls based on the relative reproductive success of those who bear the mutation and those who do not. This difference in reproductive success is in part determined by the relative fitness of individuals bearing the mutation, but includes a healthy dose of random chance. Due to this random element, the frequency of a mutation will fluctuate at random, a process known as [genetic drift][drift]. In the absence of selection pressure favouring the preservation of polymorphisms (a big topic I don't intend to cover here), the mutation will eventually either reach fixation (100% prevalence) or elimination (0% prevalence). Which of these occurs depends on the strength of selection in the population[^selstr] and the selection coefficient of the mutation (how much it effects reproductive output). When the strength of selection is low, or the selection coefficient is small, the mutation will behave more like a neutral mutation, and its eventual fate will depend more on the random vicissitudes of genetic drift.
 
-In the mutation-accumulation theory, ageing is an entirely passive, unselected process: natural selection can only efficiently remove mutations above some effect threshold, mutations affecting old age have smaller effects on fitness, therefore mutations affecting old age accumulate. There is a second theory of ageing, however, that also relies on the differential selective 
-value of different ages, but according to which ageing occurs as a consequence of selection, not drift. According to this
-"antagonistic pleiotropy" theory of ageing, ageing occurs as a side effect of mutations that improve health and fitness at other
-points in life.
+[drift]: https://en.wikipedia.org/wiki/Genetic_drift
 
-Pleiotropy is the ability of a gene to exert multiple distinct effects on the biology of an organism. A mutation in a pleiotropic gene could cause changes in diverse parts of the body, metabolic pathways, organ systems...or at different points in life. *Antagonistic* pleiotropy implies that these different effects have opposite effects on fitness: one beneficial, another deleterious. In the case of ageing, the proposed mutation would have a positive fitness effect early in life (by increasing the rate of growth, say) at the cost of a negative fitness effect later in life.
+[^selstr]: The strength of natural selection relative to genetic drift will vary depending on the size of the population and its demographic properties; all else equal a larger population will exhibit stronger selection, simply due to the law of large numbers: [TODO: Finish this]
 
-All else equal, a positive fitness effect in one place and a negative effect in another place should balance out, but as we have already seen, different ages are *not* equal in terms of their selective value. Because early life counts for so much more in terms of the fitness effect of a mutation, even a very small gain in early-life health and fitness could potentially outweigh a much larger fitness penalty applied much later. Because of the difference in selective value, natural selection is willing to accept fitness tradeoffs between different ages that leave the minority of individuals that reach old age far worse off than they otherwise would be.
+All this means that the strength of natural selection is not infinite; there is an effect threshold below which it can no longer effectively remove deleterious mutations and promote the spread of beneficial ones in the population. The "selection shadow" discussed above means that mutations with the same magnitude of effect on the *individual* have much smaller effects on *fitness* (i.e. smaller selection coefficients) when they take effect later in life. These mutations will therefore behave more like neutral mutations, increasing or decreasing in frequency with relatively little regard for their effect on those individuals that survive to experience them. Since the great majority of mutations are negative[^negative], this will lead to the accumulation of more and more mutations impairing survival and fecundity later in life, leading inevitably to demographic (and physiological) ageing.
 
-It is important to understand that, despite its reliance on natural selection, antagonistic pleiotropy is still considered a non-adaptive theory of ageing. While the mutations that cause ageing under this theory are selectively beneficial, their effects on old age are not. The negative side effects of these mutations are still negative, and a mutation that did not have those side effects would be better -- but they are not negative enough to outweigh the benefits, and so the mutation is selected for overall. This is in contrast with adaptive theories of ageing, where the decline in survival at older ages is considered to be *per se* selectively advantageous.
+[^negative]: This is the strong consensus among evolutionary biologists: when you're dealing with a complex, highly adapted system, random changes are much, much more likely to decrease its functionality than to improve it.
+
+[^medawar]: [TODO: get Medawar reference]
+
+So our elves are sadly doomed to lose their immortality, unless something very weird is happening to cause them to keep it. Mutations impairing survival and reproduction early in life will be strenuously removed by natural selection, but those causing impairments later in life will accumulate, leading to a progressive increase in mortality and decline in fecundity. This might seem bad enough, but unfortunately there is more bad news on the horizon -- because 
+
+# Perverse trade-offs: antagonistic pleiotropy
+
+The theory outlined above, under which ageing occurs due to the accumulation of late-life-affecting negative mutations which selection does not have the strength to effectively remove, is called the *mutation accumulation* or *relaxed purifying selection theory*, and was first proposed by Peter Medawar in 1951[^medawar]. It is one of two non-adaptive theories of ageing with wide currency in the field; the other, known as *antagonistic pleiotropy*, was proposed by George C. Williams in 1957. The two theories are similar in some ways and quite different in others, ... [TODO: Finish this]
+
+The basic insight required to understand antagonistic pleiotropy is the same as that required to understand mutation accumulation: due to inevitably declining survivorship with age, the fitness effect of a change in survival or reproduction declines as the age at which it takes effect increases. However, whereas mutation accumulation proposes genetic drift as a way such pro-ageing mutations can accumulate, antagonistic pleiotropy proposes a way in which such negative fitness effects can accumulate in later life through the action of natural selection.
+
+[Pleiotropy][pleiotropy] is the phenomenon whereby a gene or mutation exerts effects of multiple different aspects of biology simultaneously: different genetic pathways, developmental stages, organ systems, *et cetera*. *Antagonistic* pleiotropy is pleiotropy that imposes competing fitness effects, increasing fitness in one way while decreasing it in another. In this case, the overall fitness effect of a mutation will depend on the relative sizes of those countervailing fitness impacts.
+
+[pleiotropy]: https://en.wikipedia.org/wiki/Pleiotropy
+
+In our case, we are interested in pleiotropy across time: the idea that a mutation could affect fitness in one way early in life and another way later. If this pleiotropy is antagonistic, the mutation will increase fitness at one point in life and decrease it at another point: for example, maybe indulging in more risky fights for mates increases expected reproductive output in the near future but increases the risk of a serious injury that will impair your success later. If the fitness gain is on average larger than the fitness cost, the mutation is likely to spread.
+
+As we already saw, the fitness effect of a mutation depends on the size of the effect *and* the percentage of lifetime reproductive output affected, and as a result effects taking place later in life are less valued by natural selection. This means that selection can favour trade-offs that seem very inequitable to us, accepting large impairments to late-life functionality in exchange for small gains in early-life fitness. These unbalanced tradeoffs, seen as net-positive by natural selection, spread in the population, become fixed, and accumulate over time, resulting in the ageing we see everywhere in nature today.
+
+Antagonistic pleiotropy therefore provides an alternative framing of the ageing problem, one which focuses on selection over genetic drift. Despite claiming that ageing evolves as a result of mutations that increase fitness, however, antagonistic pleiotropy is still a *non-adaptive* theory. While the mutations that give rise to ageing are beneficial *on net*, their effects on old age are *not* beneficial: an alternative mutation that provided the same
+benefits without contributing to ageing would be better. This is in contrast to adaptive theories of ageing that claim the ageing phenotype *itself* is beneficial; more on those next time. 
+
+Mutation accumulation and antagonistic pleiotropy have historically represented the two big camps of ageing theorists, and the theories have traditionally been regarded as being in opposition to each other. I've never really understood why, though: the basic insight required to understand both theories is the same, and conditions that gave rise to ageing via mutation accumulation could easily also give rise to additional ageing via antagonistic pleiotropy [^comparison]. Importantly, both theories give the same kinds of answers to the other two key questions of ageing I discussed last time: why do lifespans differ between species, and why do some animals escape ageing altogether?
+
+[^comparison]: Which of the two is likely to predominate depends on factors like the relative strength of selection and drift (which is heavily dependent on population size) and the commonness of mutations that cause effects of the kind proposed by antagonistic pleiotropy. This will depend on the specific demographics and evolutionary history of the population you're interested in, as well as your more general ...
+
+
+===========================================
+
+
+
+
 
 # ...
 
