@@ -6,7 +6,7 @@ Status: draft
 
 [Last time][part1], I introduced three puzzles in the evolution of ageing: 
 
-[part1]: ...
+[part1]: https://apomorphic.com/2019/09/09/why-we-age-1-intro
 
 > This, then, is the threefold puzzle of ageing. Why should a process that appears to be so deleterious to the individuals experiencing it have evolved to be so widespread in nature? Given this ubiquity, which implies there is some compelling evolutionary reason for ageing to exist, why do different animals vary so much in their lifespans? And how, when ageing has either evolved or been retained in so many different lineages, have some animals evolved to escape it?
 
@@ -14,13 +14,13 @@ I divided existing theories of the evolution of ageing into two groups, adaptive
 
 In this post I'll discuss other, more sophisticated non-adaptive theories. These theories are characterised by their assertion that ageing provides no fitness benefit to organisms, but rather evolves *despite* being deleterious to reproductive success. Despite the apparent paradoxicality of this notion, I would estimate that non-adaptive theories are the most widely-believed group of explanations among scholars studying the evolution of ageing; it is also the group of explanations I personally put the most credence in at the time of writing.
 
-How can this be? How can something non-adaptive -- even deleterious -- have evolved so reliably across the animal kingdom? To answer this question, we need to understand a few important concepts from evolutionary biology, including relaxed purifying selection, pleiotropy, and genetic drift. 
+How can this be? How can something non-adaptive -- even deleterious -- have evolved so reliably across the animal kingdom? To answer this question, we need to understand a few important concepts from evolutionary biology, including relaxed purifying selection, pleiotropy, and genetic drift.
 
 First, though, we need to clarify some important 
 
 ## Mortality, survivorship, and fecundity
 
-For the purposes of this post, a **cohort** is a group of individuals from the same population who were all born at the same time, i.e. they are of the same age. The **survivorship** of a cohort at a given age is the percentage of individuals surviving *to* that age, or equivalently the probability of any given individual surviving at least that long. Conversely, the **mortality** of a cohort at a given age is the probability of an individual from that cohort dying *at* that age, and not before or after. Note the key distinction between these concepts: survivorship is the result of accumulating mortality at *all* ages from birth to the age of interest[^survmort]. As a result, the mortality and survivorship curves of a cohort will almost always look very different; while mortality can increase, decrease or stay the same over time, survivorship must always decrease. In particular, constant mortality will give rise to an *exponential* decline in survivorship[^exponential]. Ageing is in part defined as an increase in *mortality* over time, and hence as a more rapid decrease in survivorship than would be produced by constant mortality: an ageing population will die off superexponentially as chronological age increases.
+For the purposes of this post, a **cohort** is a group of individuals from the same population who were all born at the same time, i.e. they are of the same age. The **survivorship** of a cohort at a given age is the percentage of individuals surviving *to* that age, or equivalently the probability of any given individual surviving at least that long. Conversely, the **mortality** of a cohort at a given age is the probability of an individual from that cohort dying *at* that age, and not before or after. Note the key distinction between these concepts: survivorship is the result of accumulating mortality at *all* ages from birth to the age of interest[^survmort]. As a result, the mortality and survivorship curves of a cohort will almost always look very different; while mortality can increase, decrease or stay the same over time, survivorship must always decrease. In particular, constant mortality will give rise to an *exponential* decline in survivorship[^exponential].
 
 [^survmort]: In discrete time, the survivorship function of a cohort will be the product of instantaneous survival over all preceding time stages; in continuous time, it is the [product integral][prodint] of instantaneous survival up to the age of interest. Instantaneous survival is the probability of surviving at a given age, and thus is equal to 1 minus the mortality at that age.
 
@@ -28,14 +28,15 @@ For the purposes of this post, a **cohort** is a group of individuals from the s
 
 [^exponential]: Exponential in continuous time; geometric in discrete time.
 
+![Four hypothetical mortality curves and their corresponding survivorship curves]({static}/images/mortality-survivorship.png)
+*Four hypothetical mortality curves and their corresponding survivorship curves.*
 
-[TODO: Figure of some mortality curves and their corresponding survivorship curves]
-
-In evolutionary terms, survival is only important insofar as it leads to reproduction. The age-specific **fecundity** of a cohort is the average number of offspring produced by an individual of that cohort at that age. Crucially, you need to survive to reproduce, so the actual expected number of offspring produced at a given age (call this the **reproductive output**) is equal to the age-specific fecundity multiplied by the probability of surviving that long. Since this depends on survivorship, not mortality, it will tend to decline with age: a population with constant mortality and constant fecundity (i.e. no demographic ageing) will show reproductive output that declines exponentially along with survivorship.
+In evolutionary terms, survival is only important insofar as it leads to reproduction. The age-specific **fecundity** of a cohort is the average number of offspring produced by an individual of that cohort at that age. Crucially, you need to survive to reproduce, so the actual expected number of offspring produced at a given age (let's call this the **reproductive output**) is equal to the age-specific fecundity multiplied by the probability of surviving that long. Since this depends on survivorship, not mortality, it will tend to decline with age: a population with constant mortality and constant fecundity (i.e. no demographic ageing) will show reproductive output that declines exponentially along with survivorship.
 
 [^repout]: The reproductive output $r_a$ at some age $a$ is therefore equal to $f_a \cdot s_a$, where $f$ is fecundity and $s$ is survivorship. Since survivorship is determined by mortality, reproductive output can also be expressed as $r_a = f_a \cdot \int_0^a m_x \:\mathrm{d}x$ (in continuous time) or $r_a = f_a \cdot \prod_{k=0}^am_k$ (in discrete time). 
 
-[TODO: Figure of some mortality/fecundity curves and their corresponding reproductive-output curves]
+![Two hypothetical mortality/fecundity curves and their corresponding reproductive outputs]({static}/images/fecundity-output.png)
+*Two hypothetical mortality/fecundity curves and their corresponding reproductive outputs.*
 
 The fitness of an individual is determined by their lifetime reproductive output (i.e. the total number of offspring they produce over their entire lifespan) [^lro] and the average quality of their offspring (i.e. their own chances of surviving and reproducing in their turn). Mutations that significantly decrease lifetime reproductive output will affect both of these parameters, and so be strongly opposed by natural selection. It seems mutations leading to ageing (i.e. an increase in mortality and decrease in fecundity with time) should be in that category. So why does ageing evolve?
 

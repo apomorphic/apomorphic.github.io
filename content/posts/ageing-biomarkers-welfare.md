@@ -1,9 +1,9 @@
 Title: Assessing biomarkers of ageing as measures of cumulative animal welfare
 Date: 2019-09-27
-Tags: ageing, science, animal welfare
+Tags: ageing, science, animal welfare, effective altruism
 Slug: ageing-biomarkers-welfare
 
-*This article is cross-posted from the Wild Animal Initiative website. The original is [here][original]. It is also available on the EA Forum [here][eaforum]*
+*This article is cross-posted from the Wild Animal Initiative website. The original is [here][original]. It is also available on the EA Forum [here][eaforum].*
 
 [original]: https://www.wildanimalinitiative.org/blog/biomarkers-cumulative-welfare
 [eaforum]: https://forum.effectivealtruism.org/posts/QnwxhgrFARoJ2sMvA/assessing-biomarkers-of-ageing-as-measures-of-cumulative
