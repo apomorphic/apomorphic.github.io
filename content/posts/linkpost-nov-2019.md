@@ -39,7 +39,7 @@ Here's some older stuff that I read a while ago, but has been on my mind for one
 
 - Reading Roots of Progress reminds me of Kris De Decker's [Low Tech Magazine][ltm], a great example of what happens when you take widely-but-vaguely-held ideas seriously (in this case, a certain kind of environmental pessimism). His recent posts have mostly been less interesting to me, but he has a fantastic back catalogue of posts on obsolete technology: [wood-powered cars][ltm_cars], [wind-powered factories][ltm_wind], and even [fans and food mixers powered by tap water][ltm_water]. And if you're unfamiliar with the technological marvel that is the Chinese wheelbarrow, don't miss his [magisterial summary][ltm_wheelbarrow].
 - In a similar vein, remember a few years ago when everyone got very excited about [shipping containers][shipping]?
-- [A two year old's solution to the trolley problem][trolley]
+- Finally, in case you haven't seen it before, here's [a two year old's solution to the trolley problem][trolley]
 
 [ltm]: www.lowtechmagazine.com
 [ltm_wheelbarrow]: https://www.lowtechmagazine.com/2011/12/the-chinese-wheelbarrow.html
