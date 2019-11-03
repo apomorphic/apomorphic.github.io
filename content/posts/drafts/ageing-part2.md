@@ -10,13 +10,11 @@ Status: draft
 
 > This, then, is the threefold puzzle of ageing. Why should a process that appears to be so deleterious to the individuals experiencing it have evolved to be so widespread in nature? Given this ubiquity, which implies there is some compelling evolutionary reason for ageing to exist, why do different animals vary so much in their lifespans? And how, when ageing has either evolved or been retained in so many different lineages, have some animals evolved to escape it?
 
-I divided existing theories of the evolution of ageing into two groups, adaptive and nonadaptive, and discussed why one commonly believed nonadaptive theory -- namely, simple wear and tear -- could not adequately answer these questions.
+I divided existing theories of the evolution of ageing into two groups, adaptive and nonadaptive, and discussed why one commonly believed nonadaptive theory – namely, simple wear and tear – could not adequately answer these questions.
 
 In this post I'll discuss other, more sophisticated non-adaptive theories. These theories are characterised by their assertion that ageing provides no fitness benefit to organisms, but rather evolves *despite* being deleterious to reproductive success. Despite the apparent paradoxicality of this notion, I would estimate that non-adaptive theories are the most widely-believed group of explanations among scholars studying the evolution of ageing; it is also the group of explanations I personally put the most credence in at the time of writing.
 
-How can this be? How can something non-adaptive -- even deleterious -- have evolved so reliably across the animal kingdom? To answer this question, we need to understand a few important concepts from evolutionary biology, including relaxed purifying selection, pleiotropy, and genetic drift.
-
-First, though, we need to clarify some important 
+How can this be? How can something non-adaptive – even deleterious – have evolved so reliably across the animal kingdom? To answer this question, we need to understand a few important concepts from evolutionary biology, including relaxed purifying selection, pleiotropy, and genetic drift. First, though, we need to clarify some important terminology.
 
 ## Mortality, survivorship, and fecundity
 
@@ -46,9 +44,8 @@ The fitness of an individual is determined by their lifetime reproductive output
 
 Imagine a race of beautiful, immortal, ageless beings -- let's call them elves. Unlike we frail humans, elves don't age: they exhibit constant mortality and constant fecundity. As a result, their age-specific survivorship and reproductive output both fall off exponentially with increasing age -- far more slowly, in other words, than occurs in humans.
 
-[^juv]: I've simplified the model even further here by assuming that elves spring from the womb fully-formed and ready to reproduce. Adding a non-reproductive childhood of, say, 100 years will ... [TODO: complete and reference this]
-
-[TODO: Compare human and elven mortality/survivorship/etc. curves]
+![Survivorship, cumulative fecundity and cumulative reproductive output curves for a population of elves with 1% fecundity and 0.1% mortality per year.]({static}/images/fecundity-elves.png)
+*Survivorship, cumulative fecundity and cumulative reproductive output curves for a population of elves with 1% fecundity and 0.1% mortality per year.*
 
 Under the parameters I've used here (1% fecundity, 0.1% mortality), an elf has about a 50% chance of making it to 700 years old and a 10% chance of living to the spry old age of 2,300. An elf that makes it that far will have an average of 23 children over its life; 7 if it only makes it to the median lifespan of 700.
 
@@ -56,29 +53,39 @@ Since fecundity and mortality are constant, an elf that makes it to 3,000 will b
 
 This fact -- that reproductive output is concentrated in early life even in the absence of ageing -- has one very important consequence: natural selection cares much more about you when you're young.
 
-[TODO: Footnote explaining difference between output conditional on survival, and output]
+## Natural selection is ageist
 
-# 
-
-No genome is totally stable -- mutations always occur. 
-
-Let's imagine that three mutations arise in our elven population. Each is fatal to its bearer, but with a time delay, analogous to [Huntington's disease][huntington] or some other congenital diseases in humans. Each mutation has a different time delay, taking effect respectively at 100, 1000, and 10000 years of age. What effect will these mutations have on their bearers' fitness, and how well will they spread in the population?
+No genome is totally stable -- mutations always occur. Let's imagine that three mutations arise in our elven population. Each is fatal to its bearer, but with a time delay, analogous to [Huntington's disease][huntington] or some other congenital diseases in humans. Each mutation has a different delay, taking effect respectively at 100, 1000, and 10000 years of age. What effect will these mutations have on their bearers' fitness, and how well will they spread in the population?
 
 [huntington]: https://en.wikipedia.org/wiki/Huntington%27s_disease
 
+![Three potential fatal mutations in the elven populations, and their effects on lifetime reproductive output.]({static}/images/elf-mutations.png)
+*Three potential fatal mutations in the elven populations, and their effects on lifetime reproductive output.*
+
 Although all three mutations have similar impacts on an individual who lives long enough to experience them, from a fitness perspective they are very different. The first mutation is disastrous: almost 90% of wild-type individuals (those without the mutation) live past age 100, and a guaranteed death at that age would eliminate almost 90% of your expected lifetime reproductive output. The second mutation is still pretty bad, but less so: a bit over a third of wild-type individuals live to age 1000, and dying at that age would eliminate a similar proportion of your expected lifetime reproductive output. The third mutation, by contrast, has almost no expected effect: less than 0.005% of individuals make it to that age, and the effect on expected lifetime reproductive output is close to zero. In terms of fitness, the first mutation would be strenuously opposed by natural selection and would be unlikely to spread far; the second would be at a significant disadvantage and would probably be quickly outcompeted by wild-type individuals; and the third would be virtually neutral.
 
-This extreme example illustrates a general principle: "The impact of a mutation on the fitness of an organism depends on both the magnitude of its effect and the proportion of total reproductive output affected"[^williams]. Mutations that take effect later in life affect a smaller proportion of total expected reproductive output and so have a smaller selective impact, even if the size of the effect when they do take effect is just as strong. The same principle applies to mutations with less dramatic effects: those that affect early-life survival and reproduction have a big effect on fitness and will be strongly selected for or against, while those that take effect later will have progressively less effect on fitness and will thus be exposed to correspondingly weaker selection pressure. 
+This extreme example illustrates a general principle: 
+> The impact of a mutation on the fitness of an organism depends on both the magnitude of its effect and the proportion of total reproductive output affected.
+>
+> *— Williams 1957* [^williams]
+
+Mutations that take effect later in life affect a smaller proportion of total expected reproductive output and so have a smaller selective impact, even if the size of the effect when they do take effect is just as strong. The same principle applies to mutations with less dramatic effects: those that affect early-life survival and reproduction have a big effect on fitness and will be strongly selected for or against, while those that take effect later will have progressively less effect on fitness and will thus be exposed to correspondingly weaker selection pressure. Put in technical language, the **selection coefficient** of a mutation depends upon the age at which it takes effect, with mutations affecting later life having coefficients closer to zero.
+
+Okay, so we've established that selection cares less about mutations
 
 [^williams]: Williams (1957) *Evolution* 11(4): 398-411.
 
-When a mutation arises in a population, its frequency rises and falls based on the relative reproductive success of those who bear the mutation and those who do not. This difference in reproductive success is in part determined by the relative fitness of individuals bearing the mutation, but includes a healthy dose of random chance. Due to this random element, the frequency of a mutation will fluctuate at random, a process known as [genetic drift][drift]. In the absence of selection pressure favouring the preservation of polymorphisms (a big topic I don't intend to cover here), the mutation will eventually either reach fixation (100% prevalence) or elimination (0% prevalence). Which of these occurs depends on the strength of selection in the population[^selstr] and the selection coefficient of the mutation (how much it effects reproductive output). When the strength of selection is low, or the selection coefficient is small, the mutation will behave more like a neutral mutation, and its eventual fate will depend more on the random vicissitudes of genetic drift.
+When a mutation arises in a population, its frequency rises and falls based on the relative reproductive success of those who bear the mutation and those who do not. This difference in reproductive success is in part determined by the relative fitness of individuals bearing the mutation, but includes a healthy dose of random chance. Due to this random element, the frequency of a mutation will fluctuate at random, a process known as [genetic drift][drift]. In the absence of selection pressure favouring the preservation of polymorphisms [^poly], the mutation will eventually either reach fixation (100% prevalence) or elimination (0% prevalence). Which of these is more likely to occur depends on the strength of selection in the population [^selstr] and the **selection coefficient** of the mutation (how, and how much, it affects reproductive output). When the strength of selection is low, or the selection coefficient is closer to zero, the mutation will behave more like a neutral mutation, and reach fixation or elimination more-or-less randomly.
 
 [drift]: https://en.wikipedia.org/wiki/Genetic_drift
 
-[^selstr]: The strength of natural selection relative to genetic drift will vary depending on the size of the population and its demographic properties; all else equal a larger population will exhibit stronger selection, simply due to the law of large numbers: [TODO: Finish this]
+[^poly]: A **polymorphism** is a situation in which multiple versions of a gene (alleles) persist in a population for an extended period. There are various ways in which this can occur, including when the selection coefficient of an allele changes over time or according to its frequency in the population, or when individuals carrying multiple alleles are fitter than individuals carrying multiple copies of just one allele. This is a big topic I don't intend to get into here.
 
-All this means that the strength of natural selection is not infinite; there is an effect threshold below which it can no longer effectively remove deleterious mutations and promote the spread of beneficial ones in the population. The "selection shadow" discussed above means that mutations with the same magnitude of effect on the *individual* have much smaller effects on *fitness* (i.e. smaller selection coefficients) when they take effect later in life. These mutations will therefore behave more like neutral mutations, increasing or decreasing in frequency with relatively little regard for their effect on those individuals that survive to experience them. Since the great majority of mutations are negative[^negative], this will lead to the accumulation of more and more mutations impairing survival and fecundity later in life, leading inevitably to demographic (and physiological) ageing.
+[^selstr]: The strength of natural selection relative to genetic drift will vary depending on the size of the population and its demographic properties; all else equal, a larger population will exhibit stronger selection. The stronger selection is relative to drift, the more differentially likely it is for deleterious mutations of a given strength to get eliminated and beneficial mutations to reach fixation.
+
+All this means that the efficacy of natural selection is not infinite; there is an effect threshold below which it can no longer effectively remove deleterious mutations and promote the spread of beneficial ones in the population. The declining 
+
+The "selection shadow" discussed above means that mutations with the same magnitude of effect on the *individual* have much smaller effects on *fitness* (i.e. smaller selection coefficients) when they take effect later in life. These mutations will therefore behave more like neutral mutations, increasing or decreasing in frequency with relatively little regard for their effect on those individuals that survive to experience them. Since the great majority of mutations are negative[^negative], this will lead to the accumulation of more and more mutations impairing survival and fecundity later in life, leading inevitably to demographic (and physiological) ageing.
 
 [^negative]: This is the strong consensus among evolutionary biologists: when you're dealing with a complex, highly adapted system, random changes are much, much more likely to decrease its functionality than to improve it.
 
