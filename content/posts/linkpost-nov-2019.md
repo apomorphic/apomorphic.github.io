@@ -19,7 +19,7 @@ Technically, much of this stuff is not actually new, but I only came across it r
 - The Dutch have a special symbol called the [flourish of approval][flourish].
 - A mole of moles [is a lot of moles][moles].
 - The UK is experimenting with new ways of [paying for antibiotics][antibiotics].
-- "Part of what makes us happy is the satisfaction of actually (or likely) helping people. [gambles][Consequentialism can ask us to give up even this]."
+- "Part of what makes us happy is the satisfaction of actually (or likely) helping people. [Consequentialism can ask us to give up even this][gambles]."
 - Here's an actually-quite-old post about [Really Big Numbers][numbers]. I still don't really comprehend Graham's Number, but at least I'm starting to get an inkling of how unimaginably vast it is.
 
 [rop]: rootsofprogress.org
