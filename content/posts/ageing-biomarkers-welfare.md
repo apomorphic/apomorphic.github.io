@@ -8,7 +8,7 @@ Slug: ageing-biomarkers-welfare
 [original]: https://www.wildanimalinitiative.org/blog/biomarkers-cumulative-welfare
 [eaforum]: https://forum.effectivealtruism.org/posts/QnwxhgrFARoJ2sMvA/assessing-biomarkers-of-ageing-as-measures-of-cumulative
 
-# Summary
+## Summary
 
 In order to determine which conditions provide the best overall quality of life for nonhuman animals, it is important to be able to measure their cumulative welfare experience. The ideal measure of cumulative welfare would be comprehensive, objectively measurable, and easy to transfer across species; however, existing approaches fall far short of this ideal. Recent academic work has suggested that measures of biological ageing could provide a highly promising alternative measure of cumulative welfare, which comes much closer to meeting these ideal goals.
 
@@ -16,7 +16,7 @@ Here, I review the existing empirical support for the use of biomarkers of agein
 
 Overall, despite some important potential weaknesses, biomarkers of ageing are likely to represent an important step forward in the assessment of cumulative animal welfare, which could potentially help resolve some important long-running uncertainties and disputes in the animal-welfare movement. Wild Animal Initiative recommends that both researchers and funders take note of these new techniques, and consider how best they can develop them further or apply them in their own domains of expertise.
 
-# We need a good way of measuring cumulative animal welfare
+## We need a good way of measuring cumulative animal welfare
 
 > While single experiences can be acutely positive or negative, what matters more from a welfare perspective is the lasting cumulative impact of these experiences.
 >
@@ -39,7 +39,7 @@ A good measure of cumulative affective experience [^affect] is therefore vital t
 
 In the ideal case, the many and varied inputs into cumulative animal welfare would be captured by a single, objectively measurable metric, which could then be used as a single readout of cumulative wellbeing for many different species of animals. In the rest of this article, I will review and discuss the evidence supporting a new, surprisingly good candidate for this “objectively measurable common currency” [^bateson2019] of wellbeing: biomarkers of the ageing process.
 
-# Biological ageing and cumulative animal welfare
+## Biological ageing and cumulative animal welfare
 
 As we get older, our bodies decay. In various ways, our cells and tissues progressively accumulate increasing levels of damage and dysregulation, leading at the whole-organism level to a decline in functionality, an increase in mortality, and a decrease in reproductive output [^hallmarks]. These deteriorative processes, which occur in broadly similar ways in many different animal species [^jones2014], are collectively known as *ageing*.
 
@@ -58,7 +58,7 @@ There are, therefore, both empirical data and theoretical arguments suggesting a
 
 Given these potential advantages, how might we go about actually measuring biological age?
 
-# Measuring biological age in non-human animals
+## Measuring biological age in non-human animals
 
 In any given species, the ageing process will manifest itself in a plethora of different phenotypes, many of which can be used to try to quantify biological ageing. In humans, a wide variety of biological readouts have been used as biomarkers of ageing, including telomere length and attrition rate, DNA methylation patterns, gene expression profiles, changes in neuroanatomy, proteomic and metabolomic changes, and various composites of clinically relevant symptoms [^bateson2019][^belsky2017][^cole2018]. While many of these biomarkers predict health outcomes better than chronological age, they often reflect different aspects of the ageing process and do not always correlate well with one another [^bateson2019][^belsky2017]. Combining different measures (e.g. with machine-learning-based prediction tools) can overcome these problems and improve the ability of a biological ageing measure to predict health outcomes [^cole2018][^smoking].
 
@@ -68,7 +68,7 @@ Overall, I would expect more complex and multi-modal measures to provide a more 
 
 For some widely-used farmed species and experimental model organisms, it may well be worth developing sophisticated species-specific methods of measuring biological age and hence cumulative welfare; however, in contexts where resources are highly limited and/or the number of species of concern is large, cost and transferability concerns are likely to mitigate in favour of simpler, faster, cruder measures [^complex]. Bateson & Pourier [^bateson2016][^bateson2019] suggest telomere length and hippocampal volume as two metrics that are simple, well-defined, and likely to retain validity across a wide variety of vertebrate species; further work may reveal other promising candidates. However, when using such very simple readouts of biological age, it is important to remember that they may give a significantly more partial and inaccurate reading than more sophisticated measures, and to seek to develop such improved measures where feasible.
 
-# A concrete example: the welfare effect of crowding on farmed fishes
+## A concrete example: the welfare effect of crowding on farmed fishes
 
 Many farmed fish are kept at very high densities, in a manner which often appears to be detrimental to their welfare [^ashley2007]. The potential welfare effects of crowding are many and varied, including social stresses, reduced water quality, and increased disease transmission. However, the actual welfare effect of a given level of crowding will vary between fish populations, depending on the level of crowding and water quality they are adapted to cope with, the robustness of their immune systems, and whether they have been vaccinated, among other factors. It would be useful to measure the total cumulative welfare effect of different crowding regimes on different species, and to know the degree to which other interventions such as vaccination mitigate any crowding-induced welfare reduction. Biological age provides an ideal means of addressing these questions.
 
@@ -82,33 +82,33 @@ To make up some totally speculative results, these biological ageing data might 
 
 While the idea that crowding is bad for fish welfare may not be particularly controversial, this approach would allow researchers to empirically quantify how bad that effect is compared to other aspects of a farmed fish's life, and assess the efficacy of different interventions (such as vaccination or water oxygenation) for mitigating that welfare impact. The same technique could be applied to help resolve active empirical controversies in the animal welfare movement, such as the [relative welfare levels of caged vs cage-free chickens][cagefree], the relative importance of [water oxygenation][oxygen] in the welfare of farmed fishes, or the net welfare impact of [predator reintroduction][reintroduction] on prey species.
 
-# Limitations and caveats
+## Limitations and caveats
 
 While I was initially sceptical about the applicability of biological ageing markers as measures of animal welfare, I have generally been convinced that this represents a novel and important advance in the field. Nevertheless, there are a number of important limitations or difficulties I anticipate in actually applying the method, which I think it is important to be aware of and mitigate where possible. I have divided these limitations into two categories: contexts where the prerequisites of applying the method may be difficult or expensive to obtain, and contexts where the link between ageing and welfare may be weakened or broken entirely.
 
-## Difficulties in application
+### Difficulties in application
 
-### The need for biological ageing clocks
+#### The need for biological ageing clocks
 
 In order to use biological ageing as a cumulative welfare measure in a given species, we need some kind of biological ageing measure for that species. As discussed above, these range in complexity from simple metrics like telomere length to highly complex machine-learning-based predictors, and there is likely to be a tradeoff between the accuracy and comprehensiveness of a measure on the one hand and its affordability and transferability on the other. As funding is very limited in many animal-welfare contexts, it is likely that simpler, cheaper metrics that can be transferred between species with relatively little validation will be preferred; however, it is important to remember that these may only provide a partial measure of biological age.
 
 The best biomarkers of ageing to use for these experiments will depend on the species being tested and its relationship to other well-validated model systems. In many vertebrate species, and probably most mammals, the markers established in humans and laboratory mice are likely to be the best option. Conversely, in species very distantly related to humans the validity of these markers may be limited: insects, for example, are largely post-mitotic in their adult form (limiting the usefulness of telomere attrition as a biomarker) and have very different neuroanatomy from vertebrates (preventing the use of hippocampal volume). If it is desirable to apply these ageing-based methods to assess welfare in these species, alternative biomarkers (such as accumulation of fluorescent advanced glycation end products in *Drosophila* [^jacobson2010]) will need to be developed and validated as welfare measures, substantially increasing the upfront cost.
 
-### Experimental controls
+#### Experimental controls
 
 While biological ageing is a promising measure of cumulative welfare, it is important to remember that welfare is not the only thing affecting biological age. Most obviously, chronological age has a very strong effect on biological age, and studies should always compare age-matched individuals when possible. Genetic variability is also an important factor: many species exhibit substantially different lifespans in different populations, and polymorphisms within a population can also have a substantial effect. As a result, ageing-based welfare measures will be most reliable in contexts where all individuals are genetically homogeneous, or at least where there is no systematic difference in genetic composition between different experimental groups. Finally, there should of course be as little systematic difference in environment as possible between the groups being compared, other than whatever exposure is being investigated for its welfare effects.
 
 Of these control requirements, the need for genetic comparability between experimental groups is the most frustrating, as it appears to exclude a lot of factors that are widely thought to be important for animal welfare, particularly in domesticated contexts where animals' genotypes have been [substantially modified by humans][gm] through selective breeding. On the face of it, biological-ageing methods seem to be unable to address this, as the groups being compared are not genetically comparable. However, given the importance of genetic effects on welfare in many contexts, any way to overcome this limitation would be very useful, and further investigation on this front seems quite valuable in expectation.
 
-## Limitations to validity
+### Limitations to validity
 
-### Death and other acute events
+#### Death and other acute events
 
 In many cases, a large portion of the suffering experienced by an animal, whether domesticated or wild, is suspected to take place acutely at the moment of death. If this death is sufficiently gruesome, the suffering so engendered could potentially outweigh the entire net welfare of a life that is otherwise worth living. Despite its importance, however, it seems unlikely that the suffering entailed by dying would be adequately reflected in ageing-based measures of cumulative welfare. For one thing, there would be no opportunity for the negative experiences associated with the animal’s death to be reflected as a subsequent increase in the rate of biological ageing; for another, the extensive physiological damage resulting from death would prevent an accurate postmortem assessment of biological age in many cases. Hence, an important limitation of ageing-based methods of measuring welfare may be their inability to incorporate the affective experience of dying.
 
 A similar concern might apply, albeit to a much lesser extent, to other highly acute exposures, i.e. those with large but short-lived effects on welfare. Many of these will be reflected in ongoing cumulative welfare to some extent (e.g. as physical or psychological trauma in the case of negative events), but it’s not clear to me that the cumulative readout of welfare given by ageing biomarkers will always incorporate them adequately. More research may be needed here.
 
-### Differences between juveniles and adults
+#### Differences between juveniles and adults
 
 In both wild and domesticated contexts, many of the animals of greatest concern from a welfare perspective are juveniles who have not yet reached reproductive maturation. These immature individuals are often much more numerous than adults, and have less chance to accumulate positive experiences to outweigh the pain of dying.
 
@@ -116,7 +116,7 @@ For animals that die shortly after birth or hatching, the cumulative welfare of 
 
 The situation for individuals that have relatively long lives as juveniles is more complex. In many species, juvenile and adult individuals differ substantially in their biology, and the question of whether juveniles are "ageing" is somewhat fraught. There are certainly dramatic changes taking place over the course of development, some of which could be interpreted as an accumulation of damage: telomeres, for example, shorten rapidly during the period of juvenile growth [^zeichner1999]. On the other hand, many clinical biomarkers of ageing do not begin to accumulate until adulthood [^hollingsworth1965]. This means that the applicability of biological-ageing measures to juveniles depends on the specific biomarkers being used, and different markers are likely to be most appropriate for measuring juvenile vs adult wellbeing [^juveniles].
 
-### Animals very different from humans
+#### Animals very different from humans
 
 The evidence supporting the use of biological ageing markers as measures of cumulative welfare falls into three broad categories: a theoretical, evolutionary argument linking the affective status of an exposure to its effect on ageing via its effect on somatic damage; extensive empirical research in humans associating biological ageing markers with directly reported affective mood (e.g. stress, depression or anxiety) and experiences known to impact mood (e.g. trauma, pain, exercise, and sleep); and more limited empirical research in animals linking these markers to experiences that are both plausibly affectively relevant and associated with other widely-used welfare measures. 
 
@@ -130,7 +130,7 @@ These differences in life history could pose major problems for the use of biolo
 
 These issues will pose little difficulty to researchers and activists concerned with the welfare of agricultural, experimental or other captive animals, most or all of which, to my knowledge, follow the conventional pattern of ageing exhibited by humans, mice and *Drosophila*. However, they could turn out to be significant for researchers interested in quantifying and improving the welfare of wild animals, who will inevitably have to tackle the welfare of large numbers of animals very different from humans. The extent to which these "unconventional" life histories are widespread in the natural world is unclear to me at present, and could be an important factor affecting the applicability of these methods in certain contexts.
 
-# Conclusion
+## Conclusion
 
 Finding better methods with which to quantitatively measure the cumulative welfare experience of nonhuman animals would represent a major advance in the study of animal welfare. As a potential route to a better and more objective measure of cumulative welfare, biomarkers of ageing are potentially very promising.
 
@@ -138,7 +138,7 @@ Many of the caveats I outlined above are educated guesses and may well turn out 
 
 Overall, I am currently very optimistic about the value of applying these methods in domesticated contexts, and cautiously optimistic about applying them to wild ecosystems. I would recommend that researchers interested in the welfare of either domesticated or wild animals take note of these techniques and consider their applicability in their own domains, and that funders in this space seriously consider funding their further development and application to new contexts. On a meta level, I think the surprisingly strong applicability of techniques from the biology of ageing to animal welfare science should encourage us all to look for innovative, unexpected and interdisciplinary ways to help nonhuman animals: as is often the case in science, the crucial insights and discoveries may not be at all where we expect them to be.
 
-# Acknowledgements
+## Acknowledgements
 
 This report was funded by the Wild Animal Initiative, and many WAI researchers (including Luke Hecht, Michelle Graham, Hollis Howe and Jane Capozzelli) contributed their time to reviewing and suggesting improvements to the draft. Prof. Melissa Bateson, the author of the key sources for the report, also generously read the draft and provided crucial feedback.
 

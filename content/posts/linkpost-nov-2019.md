@@ -3,14 +3,15 @@ Date: 2019-11-03
 Tags: links
 Slug: linkpost-11-2019
 
-# Stuff from me
+## Stuff from me
 
 I put up two more pieces on the EA Forum that I didn't think needed to be on this blog: a [question][disneyland] about Bostrom's "Disneyland without children" and a [followup][concrete] to my [previous post][awms] about ageing-based welfare measures with some concrete suggestions for future progress in the area.
 
 [disneyland]: https://forum.effectivealtruism.org/posts/3d2SbKC3bgXyEuExF/how-worried-should-i-be-about-a-childless-disneyland
 [concrete]: https://forum.effectivealtruism.org/posts/37T6NzajJ8j68x8DP/concrete-next-steps-for-ageing-based-welfare-measures
 [awms]: https://apomorphic.com/2019/09/27/ageing-biomarkers-welfare
-# New stuff
+
+## New stuff
 
 Technically, much of this stuff is not actually new, but I only came across it recently and *it's my blog*.
 
@@ -33,7 +34,7 @@ Technically, much of this stuff is not actually new, but I only came across it r
 [numbers]: https://waitbutwhy.com/2014/11/1000000-grahams-number.html
 [antibiotics]: http://www.cidrap.umn.edu/news-perspective/2019/07/uk-test-new-payment-model-antibiotics
 
-# Golden oldies
+## Golden oldies
 
 Here's some older stuff that I read a while ago, but has been on my mind for one reason or another.
 
