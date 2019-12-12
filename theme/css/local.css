@@ -41,9 +41,11 @@ a.brand:hover {
 ul#sitelinks.nav.nav-list > li > a >i {
     color: #1f334b;}
 /* Styling for elements */
-a {color: #0A5693} 
-body {font-family: 'Gudea', 'Gill Sans', 'Arial'; font-size: 18px; line-height: 1.2em; padding: 0px;}
-p { font-family: 'Gudea', 'Gill Sans', 'Arial'; font-size: 18px; line-height: 1.2em; margin-top: 0.8em; margin-bottom: 0.8em; text-align: justify; box-sizing:border-box;   width: 100% }
+/* a {color: #0A5693} */
+a {color: #841212}
+a:hover {color: #841212; text-decoration: underline}
+body {font-family: "Source Serif Pro"; font-size: 19px; line-height: 1.4em; padding: 0px;}
+p { font-family: "Source Serif Pro"; font-size: 19px; line-height: 1.4em; margin-top: 0.8em; margin-bottom: 0.8em; text-align: justify; box-sizing:border-box;   width: 100% }
 li { line-height: 1.6em; }
 h3 { font-family: 'Alegreya SC', 'Garamond', 'Georgia'; font-weight: normal}
 h2 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal;}
@@ -124,7 +126,7 @@ h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
 .archive-title {
     height: 80px;
     line-height: 80px;
-    margin-top: 20px;
+    margin-top: 24px;
     padding-top: 5px;
     background-color: #FFF;
     border-width: 1px;
@@ -139,24 +141,24 @@ h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
 }
 
 blockquote {
-    padding: 0 0 0 20px;
-    margin: 0 0 20px;
+    padding: 0 0 0 24px;
+    margin: 0 0 24px;
     border-left: 5px solid #eeeeee;
 }
 
 blockquote p {
-    font-size: 20px;
+    font-size: 24px;
     color: #222;
 }
 
 .quote-attrib {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 30px;
 }
 
 .quote-attrib::before {
     content: " — ";
-    font-size: 20px;
+    font-size: 24px;
 }
 
 img {

@@ -9,15 +9,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
-            <script src="https://apomorphic.com/theme/html5.js"></script>
+            <script src="./theme/html5.js"></script>
         <![endif]-->
 
 
         <!-- Le styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-        <link href="https://apomorphic.com/theme/local.css" rel="stylesheet">
-        <link href="https://apomorphic.com/theme/pygments.css" rel="stylesheet">
-        <link href="https://apomorphic.com/theme/font-awesome.css" rel="stylesheet">
+        <link href="./theme/local.css" rel="stylesheet">
+        <link href="./theme/pygments.css" rel="stylesheet">
+        <link href="./theme/font-awesome.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
 
     </head>
@@ -30,7 +30,7 @@
                         <div class="container">
                             <!-- Website headline -->
                             <div class="row-fluid">
-                                <a href="https://apomorphic.com" class="brand">Apomorphic</a>
+                                <a href="." class="brand">Apomorphic</a>
                             </div>
                             <!-- Website tagline/subtitle -->
                             <div class="row-fluid">
@@ -42,7 +42,7 @@
                     <!-- Pages in links on right -->
                     <div class="col-sm-4" id="blog-nav">
                         <ul class="nav nav-pills pull-right">
-                            <li><a href="https://apomorphic.com/about">About</a></li>
+                            <li><a href="./about">About</a></li>
                         </ul>
                     </div>
                 </div> <!-- End of fluid row-->
@@ -59,21 +59,119 @@
 <!-- Show articles in date order -->
 <!-- Post title -->
 <div class="row-fluid">
-    <div class="article-title col-sm-10 col-sm-offset-1">
-        <a href="https://apomorphic.com/2019/11/03/linkpost-11-2019"><h1>Linkpost&nbsp;11/2019</h1></a>
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="./2019/11/05/evolution-is-sampling-error"><h1>Evolution is sampling&nbsp;error</h1></a>
     </div>
 </div>
 
 <!-- Post info -->
 <div class="row-fluid">
-    <div class="article-info col-sm-10 col-sm-offset-1">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted on Tue 05 November 2019 by Will Bradshaw</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>A common mistake people make about evolution is to think it&#8217;s all about natural selection and adaptation. In fact, random non-adaptive changes often dominate the evolutionary&nbsp;process.</p>
+<p>Today I&#8217;m going to lay out a useful framework that I hope makes this fact more intuitive, which might in turn help non-experts build better intuitive models of evolutionary processes. This will come in handy when I try to explain non-adaptive theories of ageing later&nbsp;on.</p>
+<h2>Sampling error and genetic&nbsp;drift</h2>
+<p>We can think of evolution as <em>sampling error</em>: deviation in the genetic composition of the offspring in a population relative to their parents. To illustrate this, let&#8217;s imagine a simple, asexual population, evenly divided between two gene variants (alleles) which produce no difference in fitness<sup id="fnref:assumptions"><a class="footnote-ref" href="#fn:assumptions">1</a></sup>:</p>
+<p><img alt="Ten dots representing individuals, stacked vertically and coloured to represent their genotype: five red and five blue" src="./images/coalescent-0.png"></p>
+<p>These individuals will reproduce, giving rise to the next generation. Since all the individuals are genetically identical and have the same chance of reproducing, we can think of these offspring being randomly sampled, with replacement, from the previous&nbsp;generation:</p>
+<p><img alt="Two columns of ten dots, stacked vertically, with lines between the columns representing parentage. Some individuals produce no offspring, some one, and some more than one." src="./images/coalescent-1-keep.png"></p>
+<p>Since there is a great deal of randomness involved in who reproduces successfully and whose offspring survive, not all individuals will produce the same number of offspring in the next generation, even though they all had the same probability of reproducing to begin with. As a result, even in the absence of selection effects, the allele distribution of the new generation is likely to differ from that of the previous generation; this random, unbiased change in allele distribution is known as <em><a href="https://en.wikipedia.org/wiki/Genetic_drift">genetic drift</a></em>.</p>
+<p>As a result of genetic drift, the allele distribution will fluctuate up and down stochastically; sooner or later, one or the other will be eliminated from the population, resulting in <em>fixation</em>:</p>
+<p><img alt="Twenty columns of ten dots, stacked vertically, with lines between the columns representing parentage. The red allele reaches fixation at generation 14." src="./images/coalescent-mid-keep.png"></p>
+<p>The time to fixation depends on the population size<sup id="fnref:effpop"><a class="footnote-ref" href="#fn:effpop">2</a></sup> and some other population parameters; here&#8217;s an example plot for a population with a carrying capacity of 200 instead of&nbsp;10:</p>
+<p><img alt="A plot of the allele frequency distribution of a larger population, reaching fixation at roughly generation 350." src="./images/coalescent-200-neutral-keep.png"></p>
+<p>Fairly dramatic genetic changes, then, can accumulate in a population based purely on genetic drift; there&#8217;s not necessarily any need to invoke selection to explain why genetic differences between populations accumulate over time. That said, what happens when we add selection into the&nbsp;mix?</p>
+<h2>Natural selection is sampling&nbsp;bias</h2>
+<p>Suppose that one of the starting alleles in the population is less <em>fit</em> than the other: individuals with that allele are less likely to produce reproductively-successful offspring. What happens&nbsp;now?</p>
+<p>If one allele is <em>much</em> less fit than the other, the individuals bearing it will probably die without issue, producing a very boring&nbsp;plot:</p>
+<p><img alt="Another twenty-column plot, this time in green and purple. The single initial purple individual produces no offspring, so the purple lineage dies out immediately." src="./images/coalescent-vdel.png"></p>
+<p>So far, so trivial. The interesting cases occur when the fitness of one genotype is close to (either a bit higher or a bit lower than) the old one. In this case, thanks to genetic drift, the less-fit allele (here in purple) can persist in the population for a surprisingly long&nbsp;time&#8230;</p>
+<p><img alt="Another twenty-stage green-and-purple plot, this time representing two alleles with only a small difference in fitness. The less-fit purple allele persists until stage 18, then is lost." src="./images/coalescent-sdel-persist.png"></p>
+<p>&#8230;or even&nbsp;fix!</p>
+<p><img alt="An independent run of the scenario from the previous figure. This time, the slightly-less-fit purple allele reaches fixation at stage 6." src="./images/coalescent-sdel-fixed.png"></p>
+<p>Overall, under these conditions (carrying capacity = 10, relative fitness ~ 0.9) the less-fit allele will reach fixation about a quarter of the time; more than enough for 100% the population to be bearing many deleterious&nbsp;alleles.</p>
+<p>These results are a pretty trivial application of statistics, but they have very important implications for how we should view evolution. Thanks to genetic drift, beneficial mutations will often die out and deleterious ones reach fixation. <em>How</em> often this occurs depends on various factors, the most obvious of which is the magnitude of the mutation&#8217;s effect on fitness &#8212; the more dramatic the effect, the greater selection&#8217;s ability to overcome drift and eliminate the less-fit&nbsp;allele.</p>
+<p>However, another crucial variable, underappreciated outside evolutionary biology, is population&nbsp;size.</p>
+<h2>Evolution and the law of large&nbsp;numbers</h2>
+<p>According to the <a href="https://en.wikipedia.org/wiki/Law_of_large_numbers">law of large numbers</a>, the average of a sample converges in probability towards its expected value as sample size increases: the larger the sample, the smaller the expected relative mean absolute difference between the sample mean and the expected value<sup id="fnref:rad"><a class="footnote-ref" href="#fn:rad">3</a></sup>. If you flip a coin ten times, the chance of deviating from the expected value (five heads) by at least 20% is more than 75%, whereas it&#8217;s only 5% if you flip 100 times and virtually zero if you flip 1000 times. The larger the sample, the more likely you are to see roughly what you&nbsp;expect.</p>
+<p>In our framework of evolution as sampling error, natural selection determines the expected value: the number of offspring of each genotype we expect to see in the next generation, given the distribution in the current generation. But the smaller the population, the more likely it is to deviate substantially from this expectation – that is, for random genetic drift to overwhelm the bias imposed by natural&nbsp;selection. </p>
+<p>If you combine this sample-size-dependent variability with the <a href="https://en.wikipedia.org/wiki/Markov_chain#Absorbing_states">absorbing</a> nature of fixation and elimination (that is, once an allele has been eliminated, it isn&#8217;t coming back), you obtain the result that <strong>the larger the population, the more likely it is that the fitter allele is actually the one that gets fixed</strong>, all else equal. We can see this in our toy model from earlier, where the green allele is 10% fitter than the purple allele and both start with 50% prevalence in the&nbsp;population:</p>
+<p><img alt="A plot of population size vs probability of fixation for two competing alleles, one of which is 10% fitter than the other. The fitter allele fixes at just over 50% when population size is very small, rising to 100% at population sizes of 100 or larger." src="./images/coalescent-fix-even.png"></p>
+<p>When population size is very small, the chance that the fitter (green) allele is the one that eventually fixes is close to 50%; as population size increases, this probability increases, until for sufficiently-large populations it is virtually certain. Smaller differences in fitness would require larger population sizes to consistently fix the fitter allele<sup id="fnref:1percent"><a class="footnote-ref" href="#fn:1percent">4</a></sup>.</p>
+<p>Population size, then, is a crucial factor affecting the optimisation power of evolution: the larger the population size, the greater the capacity of natural selection to select for beneficial mutations and eliminate deleterious ones. As a weak general rule, then, we should expect larger populations to be fitter, while small populations will be more prone to deleterious genetic&nbsp;disorders.</p>
+<p>This is why <a href="https://en.wikipedia.org/wiki/Population_bottleneck">bottlenecks</a> and <a href="https://en.wikipedia.org/wiki/Founder_effect">founder effects</a> are so important in evolution: by reducing the size of the population, they both increase the relative prevalence of rare mutations and decrease the relative strength of natural selection, resulting in very powerful drift. The results of this can be quite striking: on the tiny Micronesian island of <a href="https://en.wikipedia.org/wiki/Pingelap#Total_color_blindness">Pingelap</a>, for example, almost 10% of the population are completely colourblind, a condition that is extremely rare elsewhere<sup id="fnref:rare"><a class="footnote-ref" href="#fn:rare">5</a></sup>. This is believed to be the result of a typhoon in 1775 that left only 20 survivors, one of whom was a carrier of the condition<sup id="fnref:carrier"><a class="footnote-ref" href="#fn:carrier">6</a></sup>.</p>
+<h2>Implications</h2>
+<p>What can we infer from all this? Firstly, when thinking about evolutionary processes it&#8217;s vital not to neglect genetic drift. Just because something spread throughout a population and reached fixation does <em>not</em> mean it is adaptive. Secondly, this is especially true when populations are small, and we should always pay careful attention to population size when thinking about how a population might evolve. In general, we should expect larger populations<sup id="fnref:effpop2"><a class="footnote-ref" href="#fn:effpop2">7</a></sup> to be fitter than smaller ones, since (among other things) natural selection will be more effective at weeding out deleterious alleles and propagating beneficial&nbsp;ones.</p>
+<p>Thirdly, <a href="http://www.lablit.com/article/11">it has not escaped my notice</a> that this framework has obvious implications for thinking about analogous evolutionary processes that might occur outside of biology. More on this&nbsp;anon.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:assumptions">
+<p>I&#8217;m also assuming non-overlapping generations and a constant carrying capacity; relaxing these assumptions makes the maths more complicated but shouldn&#8217;t alter the basic conclusion. Similarly, while new genetic variants are capable of spreading much more quickly through sexual populations, the same basic phenomena still apply.&#160;<a class="footnote-backref" href="#fnref:assumptions" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:effpop">
+<p>Actually, the time to fixation (and many other aspects of the population&#8217;s behaviour) depend on its <em><a href="https://en.wikipedia.org/wiki/Effective_population_size">effective population size</a></em>, which depends not only on its actual population size but also on various demographic and genetic factors. This is an absolutely crucial distinction that I am eliding here for the sake of brevity (in my defence, population geneticists seem to also do the same thing when speaking casually). Effective population sizes are often much smaller than actual (&#8220;census&#8221;) sizes; for example, the usual estimate that gets bandied about for global human effective population size is roughly 10,000.&#160;<a class="footnote-backref" href="#fnref:effpop" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rad">
+<p>In fact, the <span class="caps">RMD</span> looks like it might vary as a power law of sample size:
+<img alt="A log-log plot of relative mean absolute difference vs sample size, showing a very linear-looking relationship" src="./images/rmd-log-log.png">
+I noticed this from simulations and haven&#8217;t bothered to tease out the underlying mathematics here, but still, kinda cool.&#160;<a class="footnote-backref" href="#fnref:rad" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:1percent">
+<p>See e.g. this plot for a 1% difference in fitness:
+<img alt="A plot of population size vs probability of fixation for two competing alleles, one of which is 1% fitter than the other. The fitter allele fixes at roughly 50% when population size is very small, rising to about 95% at a population size of 300. The rise in fixation rate is much slower than when the fitness difference was 10%." src="./images/coalescent-fix-even-1percent.png">&#160;<a class="footnote-backref" href="#fnref:1percent" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rare">
+<p>According to Wikipedia, the proportion of Americans with the same condition is 0.003%.&#160;<a class="footnote-backref" href="#fnref:rare" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:carrier">
+<p>It probably didn&#8217;t hurt that the suspected carrier was also the chief of the island.&#160;<a class="footnote-backref" href="#fnref:carrier" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:effpop2">
+<p>Again, I&#8217;m actually talking about effective population size here, not census size.&#160;<a class="footnote-backref" href="#fnref:effpop2" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="./category/posts.html">posts</a>  | Tagged as <a href="./tag/evolution.html">evolution</a>, <a href="./tag/statistics.html">statistics</a></p>
+    </div>
+</div><div class="row-fluid">
+    <div class="article-comment-btn col-sm-10 col-sm-offset-1">
+    <a class="btn btn-mini xsmall" href="./2019/11/05/evolution-is-sampling-error">
+        <i class="icon-comment"></i> Comment </a>
+    </div>
+</div>
+<hr class="post-sep"/>
+
+
+<!-- Post title -->
+<div class="row-fluid">
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="./2019/11/03/linkpost-11-2019"><h1>Linkpost&nbsp;11/2019</h1></a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
         <p>Posted on Sun 03 November 2019 by Will Bradshaw</p>
     </div>
 </div>
 
 <!-- Post content -->
 <div class="row-fluid">
-    <div class="article-content col-sm-10 col-sm-offset-1">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
         <h2>Stuff from&nbsp;me</h2>
 <p>I put up two more pieces on the <span class="caps">EA</span> Forum that I didn&#8217;t think needed to be on this blog: a <a href="https://forum.effectivealtruism.org/posts/3d2SbKC3bgXyEuExF/how-worried-should-i-be-about-a-childless-disneyland">question</a> about Bostrom&#8217;s &#8220;Disneyland without children&#8221; and a <a href="https://forum.effectivealtruism.org/posts/37T6NzajJ8j68x8DP/concrete-next-steps-for-ageing-based-welfare-measures">followup</a> to my <a href="https://apomorphic.com/2019/09/27/ageing-biomarkers-welfare">previous post</a> about ageing-based welfare measures with some concrete suggestions for future progress in the&nbsp;area.</p>
 <h2>New&nbsp;stuff</h2>
@@ -99,12 +197,12 @@
 
 <!-- Tags and categories -->
 <div class="row-fluid">
-    <div class="article-info col-sm-10 col-sm-offset-1">
-        <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/links.html">links</a></p>
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="./category/posts.html">posts</a>  | Tagged as <a href="./tag/links.html">links</a></p>
     </div>
 </div><div class="row-fluid">
     <div class="article-comment-btn col-sm-10 col-sm-offset-1">
-    <a class="btn btn-mini xsmall" href="https://apomorphic.com/2019/11/03/linkpost-11-2019">
+    <a class="btn btn-mini xsmall" href="./2019/11/03/linkpost-11-2019">
         <i class="icon-comment"></i> Comment </a>
     </div>
 </div>
@@ -113,21 +211,21 @@
 
 <!-- Post title -->
 <div class="row-fluid">
-    <div class="article-title col-sm-10 col-sm-offset-1">
-        <a href="https://apomorphic.com/2019/09/27/ageing-biomarkers-welfare"><h1>Assessing biomarkers of ageing as measures of cumulative animal&nbsp;welfare</h1></a>
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="./2019/09/27/ageing-biomarkers-welfare"><h1>Assessing biomarkers of ageing as measures of cumulative animal&nbsp;welfare</h1></a>
     </div>
 </div>
 
 <!-- Post info -->
 <div class="row-fluid">
-    <div class="article-info col-sm-10 col-sm-offset-1">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
         <p>Posted on Fri 27 September 2019 by Will Bradshaw</p>
     </div>
 </div>
 
 <!-- Post content -->
 <div class="row-fluid">
-    <div class="article-content col-sm-10 col-sm-offset-1">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
         <p><em>This article is cross-posted from the Wild Animal Initiative website. The original is <a href="https://www.wildanimalinitiative.org/blog/biomarkers-cumulative-welfare">here</a>. It is also available on the <span class="caps">EA</span> Forum <a href="https://forum.effectivealtruism.org/posts/QnwxhgrFARoJ2sMvA/assessing-biomarkers-of-ageing-as-measures-of-cumulative">here</a>.</em></p>
 <h2>Summary</h2>
 <p>In order to determine which conditions provide the best overall quality of life for nonhuman animals, it is important to be able to measure their cumulative welfare experience. The ideal measure of cumulative welfare would be comprehensive, objectively measurable, and easy to transfer across species; however, existing approaches fall far short of this ideal. Recent academic work has suggested that measures of biological ageing could provide a highly promising alternative measure of cumulative welfare, which comes much closer to meeting these ideal&nbsp;goals.</p>
@@ -302,12 +400,12 @@
 
 <!-- Tags and categories -->
 <div class="row-fluid">
-    <div class="article-info col-sm-10 col-sm-offset-1">
-        <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/ageing.html">ageing</a>, <a href="https://apomorphic.com/tag/science.html">science</a>, <a href="https://apomorphic.com/tag/animal-welfare.html">animal welfare</a>, <a href="https://apomorphic.com/tag/effective-altruism.html">effective altruism</a></p>
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="./category/posts.html">posts</a>  | Tagged as <a href="./tag/ageing.html">ageing</a>, <a href="./tag/science.html">science</a>, <a href="./tag/animal-welfare.html">animal welfare</a>, <a href="./tag/effective-altruism.html">effective altruism</a></p>
     </div>
 </div><div class="row-fluid">
     <div class="article-comment-btn col-sm-10 col-sm-offset-1">
-    <a class="btn btn-mini xsmall" href="https://apomorphic.com/2019/09/27/ageing-biomarkers-welfare">
+    <a class="btn btn-mini xsmall" href="./2019/09/27/ageing-biomarkers-welfare">
         <i class="icon-comment"></i> Comment </a>
     </div>
 </div>
@@ -316,21 +414,21 @@
 
 <!-- Post title -->
 <div class="row-fluid">
-    <div class="article-title col-sm-10 col-sm-offset-1">
-        <a href="https://apomorphic.com/2019/09/09/why-we-age-1-intro"><h1>Why We Age, Part 1: What ageing is and is&nbsp;not</h1></a>
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="./2019/09/09/why-we-age-1-intro"><h1>Why We Age, Part 1: What ageing is and is&nbsp;not</h1></a>
     </div>
 </div>
 
 <!-- Post info -->
 <div class="row-fluid">
-    <div class="article-info col-sm-10 col-sm-offset-1">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
         <p>Posted on Mon 09 September 2019 by Will Bradshaw</p>
     </div>
 </div>
 
 <!-- Post content -->
 <div class="row-fluid">
-    <div class="article-content col-sm-10 col-sm-offset-1">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
         <p><em>At the LessWrong European Community Weekend 2018, I gave a talk explaining the intuition behind non-adaptive theories of the evolution of ageing. This blog post and its followup are adapted from that&nbsp;presentation.</em></p>
 <p>When people find out that I did my PhD in the biology of ageing, they tend to ask one of two questions. First, they ask what they can do to live longer. Second, they ask why people age in the first place. My answer to the first question is unfortunately fairly boring at present &#8212; don&#8217;t smoke, eat well, get enough exercise, get enough sleep, <em>et cetera</em> &#8212; but when it comes to the second I think I have more of interest to say. To get this blog rolling (see what I did there), let&#8217;s dive into the important and fractious question of why we&nbsp;age.</p>
 <h2>What is&nbsp;ageing?</h2>
@@ -341,13 +439,13 @@
 <p>When people talk about &#8220;ageing&#8221;, there are broadly speaking three different things they might mean<sup id="fnref:popage"><a class="footnote-ref" href="#fn:popage">1</a></sup>. Firstly, there is the simple process of getting older &#8212; of the amount of time since you were born inexorably increasing. Let&#8217;s call this process &#8220;temporal ageing&#8221;. Ageing in this way has a lot of benefits: more memories, more experience, and with luck more self-knowledge and more&nbsp;wisdom.</p>
 <p>Unfortunately, the benefits conferred by temporal ageing are currently inextricably tied to the physical changes denoted by the second meaning of &#8220;ageing&#8221;: a generalised physiological deterioration, characterised by a wide range of unfortunate symptoms affecting almost every system of the body. As a result of this second kind of ageing, we become slower, more fragile, more prone to disease, and generally more likely to experience impaired health and wellbeing as we get older, eventually leading to death. As we as a civilisation have gradually eliminated more and more extrinsic forms of suffering and death, the depredations of ageing have gradually become the primary cause of ill health and death in developed countries by an overwhelming margin. This is the kind of ageing people mean when they worry about getting cancer or dementia, buy &#8220;anti-ageing&#8221; skin cream, or invest in real anti-ageing research; it&#8217;s the province of doctors, physiologists, and molecular biologists. Let&#8217;s call it &#8220;physiological&nbsp;ageing&#8221;.</p>
 <p>Finally, the individual changes taking place due to physiological ageing give rise to a distinctive statistical pattern at the level of entire populations of humans or other animals: a progressive increase in mortality (probability of dying) and decrease in fecundity (expected number of offspring) in older age cohorts. This pattern is what gives rise to plots like the ones below, and it&#8217;s what demographers, actuaries and evolutionary biologists generally mean when they talk about &#8220;ageing&#8221;. From this perspective, the specific functional changes underlying these changes in survival and reproduction are less important than the high-level functional changes that result: changes in the rates of reproduction, illness, disability, and death. From an evolutionary perspective it is the first and last of these, reproduction and death rates, that are the most important. We can call this final meaning of the word ageing &#8220;demographic&nbsp;ageing&#8221;.</p>
-<p><img alt="Alt Text" src="https://apomorphic.com/images/gompertz.png"></p>
+<p><img alt="Alt Text" src="./images/gompertz.png"></p>
 <p><em>Logarithmic mortality curves for British and American populations at different points in the 20th century. The <span class="math">\(y\)</span>-axes give the log-probability of dying for individuals in a given age-class in the year and country indicated. Source: <span class="caps">US</span> Office of Retirement and Disability&nbsp;Policy</em></p>
 <p>These two phenomena, of physiological and demographic ageing, are tightly interlinked in any given population but are nevertheless conceptually distinct: two different species (an insect and a mammal, say) could undergo very different physiological ageing processes but exhibit very similar patterns of demographic ageing. Physiological and demographic ageing also give us very different perspectives on the question of why we age. From the perspective of physiological ageing, the question is generally asking about the specific genetic, molecular, histological or physiological mechanisms underlying the changes we observe: what particular aspect of our biology is causing our bodies to deteriorate with age in this or that particular way? From the perspective of demographic ageing, the relevant <em>why</em> question is simpler and more fundamental: given that ageing appears to be pretty deleterious to the survival and reproduction chances of any individual experiencing it, how could we have evolved to exhibit declining functionality with age <em>at all</em>?</p>
 <p>In these posts, I&#8217;ll be focusing on the second kind of <em>why</em> question, discussing the evolutionary teleology of the ageing process. As we&#8217;ll see, from that perspective, ageing is frankly pretty&nbsp;weird.</p>
 <h2>Three puzzles of&nbsp;ageing</h2>
 <p>When we look at nature, or at ourselves, we observe something surprising: animals get old. In many, many different species, old age is accompanied by a progressive decline in functionality, leading to higher rates of death<sup id="fnref:mortality"><a class="footnote-ref" href="#fn:mortality">2</a></sup> and lower rates of reproduction. This pattern is seen almost everywhere you look in the animal kingdom, suggesting that it has either evolved again and again independently or been retained after inheritance from a common ancestor. Yet despite this commonality, there is profound variation in the details of the ageing process: even closely related species can differ dramatically in how quickly they age and how long they tend to live. And here and there, we see species that seem to have escaped the iron grip of ageing, exhibiting mortality that stays constant or even declines over&nbsp;time.</p>
-<p><img alt="Alt Text" src="https://apomorphic.com/images/bats_mice.png"></p>
+<p><img alt="Alt Text" src="./images/bats_mice.png"></p>
 <p><em>Distribution of lifespans across all mouse and bat species from the AnAge database (accessed 2018-09-01). Despite their relatively close relationship, similar size, and similar metabolic rates, bats live dramatically longer than&nbsp;mice.</em></p>
 <p>This, then, is the threefold puzzle of ageing. Why should a process that appears to be so deleterious to the individuals experiencing it have evolved to be so widespread in nature? Given this ubiquity, which implies there is some compelling evolutionary reason for ageing to exist, why do different animals vary so much in their lifespans? And how, when ageing has either evolved or been retained in so many different lineages, have some animals evolved to escape&nbsp;it?</p>
 <p>Any successful theory of the evolution of ageing must be able to convincingly answer all these questions. A number of attempts have been made over the years, none of which has managed to capture the consensus of the academic community. These attempted explanations can be broadly divided into two groups: those that propose with some reason why ageing, which seems so deleterious, is adaptive after all, and those that accept that ageing is deleterious and attempt to explain why it might evolve anyway. I&#8217;ll discuss the main representatives of each group in separate blog posts, but first I want to tackle one simple non-adaptive theory that doesn&#8217;t quite manage to do the&nbsp;job.</p>
@@ -446,12 +544,12 @@
 
 <!-- Tags and categories -->
 <div class="row-fluid">
-    <div class="article-info col-sm-10 col-sm-offset-1">
-        <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/ageing.html">ageing</a>, <a href="https://apomorphic.com/tag/science.html">science</a>, <a href="https://apomorphic.com/tag/evolution.html">evolution</a></p>
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="./category/posts.html">posts</a>  | Tagged as <a href="./tag/ageing.html">ageing</a>, <a href="./tag/science.html">science</a>, <a href="./tag/evolution.html">evolution</a></p>
     </div>
 </div><div class="row-fluid">
     <div class="article-comment-btn col-sm-10 col-sm-offset-1">
-    <a class="btn btn-mini xsmall" href="https://apomorphic.com/2019/09/09/why-we-age-1-intro">
+    <a class="btn btn-mini xsmall" href="./2019/09/09/why-we-age-1-intro">
         <i class="icon-comment"></i> Comment </a>
     </div>
 </div>
@@ -461,7 +559,7 @@
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-    <li class="active"><a href="https://apomorphic.com/index.html">1</a></li>
+    <li class="active"><a href="./index.html">1</a></li>
 
     <li class="next disabled"><a href="#">&rarr; Next</a></li>
 
