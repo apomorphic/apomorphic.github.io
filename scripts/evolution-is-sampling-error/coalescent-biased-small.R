@@ -1,5 +1,6 @@
 library(tidyverse)
 library(cowplot)
+library(RColorBrewer)
 
 #==============================================================================
 # SETUP
@@ -56,6 +57,7 @@ alleles <- c(0L, 1L)
 fitness <- c(1,1)
 ngen_small <- 5
 ngen_mid <- 20
+palette <- brewer.pal(6, "Set1")[c(3,4)]
 
 #==============================================================================
 # AUXILIARY FUNCTIONS
@@ -63,8 +65,8 @@ ngen_mid <- 20
 
 make_initial_pop <- function(cap = capacity, al = alleles, fit = fitness){
   tibble(id = seq(cap), generation = 0, parent = id,
-         allele = as.factor(rep(al, each = cap/length(al))),
-         fitness = rep(fit, each = cap/length(al)))
+         allele = as.factor(c(rep(al[1], cap/2), rep(al[2], cap/2))),
+         fitness = c(rep(fit[1], cap/2), rep(fit[2], cap/2)))
 }
 
 make_child_pop <- function(pop, cap = capacity){
@@ -77,12 +79,12 @@ iterate_pop <- function(pop, cap = capacity){
   bind_rows(pop, make_child_pop(pop, cap))
 }
 
-make_circ_plot <- function(pop, s = 5){
+make_circ_plot <- function(pop, s = 5, pal = palette){
   ggplot(pop) + 
     geom_segment(aes(x=pmax(0,generation-1), xend=generation, y=parent, 
                      yend=id, colour = allele)) +
     geom_point(aes(x=generation, y=id, colour=allele), shape = 16, size = s) +
-    scale_color_brewer(type = "qual", palette = "Set1") + theme_blank
+    scale_color_manual(values = pal) + theme_blank
 }
 
 generation_pop <- function(generation, cap = capacity, al = alleles, 
@@ -114,7 +116,7 @@ get_fixation_dist <- function(n = 100, cap = capacity, al = alleles,
     tibble(run = 1:n, fix = .)
 }
 
-make_stack_plot <- function(pop){
+make_stack_plot <- function(pop, pal = palette){
   pop %>% group_by(generation, allele, fitness) %>% 
     summarise(N = n(), P = n()/100) %>%
     ggplot() +
@@ -123,57 +125,43 @@ make_stack_plot <- function(pop){
     scale_x_continuous(name = "Generation") +
     scale_y_continuous(name = "Allele frequency (%)",
                        labels = function(y) y*100) +
-    scale_fill_brewer(type = "qual", palette = "Set1") + 
+    scale_fill_manual(values = pal) + 
     theme_minimal() + theme_base + theme(legend.position = "none")
 }
 
+get_winner <- function(pop) {
+  pop %>% filter(generation == max(generation)) %>% pull(allele) %>%
+    as.numeric %>% unique
+}
+
+count_winners <- function(nrep, cap = capacity, al = alleles, fit = fitness){
+  sapply(seq(nrep), function(r) fix_pop(cap, al, fit) %>% get_winner) %>%
+    tibble(run = 1:nrep, winner = .) %>% group_by(winner) %>% count %>%
+    ungroup %>% mutate(size = cap, p = n/sum(n))
+}
+
+get_fix_rate <- function(nrep, caps, fit){
+  lapply(caps, function(cap) count_winners(nrep, cap, 1:2, fit) %>%
+           filter(as.numeric(winner)==2)) %>% bind_rows
+}
+
 #==============================================================================
-# INITIAL PARENTAL POPULATION
+# VERY DELETERIOUS
 #==============================================================================
 
-pop_0 = make_initial_pop()
-g_0 <- make_circ_plot(pop_0)
-save_plot(filename = "content/images/coalescent-0.png",
-          plot = g_0, base_width = 10, base_height = 8, units="cm",
+pop_vdel <- generation_pop(ngen_mid, fit = c(1,0.1))
+g_vdel <- make_circ_plot(pop_vdel)
+save_plot(filename = "content/images/coalescent-vdel.png",
+          plot = g_vdel, base_width = 20, base_height = 8, units="cm",
           limitsize = FALSE)
 
 
 #==============================================================================
-# FIRST CHILD GENERATION
+# SLIGHTLY DELETERIOUS
 #==============================================================================
 
-pop_1 <- iterate_pop(pop_0)
-g_1 <- make_circ_plot(pop_1)
-save_plot(filename = "content/images/coalescent-1.png",
-          plot = g_1, base_width = 10, base_height = 8, units="cm",
+pop_sdel <- generation_pop(ngen_mid, fit = c(1,1/1.1))
+g_sdel <- make_circ_plot(pop_sdel)
+save_plot(filename = "content/images/coalescent-sdel.png",
+          plot = g_sdel, base_width = 20, base_height = 8, units="cm",
           limitsize = FALSE)
-
-
-#==============================================================================
-# LATER CHILD GENERATIONS
-#==============================================================================
-
-pop_small <- generation_pop(ngen_small)
-g_small <- make_circ_plot(pop_small)
-save_plot(filename = "content/images/coalescent-small.png",
-          plot = g_small, base_width = 10, base_height = 8, units="cm",
-          limitsize = FALSE)
-
-
-pop_mid <- generation_pop(ngen_mid)
-g_mid <- make_circ_plot(pop_mid)
-save_plot(filename = "content/images/coalescent-mid.png",
-          plot = g_mid, base_width = 20, base_height = 8, units="cm",
-          limitsize = FALSE)
-
-#==============================================================================
-# BIG POPULATION
-#==============================================================================
-
-# pop_big <- fix_pop(200, tail=20)
-# g_big <- make_stack_plot(pop_big)
-# save_plot(filename = "content/images/coalescent-200-neutral.png",
-#           plot = g_big, base_width = 15, base_height = 8, units="cm",
-#           limitsize = FALSE)
-
-

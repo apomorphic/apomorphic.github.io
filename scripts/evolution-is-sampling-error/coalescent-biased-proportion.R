@@ -1,6 +1,7 @@
 library(tidyverse)
 library(cowplot)
 library(RColorBrewer)
+library(reshape2)
 
 #==============================================================================
 # SETUP
@@ -52,28 +53,27 @@ theme_blank <- theme_void() +
                                     
 
 # Define parameters
-capacity = 10
-alleles <- c(0L, 1L)
-fitness <- c(1,1)
-ngen_small <- 5
-ngen_mid <- 20
+capacity <- 10
+rel_fitness <- 1
 palette <- brewer.pal(6, "Set1")[c(3,4)]
-start_prop <- 0.1
+start_prop <- 0.5
 
 #==============================================================================
 # AUXILIARY FUNCTIONS
 #==============================================================================
 
-test_fixation <- function(cap = capacity, fit = fitness, prop = start_prop){
-  limit <- capacity * 10
+# Run simulations and test fixation
+
+run_trace <- function(cap = capacity, fit = rel_fitness, prop = start_prop){
+  limit <- cap * 10
   prop_vec <- numeric(limit)
   prob_vec <- numeric(limit)
   prop_vec[1] <- prop
   prob_vec[1] <- prop * fit / ((fit - 1) * prop + 1)
   n <- 2
-  while (! p %in% c(0,1)){
+  while (! prop_vec[n-1] %in% c(0,1)){
     if (n < limit){
-      prop_vec[n] <- rbinom(1, capacity, prob_vec[n-1])
+      prop_vec[n] <- rbinom(1, cap, prob_vec[n-1])/cap
       prob_vec[n] <- prop_vec[n] * fit / ((fit - 1) * prop_vec[n] + 1)
       n <- n + 1
     } else {
@@ -82,73 +82,45 @@ test_fixation <- function(cap = capacity, fit = fitness, prop = start_prop){
       limit <- limit * 2
     }
   }
+  return(prop_vec[1:(n-1)])
 }
 
-make_initial_db <- function(cap = capacity, fit = fitness){
-  
+test_fixation <- function(cap = capacity, fit = rel_fitness,
+                          prop = start_prop){
+  run_trace(cap, fit, prop) %>% tail(1) %>% as.logical
 }
 
-make_initial_pop <- function(cap = capacity, al = alleles, fit = fitness,
-                             sp = start_prop){
-  tibble(id = seq(cap), generation = 0, parent = id,
-         allele = as.factor(
-           c(rep(alleles[1], cap * (1-sp)), rep(alleles[2], cap * sp))
-         ),
-         fitness = c(rep(fit[1], cap - 1), fit[2]))
+# Run multiple traces and get fixation statistics
+
+count_winners <- function(nrep, cap = capacity, fit = fitness[2], 
+                            sp = start_prop){
+  sapply(seq(nrep), function(r) test_fixation(cap, fit, sp)) %>% mean
 }
 
-make_child_pop <- function(pop, cap = capacity){
-  pop %>% filter(generation == max(generation)) %>%
-    sample_n(cap, T, fitness) %>% arrange(id) %>%
-    mutate(generation = generation + 1, parent = id, id = seq(cap))
+get_fix_rate <- function(nrep, caps, fit, sp){
+  tibble(size = caps, p = sapply(caps, function(c) 
+    count_winners(nrep, c, fit, sp)))
 }
 
-iterate_pop <- function(pop, cap = capacity){
-  bind_rows(pop, make_child_pop(pop, cap))
+get_fix_rates_fixed <- function(nrep, caps, fit, n_indivs=1){
+  # Get fix rates when starting from a fixed number of individuals
+  tibble(size = caps, p = sapply(1:length(caps), function(n)
+    count_winners(nrep, caps[n], fit, n_indivs/caps[n])))
 }
 
-make_circ_plot <- function(pop, s = 5, pal = palette){
-  ggplot(pop) + 
-    geom_segment(aes(x=pmax(0,generation-1), xend=generation, y=parent, 
-                     yend=id, colour = allele)) +
-    geom_point(aes(x=generation, y=id, colour=allele), shape = 16, size = s) +
-    scale_color_manual(values = pal) + theme_blank
-}
+# Make per-generation plots
 
-generation_pop <- function(generation, cap = capacity, al = alleles, 
-                           fit = fitness){
-  p <- make_initial_pop(cap, al, fit)
-  if(generation > 0) for (n in seq(generation)){ p <- iterate_pop(p, cap) }
-  return(p)
-}
-
-count_states <- function(pop){
-  # Count the number of states in the latest generation from a population
-  pop %>% filter(generation == max(generation)) %>% pull(allele) %>%
-    unique %>% length
-}
-
-fix_pop <- function(cap = capacity, al = alleles, fit = fitness,
-                    tail = 0){
-  # Run a population until it reaches fixation
-  p <- make_initial_pop(cap, al, fit)
-  while(count_states(p) > 1) p <- iterate_pop(p, cap)
-  if (tail > 0) for (n in seq(tail)){ p <- iterate_pop(p, cap) }
-  return(p)
-}
-
-get_fixation_dist <- function(n = 100, cap = capacity, al = alleles, 
-                              fit = fitness){
-  sapply(seq(n), function(n) fix_pop(cap, al, fit) %>% pull(generation) %>%
-           max) %>% 
-    tibble(run = 1:n, fix = .)
+get_plot_tab <- function(trace){
+  tab_1 <- tibble(generation = 1:length(trace)-1, p = trace, allele = 1L)
+  tab_0 <- tab_1 %>% mutate(p = 1-p, allele = 0L)
+  tab <- bind_rows(tab_0, tab_1) %>% arrange(generation, allele) %>%
+    mutate(allele = factor(allele, levels = c(0L, 1L)))
+  return(tab)
 }
 
 make_stack_plot <- function(pop, pal = palette){
-  pop %>% group_by(generation, allele, fitness) %>% 
-    summarise(N = n(), P = n()/100) %>%
-    ggplot() +
-    geom_col(aes(x=generation,y=P,fill=allele), position="fill",
+  ggplot(pop) +
+    geom_col(aes(x=generation,y=p,fill=allele), position="fill",
              width = 1) +
     scale_x_continuous(name = "Generation") +
     scale_y_continuous(name = "Allele frequency (%)",
@@ -157,25 +129,37 @@ make_stack_plot <- function(pop, pal = palette){
     theme_minimal() + theme_base + theme(legend.position = "none")
 }
 
-get_winner <- function(pop) {
-  pop %>% filter(generation == max(generation)) %>% pull(allele) %>%
-    as.numeric %>% unique
-}
-
-count_winners <- function(nrep, cap = capacity, al = alleles, fit = fitness){
-  sapply(seq(nrep), function(r) fix_pop(cap, al, fit) %>% get_winner) %>%
-    tibble(run = 1:nrep, winner = .) %>% group_by(winner) %>% count %>%
-    ungroup %>% mutate(size = cap, p = n/sum(n))
-}
-
-get_fix_rate <- function(nrep, caps, fit){
-  lapply(caps, function(cap) count_winners(nrep, cap, 1:2, fit) %>%
-           filter(as.numeric(winner)==2)) %>% bind_rows
-}
-
 #==============================================================================
 # SLIGHTLY DELETERIOUS / ADVANTAGEOUS
 #==============================================================================
 
-fix_del <- get_fix_rate(100, c(10,30,100), c(1,1.5))
-fix_adv <- get_fix_rate(100, c(10,30,100), c(1,1/1.5))
+nrep <- 1e4
+caps <- round(10^seq(0,2.5,0.25))[-1]
+delta <- 1.1
+
+# Even start
+fix_adv_even <- get_fix_rate(nrep, caps, delta, 0.5)
+fix_adv_even_mod <- fix_adv_even %>%
+  mutate(q = 1-p) %>% melt(id.var = "size", value.name = "p",
+                           variable.name = "allele")
+
+g_fix_even <- ggplot(fix_adv_even_mod, aes(x=size, y=p, colour=allele)) +
+  geom_line() + geom_point() + 
+  scale_colour_manual(values=palette) +
+  scale_x_log10(name = "Population size", expand = c(0,0),
+                sec.axis = dup_axis(name = NULL)) +
+  scale_y_continuous(name = "P(fixation)", expand = c(0,0),
+                     limits = c(0,1), breaks = seq(0,1,0.1)) +
+  theme_classic() + theme_base + theme(legend.position = "none")
+save_plot(filename = "content/images/coalescent-fix-even.png",
+          plot = g_fix_even, base_width = 10, base_height = 8, units="cm",
+          limitsize = FALSE)
+
+
+# # 10% start
+# fix_del_skew <- get_fix_rate(nrep, caps, 1/delta, 0.1)
+# fix_adv_skew <- get_fix_rate(nrep, caps, delta, 0.1)
+# 
+# # Single individual
+# fix_del_single <- get_fix_rates_fixed(nrep, caps, 1/delta)
+# fix_adv_single <- get_fix_rates_fixed(nrep, caps, delta)

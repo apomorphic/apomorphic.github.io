@@ -61,3 +61,9 @@ PLUGINS = ['render_math']
 
 # Disqus comments
 DISQUS_SITENAME = "apomorphic"
+
+# ...
+WITH_FUTURE_DATES = False
+DEFAULT_METADATA = {
+            'status': 'draft',
+            }

@@ -2,6 +2,7 @@ Title: Why We Age, Part 1: What ageing is and is not
 Date: 2019-09-09
 Tags: ageing, science, evolution
 Slug: why-we-age-1-intro
+Status: published
 
 *At the LessWrong European Community Weekend 2018, I gave a talk explaining the intuition behind non-adaptive theories of the evolution of ageing. This blog post and its followup are adapted from that presentation.*
 

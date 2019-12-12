@@ -2,6 +2,7 @@ Title: Linkpost 11/2019
 Date: 2019-11-03
 Tags: links
 Slug: linkpost-11-2019
+Status: published
 
 ## Stuff from me
 
