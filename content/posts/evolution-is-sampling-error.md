@@ -1,5 +1,5 @@
 Title: Evolution is sampling error
-Date: 2019-11-05
+Date: 2019-12-12
 Tags: evolution, statistics
 Slug: evolution-is-sampling-error
 Status: published
