@@ -9,12 +9,16 @@
 <!-- Show articles in date order -->
 {% if articles %}
 {% for article in articles_page.object_list %}
-{% include "article-content.html" %}
+<div class="container">
+    {% include "article-content.html" %}
+</div>
 {% if DISQUS_SITENAME %}
-<div class="row-fluid">
-    <div class="article-comment-btn col-sm-10 col-sm-offset-1">
-    <a class="btn btn-mini xsmall" href="{{ SITEURL }}/{{ article.url }}">
-        <i class="icon-comment"></i> Comment </a>
+<div class="container">
+    <div class="row-fluid">
+        <div class="article-comment-btn col-sm-10 col-sm-offset-1">
+            <a class="btn btn-mini xsmall" href="{{ SITEURL }}/{{ article.url }}">
+                <i class="icon-comment"></i> Comment </a>
+        </div>
     </div>
 </div>
 {% endif %}
