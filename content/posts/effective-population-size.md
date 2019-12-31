@@ -1,5 +1,5 @@
 Title: An addendum on effective population size
-Date: 2019-12-24
+Date: 2019-12-31
 Tags: evolution, statistics
 Slug: effective-population-size
 Status: published
