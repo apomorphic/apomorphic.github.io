@@ -1,0 +1,201 @@
+<!-- Single article page with comments -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>An addendum on effective population size - Apomorphic</title>
+        <meta name="description" content="">
+        <meta name="author" content="Will Bradshaw">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+            <script src="https://apomorphic.com/theme/html5.js"></script>
+        <![endif]-->
+
+
+        <!-- Le styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link href="https://apomorphic.com/theme/local.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/pygments.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/font-awesome.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+        <header class="blog-header">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="col-sm-8">
+                        <div class="container">
+                            <!-- Website headline -->
+                            <div class="row-fluid">
+                                <a href="https://apomorphic.com" class="brand">Apomorphic</a>
+                            </div>
+                            <!-- Website tagline/subtitle -->
+                            <div class="row-fluid">
+                                <span class="tagline">A blog about biology, self-improvement, and the future</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pages in links on right -->
+                    <div class="col-sm-4" id="blog-nav">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="https://apomorphic.com/about">About</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- End of fluid row-->
+            </div>   <!-- End of Container-->
+        </header>
+
+        <main>
+        <! -- Main content of page, depending on page type -->
+        <div class="container">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="col-sm-12">
+<!-- Main article content (as on homepage) -->
+<div class="container">
+<!-- Post title -->
+<div class="row-fluid">
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="https://apomorphic.com/drafts/effective-population-size"><h1>An addendum on effective population&nbsp;size</h1></a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted on Tue 24 December 2019 by Will Bradshaw</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p><strong>Follows from:</strong> <a href="https://apomorphic.com/2019/12/12/evolution-is-sampling-error">Evolution is Sampling&nbsp;Error</a></p>
+<p>It seems a lot of people either missed my footnotes in the last post about <a href="https://en.wikipedia.org/wiki/Effective_population_size">effective population size</a>, or noticed them, read them and were confused<sup id="fnref:footnotes"><a class="footnote-ref" href="#fn:footnotes">1</a></sup>. I think the second response is reasonable; for non-experts, the concept of effective population size is legitimately fairly confusing. So I thought I&#8217;d follow up with a quick addendum about what effective population size is and why we use it. Since I&#8217;m not a population geneticist by training this should also be a useful reminder for&nbsp;me.</p>
+<p>The field of biology that deals with the evolutionary dynamics of populations &#8212; how mutations arise and spread, how allele frequencies shift over time through drift and selection, how alleles flow between partially-isolated populations &#8212; is <a href="https://en.wikipedia.org/wiki/Population_genetics"><strong>population genetics</strong></a>. &#8220;PopGen&#8221; differs from most of biology in that its foundations are primarily hypothetico-deductive rather than empirical: one begins by proposing some simple model of how evolution works in a population, then derives the mathematical consequences of those initial assumptions. A very large and often very beautiful edifice of theory has been constructed from these initial axioms, often yielding surprising and interesting&nbsp;results.</p>
+<p>Population geneticists can therefore say a great deal about the evolution of a population, <em>provided</em> it meets some simplifying assumptions. Unfortunately, real populations often violate these assumptions, often dramatically so. When this happens, the population becomes dramatically harder to model productively, and the maths becomes dramatically more complicated and messy. It would therefore be very useful if we could find a way to usefully model more complex real populations using the models developed for the simple&nbsp;cases.</p>
+<p>Fortunately, just such a hack exists. Many important ways in which real populations deviate from ideal assumptions cause the population to behave roughly like an idealised population of a different (typically smaller) size. This being the case, we can try to estimate the size of the idealised population that would best approximate the behaviour of the real population, then model the behaviour of that (smaller, idealised) population instead. The size of the idealised population that causes it to best approximate the behaviour of the real population is that real population&#8217;s &#8220;effective&#8221;&nbsp;size.</p>
+<p>There are various ways in which deviations from the ideal assumptions of population genetics can cause a population to act as though it were smaller – i.e. to have an effective size (often denoted <span class="math">\(N_e\)</span>) than its actual census size – but two of the most important are non-constant population size and, for sexual species, nonrandom mating. According to <a href="https://public.wsu.edu/~gomulki/mathgen/materials/gillespie_book.pdf">Gillespie (1998)</a>, who I&#8217;m using as my introductory source here, fluctuations in population size are often by far the most important&nbsp;factor.</p>
+<p>In terms of some of the key equations of population genetics, a population whose size fluctuates between generations will behave like a population whose constant size is the <a href="https://en.wikipedia.org/wiki/Harmonic_mean">harmonic mean</a> of the fluctuating sizes. Since the harmonic mean is much more sensitive to small values than the arithmetic mean, this means a population that starts large, shrinks to a small size and then grows again will have a much smaller effective size than one that remains large<sup id="fnref:bottleneck"><a class="footnote-ref" href="#fn:bottleneck">2</a></sup>. Transient <a href="https://en.wikipedia.org/wiki/Population_bottleneck">population bottlenecks</a> can therefore have dramatic effects on the evolutionary behaviour of a&nbsp;population.</p>
+<p>Many natural populations fluctuate wildly in size over time, both cyclically and as a result of one-off events, leading to effective population sizes much smaller than would be expected if population size were reasonably constant. In particular, the human population as a whole has been through <a href="https://royalsocietypublishing.org/doi/full/10.1098/rspb.2009.1473">multiple bottlenecks</a> in its history, as well as many more local bottlenecks and <a href="https://en.wikipedia.org/wiki/Founder_effect#Among_human_populations">founder effects</a> occurring in particular human populations, and has recently undergone an extremely rapid <a href="https://en.wikipedia.org/wiki/World_population_estimates#/media/File:Population_curve.svg">surge</a> in population size. It should therefore not be too surprising that the human <span class="math">\(N_e\)</span> is <em>dramatically</em> smaller than the census size; estimates vary pretty widely, but as I said in the footnotes to the last post, tend to be roughly on the order of <span class="math">\(10^4\)</span>.</p>
+<p>In sexual populations, skewed sex ratios and other forms of nonrandom mating will also tend to reduce the effective size of a population, though less dramatically<sup id="fnref:sex_ratio"><a class="footnote-ref" href="#fn:sex_ratio">3</a></sup>; I don&#8217;t want to go into too much detail here since I haven&#8217;t talked so much about sexual populations&nbsp;yet.</p>
+<p>As a result of these and other factors, then, the effective sizes of natural populations is often much smaller than their actual census sizes. Since genetic drift is <a href="https://apomorphic.com/2019/12/12/evolution-is-sampling-error">stronger</a> in populations with smaller effective sizes, that means we should expect populations to be much more &#8220;drifty&#8221; than you would expect if you just looked at their census sizes. As a result, evolution is typically more dominated by drift, and less by selection, than would be the case for an idealised population of equivalent (census)&nbsp;size.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:footnotes">
+<p>Lesson 1: Always read the footnotes.
+Lesson 2: Never assume people will read the footnotes.&#160;<a class="footnote-backref" href="#fnref:footnotes" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bottleneck">
+<p>As a simple example, imagine a population that begins at size 1000 for 4 generations, then is culled to size 10 for 1 generation, then returns to size 1000 for another 5 generations. The resulting effective population size will be: <br><br><span class="math">\(N_e = \frac{10}{\frac{9}{1000} + \frac{1}{10}} \approx 91.4\)</span><br><br>A one-generation bottleneck therefore cuts the size of the population by an order of magnitude.&#160;<a class="footnote-backref" href="#fnref:bottleneck" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sex_ratio">
+<p>According to <a href="https://public.wsu.edu/~gomulki/mathgen/materials/gillespie_book.pdf">Gillespie</a> again, In the most basic case of a population with two sexes, the effective population size is given by <span class="math">\(N_e = \frac{4\alpha}{1+\alpha^2}\)</span>. A population with twice as many males as females (or vice-versa) will have an <span class="math">\(N_e\)</span> about 90% the size of its census population size; a tenfold difference between the sexes will result in an <span class="math">\(N_e\)</span> about a third the size of the census size. Humans have a fairly even sex ratio so this particular effect won&#8217;t be very important in our case, though other kinds of nonrandom mating might well be.&#160;<a class="footnote-backref" href="#fnref:sex_ratio" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/evolution.html">evolution</a>, <a href="https://apomorphic.com/tag/statistics.html">statistics</a></p>
+    </div>
+</div></div>
+
+<! -- Comments -->
+<div class="container">
+    <div class="article-comments col-sm-10">
+        <h3 id="disqus_title">Comments</h3>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'apomorphic'; 
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                    </div>
+                </div>             </div>         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
