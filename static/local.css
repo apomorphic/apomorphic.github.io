@@ -42,8 +42,8 @@ ul#sitelinks.nav.nav-list > li > a >i {
     color: #1f334b;}
 /* Styling for elements */
 /* a {color: #0A5693} */
-a {color: #841212}
-a:hover {color: #841212; text-decoration: underline}
+a {color: #9C0000}
+a:hover {color: #9C0000; text-decoration: underline}
 body {font-family: "Source Serif Pro"; font-size: 19px; line-height: 1.4em; padding: 0px;}
 p { font-family: "Source Serif Pro"; font-size: 19px; line-height: 1.4em; margin-top: 0.8em; margin-bottom: 0.8em; text-align: justify; box-sizing:border-box;   width: 100% }
 li { line-height: 1.6em; }
@@ -173,6 +173,6 @@ div.container {
     padding-right: 0;
 }
 
-#disqus_title {
+#disqus_title_header {
     margin-bottom: 1ex;
 }
