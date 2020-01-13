@@ -189,4 +189,26 @@ save_plot(filename = "content/images/elf-mutations.png",
           plot = g_elves_cutoff, base_width = 13, base_height = 6, units="cm",
           # base_width = 16, base_height = 9, units = "cm", dpi = 320,
           limitsize = FALSE)
-  
+
+#==============================================================================
+# EXTRINSIC MORTALITY
+#==============================================================================
+
+# Mortality vs survivorship
+var_ms <- bind_rows(lapply(elf_mort * c(1,3,10), function(m)
+                  tibble(Age = 1:max_age_plot, Mortality = m, 
+                  Survivorship = cumprod(1-Mortality))))
+
+g_var_ms <- ggplot(var_ms) + 
+  geom_line(aes(x=Age,y=Survivorship,colour=factor(Mortality)), size=1) +
+  xlim(c(NA,1000)) +
+  scale_y_continuous(name="% Survival", labels = function(y) round(y*100),
+                     breaks = c(0,0.5,1)) +
+  scale_color_brewer(type="div", palette = "Set2", name="Mortality") +
+  theme_classic() + theme_base +
+  theme(legend.position = "right")
+
+save_plot(filename = "content/images/extrinsic-mortality.png",
+          plot = g_var_ms, base_width = 13, base_height = 6, units="cm",
+          # base_width = 16, base_height = 9, units = "cm", dpi = 320,
+          limitsize = FALSE)
