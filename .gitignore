@@ -1,7 +1,8 @@
 #  Custom
 output
-./drafts
+drafts/*
 *.swp
+content/posts/drafts
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

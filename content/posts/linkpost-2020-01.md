@@ -37,7 +37,7 @@ Happy New Year! More links abound. As always, these are "new" only in the sense 
 [sumner]: https://www.econlib.org/against-blackmail/
 [christiano]: https://sideways-view.com/2019/06/02/checkmate-on-blackmail/
 [cowen]: https://marginalrevolution.com/marginalrevolution/2019/02/why-should-blackmail-be-illegal.html
-[hanson_blackmail]: http://www.overcomingbias.com/2019/02/checkmate-on-blackmail.html]
+[hanson_blackmail]: http://www.overcomingbias.com/2019/02/checkmate-on-blackmail.html
 [secret]: http://scholars-stage.blogspot.com/2018/08/tradition-is-smarter-than-you-are.html
 [aumann]: https://en.wikipedia.org/wiki/Aumann%27s_agreement_theorem
 [double-crux]: https://www.lesswrong.com/posts/jrLkMFd88b4FRMwC6/don-t-double-crux-with-suicide-rock
