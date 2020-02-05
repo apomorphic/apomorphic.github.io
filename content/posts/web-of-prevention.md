@@ -4,6 +4,8 @@ Tags: biosecurity, policy
 Slug: web-of-prevention
 Status: published
 
+*Also posted on the [EA Forum](https://forum.effectivealtruism.org/posts/emvBqtzYYRQwGrazx/the-web-of-prevention).*
+
 *[Epistemic status: Quick discussion of a seemingly useful concept from a field I as yet know little about.]*
 
 I've recently started reading around the biosecurity literature, and one concept that seems to come up fairly frequently is the Web of Prevention (also variously called the Web of Deterrence, the Web of Protection, the Web of Reassurance...[^web]). Basically, this is the idea that the distributed, ever-changing, and dual-use nature of potential biosecurity threats means that we can't rely on any single strategy (e.g. traditional arms control) to prevent them. Instead, we must rely on a network of different approaches, each somewhat failure-prone, that together can provide robust protection.
