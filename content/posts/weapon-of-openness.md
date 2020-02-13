@@ -1,6 +1,6 @@
 Title: Thoughts on The Weapon of Openness
 Date: 2020-02-13
-Tags: information hazards
+Tags: information hazards, effective altruism
 Slug: weapon-of-openness
 Status: published
 
