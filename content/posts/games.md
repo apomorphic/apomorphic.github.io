@@ -224,7 +224,7 @@ There is so much about *Primordia* that doesn't make sense. Almost all the robot
 
 I'm baffled that a game this short could pack so much into itself that it keeps unspooling in my memory, all these years later. Somehow, so much more of it has lodged in my memory than usual that my mind, used to reconstructing big experiences from tiny slivers of memory, assumes there must really have been far more of it than there was. But that in itself tells you how memorable it was, how well it is the thing that it is.
 
-I hear the [developers][wormwood] have a new game out soon, also published by Wadjet Eye. I'll definitely be keeping an eye on that. In the meantime *Primordia* is so old and cheap now that, really, what excuse do you have *not* To play it?
+I hear the [developers][wormwood] have a new game out soon, also published by Wadjet Eye. I'll definitely be keeping an eye on that. In the meantime *Primordia* is so old and cheap now that, really, what excuse do you have *not* to play it?
 
 [wormwood]: http://www.wormwoodstudios.com/
 
