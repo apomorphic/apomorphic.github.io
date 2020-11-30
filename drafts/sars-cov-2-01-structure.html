@@ -1,0 +1,208 @@
+<!-- Single article page with comments -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>An introduction to SARS-CoV-2, part 1: Structure - Apomorphic</title>
+        <meta name="description" content="">
+        <meta name="author" content="Will Bradshaw">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+            <script src="../theme/html5.js"></script>
+        <![endif]-->
+
+
+        <!-- Le styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link href="../theme/local.css" rel="stylesheet">
+        <link href="../theme/pygments.css" rel="stylesheet">
+        <link href="../theme/font-awesome.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+        <header class="blog-header">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="col-sm-8">
+                        <div class="container">
+                            <!-- Website headline -->
+                            <div class="row-fluid">
+                                <a href=".." class="brand">Apomorphic</a>
+                            </div>
+                            <!-- Website tagline/subtitle -->
+                            <div class="row-fluid">
+                                <span class="tagline">A blog about biology, self-improvement, and the future</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pages in links on right -->
+                    <div class="col-sm-4" id="blog-nav">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="../about">About</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- End of fluid row-->
+            </div>   <!-- End of Container-->
+        </header>
+
+        <main>
+        <! -- Main content of page, depending on page type -->
+        <div class="container">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="col-sm-12">
+<!-- Main article content (as on homepage) -->
+<div class="container">
+<!-- Post title -->
+<div class="row-fluid">
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="../drafts/sars-cov-2-01-structure"><h1>An introduction to <span class="caps">SARS</span>-CoV-2, part 1:&nbsp;Structure</h1></a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted on Wed 18 March 2020 by Will Bradshaw</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p><em>[<span class="caps">NB</span>: This was a very difficult document to pitch correctly. I reserve the right to shuffle content around between the footnotes as the main text to aid understanding, and am keen for non-expert&nbsp;feedback.]</em></p>
+<p>Behold, a machine of great and terrible&nbsp;power:</p>
+<p><img alt="Transmission electron micrograph of SARS-CoV-2 virions" src="../images/sars-cov-2-tem.jpg"></p>
+<p>This<sup id="fnref:TEM"><a class="footnote-ref" href="#fn:TEM">1</a></sup> is <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2"><span class="caps">SARS</span>-CoV-2</a><sup id="fnref:name"><a class="footnote-ref" href="#fn:name">2</a></sup>, the virus responsible for the <a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">current <span class="caps">COVID19</span> pandemic</a>, which is shaping up to be the worst in a century. Lots of people are going all-out trying to model the disease and predict what will happen next; I&#8217;ve been taking a somewhat different approach, starting with the virus itself and moving out from there. This has been mostly for my own education, but  I&#8217;m sharing what I&#8217;ve learned here as well; it&#8217;s often more motivating to work on something when you have an audience in&nbsp;mind.</p>
+<p>Today I&#8217;ll focus on the structure of the <span class="caps">SARS</span>-CoV-2 virion: what it&#8217;s made of and how it works. The next post will talk about how the virus gets into cells and discuss its replication cycle, with all the usual entertaining viral tricks. I hope for future posts to cover things like the pathology of the virus, how it interacts with the immune system, and how the various known and proposed countermeasures work. There&#8217;s some chance I drop all this to jump on the epidemiology/modelling bandwagon in the near future&nbsp;instead.</p>
+<p>Take a closer look at the particles in the image above. In the middle of each virion<sup id="fnref:virion"><a class="footnote-ref" href="#fn:virion">3</a></sup> is a large red area. That&#8217;s the <strong>nucleocapsid</strong>, containing the packaged-up viral <strong>genome</strong>. Surrounding the nucleocapsid are two dense layers stained in yellow; that&#8217;s the viral <strong>envelope</strong>, made of cellular membrane stolen from the host cell. The two dense layers are the two sides of the phosolipid bilayer. Finally, the blue <strong>corona</strong> surrounding the virion comprises the heads of spike proteins projecting from the envelope; these proteins are responsible for recognising and orchestrating invasion of host cells and so are key to the viral replication process. As is so often repeated in the news media, it&#8217;s these spike proteins that give the coronaviruses their distinctive appearance, and their&nbsp;name.</p>
+<p>[<span class="caps">TODO</span>: How big is the coronavirus virion as a whole? How much does it&nbsp;weigh?]</p>
+<p>In this post I&#8217;ll tackle each of these components in turn, starting with the genome and moving outwards until we&#8217;ve covered the entire virion. Then, next time, I&#8217;ll discuss how the machine actually works: how it gets into cells, replicates its genome, and produces new virions to infect more&nbsp;cells.</p>
+<h2>The <span class="caps">SARS</span>-CoV-2&nbsp;genome</h2>
+<p>The genome is the central component of the virion, both spatially, (it&#8217;s surrounded by everything else) and functionally (it&#8217;s the point of the whole business). Like other coronaviruses, <span class="caps">SARS</span>-CoV-2 has a linear, single-stranded, positive-sense, nonsegmented <span class="caps">RNA</span> genome. Rattling off a list like this tells you a lot about the virus if you know some virology, so let&#8217;s clarify these terms in&nbsp;context.</p>
+<ul>
+<li><strong><span class="caps">RNA</span>:</strong> Viral genomes can be composed of either <span class="caps">DNA</span> (like our genome) or <span class="caps">RNA</span> (like the rest of our nucleic-acid machinery). In combination with the strandedness and sense of the genome (see below), what the viral genome is made of determines what hoops the virus has to jump through to get the host cell to replicate its genome and express its genes, and hence has a big impact on viral biology. <span class="caps">RNA</span> replication is typically much more error-prone than that of <span class="caps">DNA</span>, giving <span class="caps">RNA</span> viruses much higher mutation rates than <span class="caps">DNA</span> viruses<sup id="fnref:mutation"><a class="footnote-ref" href="#fn:mutation">4</a></sup>. However, due to unusual features of their replication machinery<sup id="fnref:unusual"><a class="footnote-ref" href="#fn:unusual">5</a></sup>, coronavirus genomes are unusually stable for <span class="caps">RNA</span> viruses; as a result, coronaviruses have the largest genomes of any <span class="caps">RNA</span> virus group<sup id="fnref:size"><a class="footnote-ref" href="#fn:size">6</a></sup>.</li>
+<li><strong>Single-stranded:</strong> Both <span class="caps">DNA</span> genomes can be either single- or double-stranded. A double-stranded <span class="caps">DNA</span> (dsDNA) genome takes on the familiar double helix structure we&#8217;re used to seeing; a dsRNA genome is similar. Single-stranded nucleic acids (ssRNA and ssDNA) can form complex <a href="https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure">secondary structures</a> through internal base-pairing, which in the case of viruses can be important to their behaviour inside the&nbsp;cell.</li>
+<li><strong>Positive-sense:</strong>  The &#8220;sense&#8221; of a single-stranded nucleic acid molecule<sup id="fnref:ds"><a class="footnote-ref" href="#fn:ds">7</a></sup> specifies whether it codes for protein directly (positive-sense) or is the <a href="https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)">reverse-complement</a> of a sequence that codes for protein (negative-sense)<sup id="fnref:ambisense"><a class="footnote-ref" href="#fn:ambisense">8</a></sup>. Given a few other requirements, a positive-sense <span class="caps">RNA</span> (henceforth (+)ssRNA) virus has the easiest time, since its genome can be immediately and directly read by the cell’s protein-synthesis machinery upon cell entry<sup id="fnref:negative"><a class="footnote-ref" href="#fn:negative">9</a></sup>.</li>
+<li><strong>Linear:</strong> Nucleic acid molecules can be linear, with a 5&#8217; and a 3&#8217; end<sup id="fnref:5prime"><a class="footnote-ref" href="#fn:5prime">10</a></sup>, or circular, with no end at all. Coronaviruses have linear&nbsp;genomes.</li>
+<li><strong>Nonsegmented:</strong> <span class="caps">RNA</span> viruses often have their genomes divided up into multiple separate <span class="caps">RNA</span> molecules, referred to as <em>segments</em>, which are packaged up together inside the virion but are replicated separately inside the host cell<sup id="fnref:segment"><a class="footnote-ref" href="#fn:segment">11</a></sup>. Coronaviruses, including <span class="caps">SARS</span>-CoV-2, do not have segmented genomes; each virion contains a single <span class="caps">RNA</span> molecule encoding the entire&nbsp;genome.</li>
+</ul>
+<p>The <span class="caps">SARS</span>-CoV-2 genome is about 30,000 bases (30 kb) in length, long for an <span class="caps">RNA</span> virus but in line with other coronaviruses. For comparison, <span class="caps">HIV</span>-1 has a genome of about 10kb, influenza A’s genome is ~14kb, and polio’s is ~7.5kb<sup id="fnref:genomes"><a class="footnote-ref" href="#fn:genomes">12</a></sup>, while those of <span class="caps">SARS</span>-CoV and <span class="caps">MERS</span>-CoV are both very close in size to <span class="caps">SARS</span>-CoV-2.</p>
+<p>So much for the viral genome as a molecule. What about its actual content? If you look for diagrams of the genome structure for <span class="caps">SARS</span>-CoV-2, you find things like&nbsp;this:</p>
+<p><img alt="A map of the SARS-CoV-2 genome" src="../images/sars2-genome-zhou.jpg"></p>
+<p>Or&nbsp;this:</p>
+<p><img alt="A map of the SARS-CoV-2 genome" src="../images/sars2-genome-lu.jpg"></p>
+<p>Or&nbsp;this:</p>
+<p><img alt="A map of the SARS-CoV-2 genome" src="../images/sars2-genome-wu.jpg"></p>
+<p>This tells us that the scientists in the field have yet to reach complete consensus on structure, nomenclature, or basic standards of graphic design. I&#8217;m going to go with the last version<sup id="fnref:scale"><a class="footnote-ref" href="#fn:scale">13</a></sup>, which <a href="https://www.cell.com/cell-host-microbe/abstract/S1931-3128(20)30072-X">came out</a> less than a week ago at the time of writing and is hopefully fairly up-to-date<sup id="fnref:speed"><a class="footnote-ref" href="#fn:speed">14</a></sup>. That paper finds 14 <a href="https://en.wikipedia.org/wiki/Open_reading_frame">open reading frames</a> (coding sequences, more-or-less<sup id="fnref:frame"><a class="footnote-ref" href="#fn:frame">15</a></sup>) encoding 27 different viral proteins. Some of these ORFs overlap with or are embedded in others<sup id="fnref:overlap"><a class="footnote-ref" href="#fn:overlap">16</a></sup>, which is exactly the kind of dirty trick you expect from viral genomes – they&#8217;re under extreme pressure to fit a lot of information into a very small&nbsp;space. </p>
+<p>The star of the show, though, is the gigantic <span class="caps">ORF</span> taking up the first two-thirds of the genome, labelled variously ORF1a/1b, pp1ab, or in some sources rep1a/1b. This is the gene that is <a href="https://en.wikipedia.org/wiki/Translation_(biology)">translated</a> into protein immediately upon cell entry, and that has to co-ordinate expression of all the other viral genes. To do this you need a lot more than one functional protein, but only the first <span class="caps">ORF</span> in the genome gets translated &#8220;for free&#8221; by the cellular machinery. To solve this problem, the first <span class="caps">ORF</span> produces a gigantic polyprotein comprising many different important proteins strung together. This polyprotein contains two different protease (protein-cutting) domains, which it uses to cut <em>itself</em> into fifteen different functional&nbsp;pieces. </p>
+<p>(Some of you may be confused by the fact that the diagram above shows two different ORFs, labelled pp1a and pp1ab. This is more viral genome deviousness; I&#8217;ll explain in more detail next time. Focus just on pp1ab for now and forget about pp1a for a&nbsp;bit.)</p>
+<p>These fifteen pieces are then folded into fifteen different functional proteins, collectively called <strong>non-structural proteins</strong> (nsps) since they don&#8217;t form part of the final virion. I won&#8217;t list them exhaustively here, but they include most of the key components involved in forming the viral <em>replicase-transcriptase complex</em> (<span class="caps">RTC</span>), which is responsible for copying the viral genome and expressing viral genes other than <span class="caps">ORF1</span>. Others act to impede the host cell&#8217;s internal immune system, or to shut down production of host cell proteins so it can focus exclusively on making new viruses. For some (such as nsp2) the function is still not&nbsp;understood.</p>
+<p>Downstream of the gigantic first <span class="caps">ORF</span> are twelve much smaller ORFs coding for the other twelve viral proteins. These are divided into two categories: the four core <strong>structural proteins</strong> S, E, M and N, and eight <strong>accessory proteins</strong>. The four structural proteins are always present, in the same order, in all coronavirus genomes; the accessory proteins are interspersed around (or inside) the structural proteins, and vary much more from virus to&nbsp;virus.</p>
+<p>I&#8217;ll talk more about the structural proteins when I talk about the viral replication cycle next&nbsp;time. </p>
+<ul>
+<li>As I said at the start, the <strong>spike protein</strong> (S) is responsible for recognising and binding receptor proteins on the surface of the host&nbsp;cell</li>
+</ul>
+<p>S1 is highly divergent&nbsp;between </p>
+<p>responsible for recognising and orchestrating invasion of host cells and so are key to the viral replication&nbsp;process</p>
+<ul>
+<li>The <strong>membrane protein</strong> (M) is the most abundant&nbsp;of </li>
+</ul>
+<p>is the primary protein responsible for inducing and maintaining membrane curvature in order to make and maintain the viral envelope. It also interacts with the nucleocapsid to attach the viral genome to the envelope. It&nbsp;is </p>
+<p><img alt="Sketches of the four core structural proteins of the SARS-CoV-2 genome: S, M, E and N" src="../images/sars2-structurals.png"></p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:TEM">
+<p>Image credit <a href="https://www.niaid.nih.gov/news-events/novel-coronavirus-sarscov2-images"><span class="caps">NIAID</span></a>, via <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2">Wikipedia</a>. There are lots more great images available <a href="https://www.flickr.com/photos/niaid/albums/72157712914621487">here</a>; I went with the one everyone else is using because it helpfully distinguishes the different parts of the virion.&#160;<a class="footnote-backref" href="#fnref:TEM" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:name">
+<p>The name is due to the virus&#8217;s genetic similarity to the original causative agent of <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome"><span class="caps">SARS</span></a>, <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus"><span class="caps">SARS</span>-CoV</a>, which was <a href="https://www.biorxiv.org/content/10.1101/2020.02.07.937862v1">judged</a> high enough that the virus should be considered part of the same viral &#8220;species&#8221; and not get its own name. This has proven controversial, and there has been some <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30419-0/fulltext">back</a> and <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30557-2/abstract">forth</a> on whether a different name would be better. The tangles people have been getting into trying to find a decent name for this thing should give you an idea of why everyone used to just name viruses after the locations of outbreaks.&#160;<a class="footnote-backref" href="#fnref:name" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:virion">
+<p>A <em>virion</em> is an individual, independent virus particle. It&#8217;s a more specific term than &#8220;virus&#8221;, which can also refer to the viral genome and its activities inside the cell.&#160;<a class="footnote-backref" href="#fnref:virion" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mutation">
+<p>These high mutation rates, which are about three orders of magnitude greater than those for <span class="caps">DNA</span> viruses, allow <span class="caps">RNA</span> viruses to evolve very rapidly, which is a major reason why they are the number-one pathogens of pandemic concern.&#160;<a class="footnote-backref" href="#fnref:mutation" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:unusual">
+<p>Specifically, unlike most <span class="caps">RNA</span> viruses, the replicase-transcriptase complex of coronaviruses possesses <a href="https://en.wikipedia.org/wiki/Proofreading_(biology)">proofreading</a> activity, allowing it to detect and correct errors.&#160;<a class="footnote-backref" href="#fnref:unusual" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:size">
+<p>The error rate of a replicator imposes a size limit on its genome, known as its error threshold. Above the error threshold, mutations inexorably destroy the information stored in the genome. Hence, a lower mutation rate permits a larger genome size, which carries advantages if there is a limit on the genetic complexity that can be fit into a given length of genome sequence. I don&#8217;t really understand error thresholds yet and will come back to this in future.&#160;<a class="footnote-backref" href="#fnref:size" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ds">
+<p>Double-stranded nucleic acids always comprise two complementary strands, one in positive sense and one in negative sense, so this distinction doesn’t apply to them.&#160;<a class="footnote-backref" href="#fnref:ds" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ambisense">
+<p>Some single-stranded viral genomes are ambisense, meaning that both the genome and its reverse-complement code for (different) proteins. Such is viral genetics.&#160;<a class="footnote-backref" href="#fnref:ambisense" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:negative">
+<p>Negative-sense <span class="caps">RNA</span> viruses must go through an extra step of converting their negative-sense genomes into positive-sense copies before protein synthesis can occur, and hence must include the machinery for doing this in their virions.&#160;<a class="footnote-backref" href="#fnref:negative" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5prime">
+<p>5&#8217; and 3&#8217; refer to two of the carbon atoms in the nucleic acid backbone. Successive nucleotides are added to the nucleic-acid chain such that the 5&#8217; carbon of the new nucleotide is linked (via phosphate group) to the 3&#8217; end of the previous nucleotide, giving the chain an intrinsic directionality. Paired nucleic-acid chains run in opposite directions, so the 5&#8217; end of the forward strand corresponds to the 3&#8217; end of the reverse strand. All this is very important to understanding molecular genetics. Wikipedia has an explanation <a href="https://en.wikipedia.org/wiki/Directionality_(molecular_biology)#5%E2%80%B2-end">here</a>.&#160;<a class="footnote-backref" href="#fnref:5prime" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:segment">
+<p>This is important for the evolution of segmented viruses, since if the same cell is infected by multiple strains their segments can get <a href="https://en.wikipedia.org/wiki/Reassortment">shuffled together</a>. This option is unavailable to nonsegmented viruses like <span class="caps">SARS</span>-CoV-2.&#160;<a class="footnote-backref" href="#fnref:segment" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:genomes">
+<p><span class="caps">DNA</span> virus genomes can be (but are not always) much larger; adenovirus has a genome of ~36kb and herpes simplex 1 has a genome of ~150kb. As for cellular organisms, <em>E. coli</em>&#8216;s genome is about 1.5 megabases (Mb), yeast is ~12 Mb, and the human genome, famously, is ~3.2 <em>giga</em>bases in size.&#160;<a class="footnote-backref" href="#fnref:genomes" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:scale">
+<p>Note that, unlike the others, this most recent genome diagram is not to scale.&#160;<a class="footnote-backref" href="#fnref:scale" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:speed">
+<p>The speed of development in this space is breathtaking to those of us used to the more sedate pace of academic science; the week-old paper I&#8217;m using already has 29 citations on Google Scholar.&#160;<a class="footnote-backref" href="#fnref:speed" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:frame">
+<p><span class="caps">RNA</span> base sequences are <a href="https://en.wikipedia.org/wiki/Translation_(biology)">converted</a> into protein amino-acid sequences in sets of three (known as codons): <span class="caps">GAR</span> produces glutamic acid, <span class="caps">UCA</span> produces serine, <a href="https://en.wikipedia.org/wiki/Genetic_code">and so forth</a>. How you break up a continuous string of <span class="caps">RNA</span> bases into codons specifies a <em><a href="https://en.wikipedia.org/wiki/Reading_frame">reading frame</a></em>; if you start translating one base forward or back you get a different reading frame and a completely different (usually useless) protein results. A reading frame is <em>open</em> if it can be <a href="https://en.wikipedia.org/wiki/Translation_(biology)">translated</a> into a protein by the appropriate cellular machinery.&#160;<a class="footnote-backref" href="#fnref:frame" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:overlap">
+<p>To get one gene to overlap with another, you need the same sequence to produce two different, functional proteins when read in different reading frames (see previous footnote). This is pretty hard, but viral evolution is very smart.&#160;<a class="footnote-backref" href="#fnref:overlap" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="../category/drafts.html">drafts</a>  | Tagged as <a href="../tag/biology.html">biology</a>, <a href="../tag/virology.html">virology</a>, <a href="../tag/covid19.html">covid19</a></p>
+    </div>
+</div></div>
+
+<! -- Comments -->
+<div class="container">
+    <div class="article-comments col-sm-10">
+        <h3 id="disqus_title_header">Comments</h3>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'apomorphic';
+            var disqus_title = 'An introduction to <span class="caps">SARS</span>-CoV-2, part 1:&nbsp;Structure';
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                    </div>
+                </div>             </div>         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,314 @@
+<!-- Single article page with comments -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>Exploring the Streisand effect - Apomorphic</title>
+        <meta name="description" content="">
+        <meta name="author" content="Will Bradshaw">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+            <script src="../theme/html5.js"></script>
+        <![endif]-->
+
+
+        <!-- Le styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link href="../theme/local.css" rel="stylesheet">
+        <link href="../theme/pygments.css" rel="stylesheet">
+        <link href="../theme/font-awesome.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+        <header class="blog-header">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="col-sm-8">
+                        <div class="container">
+                            <!-- Website headline -->
+                            <div class="row-fluid">
+                                <a href=".." class="brand">Apomorphic</a>
+                            </div>
+                            <!-- Website tagline/subtitle -->
+                            <div class="row-fluid">
+                                <span class="tagline">A blog about biology, self-improvement, and the future</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pages in links on right -->
+                    <div class="col-sm-4" id="blog-nav">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="../about">About</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- End of fluid row-->
+            </div>   <!-- End of Container-->
+        </header>
+
+        <main>
+        <! -- Main content of page, depending on page type -->
+        <div class="container">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="col-sm-12">
+<!-- Main article content (as on homepage) -->
+<div class="container">
+<!-- Post title -->
+<div class="row-fluid">
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="../drafts/streisand-effect"><h1>Exploring the Streisand&nbsp;effect</h1></a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted on Fri 26 June 2020 by Will Bradshaw</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p><em>A few weeks ago I did some fairly extensive reading on the <a href="https://en.wikipedia.org/wiki/Streisand_effect">Streisand effect</a>. Since I now don&#8217;t expect that work to lead to any more formal academic writing, I&#8217;m publishing my thoughts on the topic here in less-polished form. This first post will provide a general overview of existing work on the effect; I hope to follow up later with thoughts on what EAs can learn from&nbsp;this.</em></p>
+<hr>
+<p><strong><span class="caps">TL</span>;<span class="caps">DR</span>:</strong> The Streisand effect occurs when efforts to suppress the spread of information cause it to spread more widely. It occurs for several reasons: because censorship is <em>interesting</em> independent of the information being censored; because it provides a good <em>signal</em> that the information being suppressed is worth knowing; and because it is <em>offensive</em>, triggering instinctive opposition in both target and audience. Would-be censors can risk triggering Streisand effects for a variety of rational and irrational reasons; however, even if a given incident has strong <em>potential</em> to backfire, a significant <em>actual</em> Streisand effect typically requires concerted and media-savvy opposition. It is difficult to estimate the actual rate of Streisand effects as a proportion of attempts at censorship; however, even if &#8220;general&#8221; Streisand effects that reach national news are very rare, smaller effects that remain localised to particular communities can remain a major&nbsp;concern.</p>
+<hr>
+<p>Since its coinage in 2005, the <a href="https://en.wikipedia.org/wiki/Streisand_effect">Streisand effect</a> has become a well-known internet phenomenon, and a serious concern for those seeking to limit the spread of information. The effect has many different definitions, but broadly speaking refers to the phenomenon whereby <em>seeking to suppress information results in it becoming more widely known than it otherwise would&nbsp;have.</em></p>
+<p>A few famous examples<sup id="fnref:examples"><a class="footnote-ref" href="#fn:examples">1</a></sup> to set the&nbsp;scene:</p>
+<ul>
+<li>In 2003, Barbra Streisand sued a photographer for posting a photograph of her house online, as part of a series documenting coastal erosion in California. In addition to losing the suit, the resulting publicity resulted in vastly more people viewing the photograph. This case <a href="https://www.techdirt.com/articles/20050105/0132239.shtml">later became the trope namer</a>.</li>
+<li>In 2013, French intelligence agencies attempted to suppress an obscure Wikipedia article about a <a href="https://en.wikipedia.org/wiki/Pierre-sur-Haute_military_radio_station">military radio station</a>, going so far as arresting a Wikipedia editor and forcing him to delete the page. The page was quickly restored by an editor outside France and quickly <a href="https://arstechnica.com/tech-policy/2013/04/wikipedia-editor-allegedly-forced-by-french-intelligence-to-delete-classified-entry/">became the most-viewed page</a> on French&nbsp;Wikipedia.</li>
+<li>In 2012, the British High Court ordered five British ISPs to block access to the filesharing site The Pirate Bay. The case featured prominently in national news, and the Bay <a href="https://www.theguardian.com/commentisfree/2012/jul/11/pirate-bay-ban">received record levels of traffic</a> during and after the court&nbsp;case.</li>
+</ul>
+<p>These examples typify the usual patterns of famous Streisand-effect cases: most involve either celebrities or corporations seeking to protect their reputations or intellectual property, or governments seeking to protect state secrets or silence dissent. The plaintiff is typically powerful, heavy-handed, and surprisingly heedless of public relations. The typical defendant is (or can be presented to be) a scrappy underdog, with <a href="https://www.plagiarismtoday.com/2012/06/26/understanding-the-streisand-effect/">access to enough media savvy</a> to capture public sympathy. But even if the plaintiff has defenders, that can just make it worse: an ongoing conflict can be even more interesting than a one-off outrage, and a <a href="https://en.wikipedia.org/wiki/Internet_Watch_Foundation_and_Wikipedia">clash of sacred values</a> can be the juiciest conflict of&nbsp;all.</p>
+<p>It&#8217;s clear that the Streisand effect is a real phenomenon in at least some cases, but why? What conditions cause some attempts at censorship to succeed, while others not only fail, but explode in the censors&#8217; faces? And how big a problem is the Streisand effect, really, for those who wish to manage the information shared by&nbsp;others?</p>
+<h2>Some definitions and&nbsp;distinctions</h2>
+<p>As stated slightly differently above, a good general definition of the Streisand effect is: <em>The phenomenon whereby an attempt to suppress information has the unintended consequence of causing it to spread more&nbsp;widely.</em></p>
+<p>Put more concisely, <em>censorship is newsworthy</em>.</p>
+<p>The Streisand effect is thus a particular instance of <em>censorship backfire</em>, in which attempted suppression of information results in unanticipated negative consequences for the would-be&nbsp;censor.</p>
+<p>Before we discuss why the Streisand effect occurs, it&#8217;s worth distinguishing it from a few related&nbsp;concepts:</p>
+<ul>
+<li>Firstly, the Streisand effect specifically refers to cases where attempted censorship is <em>counterproductive</em>: where the information to be suppressed becomes <em>more</em> widely known than in the counterfactual. This should be distinguished from censorship that is merely <em>ineffective</em>, failing to reduce spread of the information as much as the would-be censor would like. This is quite important: a high risk that your attempt to suppress information fails is very different, decision-theoretically, from a risk that it actually causes the information to&nbsp;spread.</li>
+<li>Secondly, the Streisand effect should be distinguished from other ways in which censorship can backfire: most obviously, by <em>damaging the reputation</em> of the censor<sup id="fnref:weakness"><a class="footnote-ref" href="#fn:weakness">2</a></sup>. If your attempt to suppress information attracts so much opprobrium that it turns out to be net-bad for you, but does not actually result in the counterfactual spread of the information in question, then that is a case of censorship backfire, but is importantly different from the Streisand effect<sup id="fnref:payne"><a class="footnote-ref" href="#fn:payne">3</a></sup>.</li>
+</ul>
+<p>A third category of things that are distinct from the classic Streisand effect, but similar enough that it is often worth discussing them together, is counterproductive <em>secrecy</em>. That is, cases where, instead of causing information spread by attempting to change the actions of others, you cause it by being ostentatiously secretive yourself. This is certainly a real thing: if you make it known that you possess valuable secret information, people will want it. There&#8217;s a reason so many people try to <a href="https://www.techworm.net/2016/02/nsa-data-center-state-hacking-attacks.html">hack the <span class="caps">NSA</span></a>. Some of the dynamics of this are similar to parts of the Streisand effect, but the lack of an interpersonal censor/censee<sup id="fnref:censee"><a class="footnote-ref" href="#fn:censee">4</a></sup> dynamic makes it different enough that I think it&#8217;s worth discussing under a different heading. My focus in this piece will be on the central case of counterproductive <em>censorship</em>, but there is certainly much that could valuably be said about counterproductive&nbsp;secrecy.</p>
+<h2>Decomposing the Streisand&nbsp;effect</h2>
+<blockquote>
+<p>So long as the possession of these writings were attended by danger, they were eagerly sought and read: when there was no longer any difficulty in securing them, they fell into&nbsp;oblivion.</p>
+<p><em>&#8212; Tacitus</em><sup id="fnref:tacquote"><a class="footnote-ref" href="#fn:tacquote">5</a></sup></p>
+</blockquote>
+<p>Where does the Streisand effect come from? Broadly speaking, the phenomenon of censorship attracting unwanted attention can be decomposed into at least three parts: that censorship is <em>per se</em> interesting; that it provides a signal that the information being suppressed is valuable; and that it is often offensive, motivating adversarial seeking-out of the information. The stronger each of these factors is in a given case, the greater the chance of provoking a large Streisand&nbsp;effect.</p>
+<h3>Censorship is&nbsp;interesting</h3>
+<p>Firstly, the attempt to suppress information another wants shared, often by threatening, petitioning for or exacting punishment on the censee, is <em>per se</em> interesting to onlookers. Conflict and drama have always been well-known to attract interest and attention, and stories about conflict and drama communicate valuable information about society: who is powerful, who is not, how particular kinds of conflicts are handled, what various important people believe about various things. People pay attention because these things are interesting and worth knowing about irrespective of the information being suppressed, and <em>as a side effect</em> are more likely to learn about (and remember) the&nbsp;information.</p>
+<p><em>Examples:</em><sup id="fnref:subexamples"><a class="footnote-ref" href="#fn:subexamples">6</a></sup></p>
+<ul>
+<li>The <a href="https://en.wikipedia.org/wiki/Internet_Watch_Foundation_and_Wikipedia">Internet Watch Foundation vs Wikipedia</a> controversy was a case of high drama over two clashing sacred values – freedom of expression vs protection of the vulnerable – mixed with entertaining farce. It also involved dramatic unintended consquences, bold stands on principle, and entertaining mutual misunderstanding. The information in dispute – an explicit album cover – was of relatively little importance to anyone involved, but it sure got a lot of extra attention as a result of the whole&nbsp;mess.</li>
+<li>As Streisand plaintiffs go, <a href="https://en.wikipedia.org/wiki/Google_Spain_v_AEPD_and_Mario_Costeja_Gonz%C3%A1lez">Mario Costeja Gonzáles</a> is one of the more sympathetic. All he wanted was not to be primarily known for long-settled social security debt! But in the process, he sued Google, was counter-sued, and the case went to the Court of Justice of the European Union and established a major legal precedent. This is a <em>very interesting story</em>. And as a result, Costeja Gonzáles&#8217;s social security debt is now <em>extremely</em>&nbsp;well-known.</li>
+</ul>
+<h3>Censorship is a&nbsp;signal</h3>
+<p>In general, people don&#8217;t exert effort to suppress information willy-nilly. There is generally some reason they think <em>this particular</em> information is worth censoring. As such, discovering that someone tried to suppress a given piece of information is good evidence that that information is valuable, and hence worth&nbsp;exposing.</p>
+<p>What we mean by &#8220;valuable&#8221; information depends upon the nature of the audience. For a journalist, valuable information is information that makes a good, newsworthy, clickable story. For an activist, valuable information is information you can use to sway public opinion. For an adversary, valuable information is information you can exploit to gain some kind of advantage over your opponent. For a consumer, valuable information might be information that makes you feel more informed about the world, or that simply entertains you. Regardless, if it is discoverable that you have suppressed information, that is likely to be a signal to <em>somebody</em> that that information is worth making a special effort to&nbsp;uncover.</p>
+<p>One of the loudest ways to broadcast that signal is to register your attempt at censorship in a public forum constantly watched by nosy spectators – say, a court of law. For non-government actors, this is often the only way to compel others to comply with your attempt at censorship, thus putting would-be censors in a catch-22: you can hope your target quietly complies with your cease-and-desist letter, but if they don&#8217;t, your secret is probably hopelessly doomed whether or not you win. Some jurisdictions, <a href="https://en.wikipedia.org/wiki/Injunction#UK_superinjunctions">like the <span class="caps">UK</span></a>, allow actors to try to circumvent this problem through so-called &#8220;super-injunctions&#8221; that prohibit not only the sharing of information but the fact that any such prohibition is in place; this can work, but if the super-injunction later comes to light it provides an extra-strong signal that there is something worth knowing here<sup id="fnref:extra"><a class="footnote-ref" href="#fn:extra">7</a></sup>.</p>
+<p>The signalling effect of concealing information is most obvious in the case of counterproductive secrecy I mentioned above, but it can also be an important factor in counterproductive censorship<sup id="fnref:hagenbach"><a class="footnote-ref" href="#fn:hagenbach">8</a></sup>.</p>
+<p><em>Examples:</em></p>
+<ul>
+<li>In the <a href="https://www.theguardian.com/commentisfree/2012/jul/11/pirate-bay-ban">Pirate Bay example</a> at the start of this post, the blocking of the website sent a strong signal to onlookers: &#8220;here is a place you can get lots of good content for&nbsp;free&#8221;.</li>
+<li>A recent example – in February 2020 Apple <a href="https://www.reuters.com/article/us-apple-germany/what-secrets-apple-embroiled-in-row-over-book-by-german-former-executive-idUSKBN20E2FT">sought to block publication</a> of the German-language book <em>App Store Confidential</em>, which it asserted contained &#8220;a multitude of business secrets&#8221; and &#8220;confidential&#8221; &#8220;business practices&#8221;. Confidential business practices of one of the world&#8217;s most successful companies? That sounds like a book worth buying! The book shot to #2 on Amazon&#8217;s German best-seller&nbsp;charts.</li>
+</ul>
+<h3>Censorship is&nbsp;offensive</h3>
+<p>This one doesn&#8217;t need much elaboration. It is difficult to censor information without making enemies. Censorship is coercive both for the direct censee and for their potential audience (who might prefer to know the information given freely by the censee, but now can&#8217;t), and is also offensive to those people who hold freedom of expression as an important and fundamental right. In many prominent cases, the would-be censor also behaves in a heavy-handed, authoritarian manner that upsets an even larger number of people, further stoking the&nbsp;story.</p>
+<p>This outrage seems to manifest as the Streisand effect in a couple of different ways. Firstly, outrage holds the attention: angry people are much more likely to read, share and remember a story, resulting in it spreading much further (and persisting much longer) than it otherwise would<sup id="fnref:obv"><a class="footnote-ref" href="#fn:obv">9</a></sup>. Secondly, perceived attempts to pressure and control people stimulate <a href="https://en.wikipedia.org/wiki/Reactance_(psychology)">psychological reactance</a>, resulting in them taking actions to spite the would-be controller – which in this case means seeking out and sharing the information in&nbsp;question.</p>
+<p>The importance of this factor is evident in the headlines used to report on Streisand-effect stories, which often emphasise the bad behaviour of the would-be censor and the fact that they &#8220;don&#8217;t want you to see/know&#8221; the information in question. Nevertheless, it can be hard to distinguish this effect from the other two, and in many cases all three are tightly bound&nbsp;together.</p>
+<p><em>Examples:</em></p>
+<ul>
+<li>Streisand&#8217;s actions in the <a href="https://www.plagiarismtoday.com/2012/06/26/understanding-the-streisand-effect/">trope namer example</a> – suing a nonprofit researcher for $50 million dollars for a trivial and inadvertent violation of privacy – were clearly outrageous, and people were correspondingly outraged. This led to the widespread sharing of the story and the mass attention on the offending&nbsp;photo.</li>
+<li>In the <a href="https://arstechnica.com/tech-policy/2013/04/wikipedia-editor-allegedly-forced-by-french-intelligence-to-delete-classified-entry/">French-radio-station example</a>, the authorities involved acted in a way widely perceived as heavy-handed bullying, not to mention technically ignorant. Their principle victim also happened to be the chairman of Wikimedia France, giving him a substantial megaphone to voice his outrage and so stimulate&nbsp;controversy.</li>
+<li>There are several cases on record of businesses <a href="http://pagesix.com/2014/08/04/hotel-charges-500-for-every-bad-review-posted-online/">threatening</a> or <a href="https://www.techdirt.com/articles/20160901/07171135412/court-tosses-prestigious-pets-1-million-defamation-suit-against-unhappy-customers.shtml">suing</a> customers over bad reviews, an idea that makes virtually everyone angry. Union Street Guest House, the most notorious case, was <a href="https://www.yelp.com/biz/union-street-guest-house-hudson?hrid=_p-R59VY-c19Nmxt4r9X9w">deluged with bad reviews</a> from people who had never stayed there, who were furious about their &#8220;no bad review&#8221; policy<sup id="fnref:badreview"><a class="footnote-ref" href="#fn:badreview">10</a></sup>.</li>
+</ul>
+<h2>Why provoke the Streisand&nbsp;effect?</h2>
+<p>Given these all these reasons censorship can backfire, why do would-be censors try to suppress information? Why trigger the Streisand effect rather than allow the information to wallow in news-free&nbsp;obscurity?</p>
+<h3>Error&nbsp;theory</h3>
+<p>The simplest answer to this question is simply that the would-be censors are <strong>making a mistake</strong>: for one reason or another, they expect their attempt at censorship to successfully suppress the information, where instead it causes it to spread more widely. This is a very plausible answer: human folly is one of the few constants in the world, and most of the famous cases of the Streisand effect certainly <em>seem</em> deeply&nbsp;ill-conceived.</p>
+<p>There are a number of mistakes that could cause a would-be censor to fail to anticipate the Streisand effect. They could underestimate the visibility of their actions, the strength of public aversion to them, or the degree to which they provide a signal that the information being suppressed is worth knowing. They could overestimate the likelihood of the information spreading widely without their information, or the pliability of their target. Even if aware of the Streisand effect in the abstract, they not realise that <em>this particular</em> attempt at censorship is likely to be&nbsp;counterproductive.</p>
+<p>Between them, these diverse mistakes provide ample opportunity for triggering the Streisand effect. This was especially true in the early decades of the internet, when people had still not yet adapted to its effects on news and culture; it is still true today. That said, in researching the existing literature on the Streisand effect I&#8217;ve been frustrated by the <a href="https://gizmodo.com/the-streisand-effect-celebrating-10-years-of-internet-1677579192">crowing how-could-they-have-been-so-stupid attitude</a> that generally accompanies popular coverage. I think there are a number of reasons someone might knowingly risk triggering the Streisand effect in service of some larger&nbsp;goal.</p>
+<h3>Clear-eyed&nbsp;trade-offs</h3>
+<h4>Morality/deterrence</h4>
+<p>It is well-known that people will accept disproportionate costs to punish what they see as immoral behaviour; the willingness of victims to endure the enormous cost of the court system is a case in point. These actions are personally costly but socially beneficial, in that they create an incentive to not carry out the behaviour that incurs the costly&nbsp;punishment.</p>
+<p>Many instances of the Streisand effect with an individual plaintiff take this form: the plaintiff realises their secret is out whatever happens, but seeks to punish the defendant for violating their privacy or other rights. I expect <a href="https://en.wikipedia.org/wiki/Google_Spain_v_AEPD_and_Mario_Costeja_Gonz%C3%A1lez">Mario Costeja Gonzáles</a> eventually realised that his case against Google was getting him more publicity rather than less, but he carried on fighting on principle: and established a precedent that, for better or worse, allowed many others to conceal information more&nbsp;easily.</p>
+<p>Less sympathetically, larger actors can also exploit the deterrent effect. The actions and threats of North Korea probably dramatically increased <a href="https://en.wikipedia.org/wiki/The_Interview#Sony_Pictures_Entertainment_hack_and_threats">The Interview&#8217;s</a> public profile, but I&#8217;d bet both filmmakers and especially producers/distributors will be substantially warier in similar cases going forward. Indeed, in these cases the increased publicity given by the Streisand effect can<sup id="fnref:deterrent"><a class="footnote-ref" href="#fn:deterrent">11</a></sup> work in the censor&#8217;s favour, increasing the breadth and strength of the deterrent&nbsp;effect.</p>
+<h4>Rational&nbsp;gambling</h4>
+<p>It&#8217;s not clear how common large Streisand effects actually are, as a subset of attempts at censorship (see below). If the base rate is low, then the threat of backfire may not have a large effect on the expected value of censorship. In the same way a maritime trade company accepts a certain frequency of shipwreck and piracy, a certain (low) frequency of Streisand effects might be an acceptable price to pay for the broader benefits of censorship to the censor<sup id="fnref:risk"><a class="footnote-ref" href="#fn:risk">12</a></sup>.</p>
+<p>This is especially true when the individual making the decisions is not the one assuming the risk. In this case, there is a <a href="https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem">principal-agent problem</a> at work: the agent assumes less reputational risk, and so is prepared to accept a higher risk of backlash. The attourney representing Streisand in the house-photograph case <a href="https://www.hollywoodreporter.com/thr-esq/why-streisand-effect-is-misunderstood-1299990">had and has a long track-record</a> of representing celebrities in privacy cases: he has mostly been successful, and if he loses some, well, <em>his</em> name hasn&#8217;t been attached to any embarrassing internet phenomena. We can probably assume that he&#8217;s not the only attourney who might sometimes have done better by his clients (but not by himself) to advise them to be a tad less&nbsp;litigious.</p>
+<h4>Creating&nbsp;noise</h4>
+<p>Censorship creates a signal that there is something here worth knowing. But if you consistently attempt to censor, that signal progressively weakens until it is no longer useful in any particular case. Similarly, if you are well-known to be generally secretive and censorious, any particular instance of you being secretive and censorious is less interesting, and hence less newsworthy. Taking a few hits from the Streisand effect early on might therefore be worth it to protect other secrets in the long-run, if you can maintain your general censoriousness in the face of serious&nbsp;opposition. </p>
+<p>This theory makes some sense, but I&#8217;d be cautious about giving it too much weight in practice. While generally being censorious can reduce the signalling value of particular cases of censoriousness, <em>your general censoriousness</em> can itself become a signal, motivating people to seek what it is you want so badly to hide. Not to mention the fact that this attitude is likely to damage your reputation and motivate others to uncover your secrets to spite you, independent of any particular instance. Overall I&#8217;d say this strategy (being generally secretive so people don&#8217;t know which secrets are important) works better for organisations (e.g. Apple, the <span class="caps">NSA</span>) than individuals, and even there needs to be backed up with serious cybersecurity&nbsp;competence.</p>
+<h4>Taking the long&nbsp;view</h4>
+<p>Sometimes the number of people accessing some particular information <em>now</em> is less important to the censor than the accessibility of that information over time. In this case, a spike in the attention paid to the information now may be worth an ongoing reduction in the accessibility of that information, especially if that short-term attention is superficial and&nbsp;transitory. </p>
+<p>This can be the case with government censorship, especially when the target of censorship is a platform rather than a specific story. <a href="https://en.wikipedia.org/wiki/Censorship_of_YouTube#Pakistan">Blocking YouTube</a> might spur increased attention and access in the short term, but if that interest isn&#8217;t sustained, the ongoing <a href="https://www.lesswrong.com/posts/reitXJgJXFzKpdKyd/beware-trivial-inconveniences">trivial inconvenience</a> of accessing the site might help dampen ongoing dissent in the future<sup id="fnref:trivial"><a class="footnote-ref" href="#fn:trivial">13</a></sup>.</p>
+<p>Of course, this is an extremely delicate balancing act. That short-term backlash could greatly increase awareness of the tools and techniques needed to bypass government censorship, creating an ongoing problem<sup id="fnref:increase"><a class="footnote-ref" href="#fn:increase">14</a></sup>. Or the backlash could cause so much short-term reputational damage that it provokes serious resistance: no use making your life easier in five years if it gets you deposed now. In general, the extent to which this is an effective tactic vs a more sophisticated kind of error is a political-science question I don&#8217;t feel qualified to answer<sup id="fnref:qual"><a class="footnote-ref" href="#fn:qual">15</a></sup>; I just wanted to flag that it could, in principle, go either&nbsp;way.</p>
+<h2>Amplification and&nbsp;mitigation</h2>
+<p>We&#8217;ve discussed different mechanisms by which attempted censorship can give rise to the Streisand effect, and a range of reasons why a would-be censor might (rationally or irrationally) risk triggering such a backlash. But what kind of features make an attempt at censorship more or less likely to produce a Streisand&nbsp;effect?</p>
+<p>There are a few different framings one can use to look at this question. To begin with, we can return to the three contributing factors from earlier: that censorship is <strong>interesting</strong>, that it is <strong>offensive</strong>, and that it provides a good <strong>signal</strong>. We can thus predict that attempts at censorship that score especially highly on these measures will be at greatest risk of triggering the Streisand&nbsp;effect.</p>
+<ul>
+<li>Censorship is especially <strong>interesting</strong> when it is especially dramatic (involving well-known personalities or institutions, high-drama controversy and conflict, clashes of sacred values, etc.) or when it is strange or unusual in some way (e.g. if the information being censored seems to be something people don&#8217;t normally censor; if it is the test case for some new law or principle; or if the would-be censor or target are acting strangely). It is less interesting when it appears dull and routine; the appearance of being dull and routine is thus precious to the censor, and often studiously&nbsp;maintained.</li>
+<li>Censorship provides an especially strong <strong>signal</strong> when the observer already has reason to value information about the would-be censor (e.g. because they are a rival or a celebrity); when the would-be censor seems to be trying especially hard to conceal the information (e.g. through super-injunctions); when the act of censorship is highly visible (e.g. a court order); or when the censors explicitly lay out why the information is valuable (e.g. Apple claiming that <em>App Store Confidential</em> contains business secrets). The signal is weaker if the would-be censor is obscure; if the means of censorship are inconspicuous; or if public information about the reason for censorship is vague and&nbsp;uninteresting.</li>
+<li>Censorship is especially <strong>offensive</strong>, and hence triggers especially strong reactance, when the would-be censor seems to be behaving especially badly, and especially when they are seen to be abusing their power, misusing the law, reacting disproportionately, or demonstrating poor personal character in some way<sup id="fnref:bullying"><a class="footnote-ref" href="#fn:bullying">16</a></sup>. Similarly, censorship will be especially offensive if the target of that censorship is (or can be presented to be) especially sympathetic, or demonstrates especially good character. Conversely, censorship is less offensive when these factors are reversed, with the censor appearing sympathetic and reasonable, and the target unsympathetic<sup id="fnref:converse"><a class="footnote-ref" href="#fn:converse">17</a></sup>. </li>
+</ul>
+<p>Thus, a Streisand effect is more likely when the would-be censor misestimates or mispredicts one or more of these factors<sup id="fnref:sudden"><a class="footnote-ref" href="#fn:sudden">18</a></sup>.</p>
+<p>This framing, however, is largely censor-centric, and so misses out one of the most important factors determining whether a Streisand effect occurs: the <strong>actions of the target</strong>. The individual or organisation being censored often has a huge amount of influence over the outcome: if they roll over quietly there is little chance of a major backlash, while if they fight back in a media-savvy fashion a major Streisand effect is much more likely. In these latter cases, the Streisand effect is thus better seen as the result of a contest between the censor and the target to control the public&nbsp;narrative.</p>
+<p>In his various papers<sup id="fnref:martin_papers"><a class="footnote-ref" href="#fn:martin_papers">19</a></sup> about backfire dynamics in censorship and repression, <a href="https://en.wikipedia.org/wiki/Brian_Martin_(social_scientist)">Brian Martin</a> claims that censors use five main methods to &#8220;inhibit outrage&#8221; over an incident<sup id="fnref:incident"><a class="footnote-ref" href="#fn:incident">20</a></sup> and so reduce the probability of a Streisand&nbsp;effect:</p>
+<ol>
+<li><strong>Reducing visibility</strong> of the action (e.g. through&nbsp;cover-ups)</li>
+<li><strong>Devaluing</strong> the target of the&nbsp;action</li>
+<li><strong>Interpreting</strong> events in a favourable&nbsp;light</li>
+<li><strong>Legitimising</strong> their response through the use of official&nbsp;channels</li>
+<li><strong>Incentivising</strong> those involved to stay quiet (or follow their preferred line) through threats, bribes,&nbsp;etc.</li>
+</ol>
+<p>This list naturally suggests a corresponding list of actions available to a target of censorship (or their allies) seeking to increase&nbsp;outrage:</p>
+<ol>
+<li><strong>Increasing visibility</strong> of the&nbsp;action</li>
+<li><strong>Arguing for the value</strong> of the target, and perhaps devaluing the would-be&nbsp;censor</li>
+<li><strong>Interpreting</strong> events in a negative, outrageous&nbsp;light</li>
+<li><strong>Delegitimising</strong> the action (e.g. by rejecting official channels as&nbsp;corrupt)</li>
+<li><strong>Resisting incentives</strong> to keep quiet, and perhaps incentivising others to speak&nbsp;out</li>
+</ol>
+<p>Of course, not all would-be censors and targets are able (or willing) to utilise all of these tactics; the full range is perhaps only really available to authoritarian governments. Private citizens bringing defamation charges, for example, have limited ability to reduce the visibility of their actions beyond avoiding publicity during the trial. However, they can still use many of the other strategies, such as legitimisation (through the use of the courts), positive framing (as a fight to protect one&#8217;s good name against unjustified slander), devaluing the target (as a liar or reckless spreader of falsehoods) and incentivisation (threats of punitive damages and offers of&nbsp;settlement).</p>
+<p>In this framing, whether an attempt at censorship leads to a Streisand effect depends on which actor is better able to execute their corresponding strategies. In this contest, the would-be censor is typically more powerful<sup id="fnref:powerful"><a class="footnote-ref" href="#fn:powerful">21</a></sup> in many ways, but the target has a key advantage: for the censor, any publicity is bad publicity. The more the target is able to raise the profile of the controversy, the more likely a Streisand effect is to occur. The three factors discussed above – the interestingness, offensiveness, and signalling value of censorship – serve to aid the target in this goal, and the stronger they are the more likely the target is to succeed, <em>if</em> they&nbsp;try.</p>
+<h2>How common is the Streisand&nbsp;effect?</h2>
+<p>Finally, we turn to the question of just how frequent the Streisand effect actually is. Is it a universal phenomenon that every would-be censor should fear? Or is it flashy and painful but ultimately rare, like getting struck by&nbsp;lightning?</p>
+<p>Among internet journalists, the Streisand effect is often treated like an iron law of the universe: the just comeuppance of anyone foolish enough to try to suppress information in the digital age. There&#8217;s a lot of breathless rhetoric around <a href="https://rationalwiki.org/wiki/Streisand_effect">&#8220;Streisand&#8217;s Law&#8221;</a> and <a href="https://theswaddle.com/streisand-effect-censorship-internet/">&#8220;When you try to hide something on the web, everyone sees it&#8221;</a>. If you believe this coverage, the Streisand effect is just an inevitable consequence of the way the internet works<sup id="fnref:hr"><a class="footnote-ref" href="#fn:hr">22</a></sup>.</p>
+<p>I&#8217;m not convinced. It seems notable to me that most coverage of the effect seems to recycle some subset of the same ten or so core examples, with a somewhat larger number of minor cases. In any case, the frequency of news articles about a subject <a href="https://www.lesswrong.com/posts/R8cpqD3NA4rZxRdQ4/availability">isn&#8217;t a great way</a> of gauging its true relative frequency. There&#8217;s an obvious evidence-filtering problem here: we can see the numerator, but not the denominator<sup id="fnref:jm_selection"><a class="footnote-ref" href="#fn:jm_selection">23</a></sup>.</p>
+<p>I don&#8217;t <em>know</em>, but I <em>suspect</em> that, in fact, cases of the Streisand effect strong enough to reach the general news media are very rare. Most of the time, I predict, either result in the information being suppressed, or are ineffective without sparking a major backlash. As <a href="https://www.plagiarismtoday.com/2012/06/26/understanding-the-streisand-effect/">this article</a> points out, almost none of the <a href="https://transparencyreport.google.com/copyright/overview">vast number</a> of takedown requests received by Google result in any kind of significant Streisand effect. Or, as one person I spoke to about this put it, &#8220;most people respond to cease and desist letters by ceasing and&nbsp;desisting&#8221;.</p>
+<p>I&#8217;m not the only one with this impression. Brian Martin <a href="10.21153/dlr2006vol11no2art238">says that</a> &#8220;most [attempts at censorship] do not backfire, even when they have the potential to do so&#8221;. But Martin, with his clear sympathy for the targets of censorship, has reason to paint a picture of a dire threat. Actual attempts to <em>quantify</em> the frequency of censorship backfire seem very thin on the ground: most studies that attempt to analyse data on this issue show only that the Streisand effect <em>can</em> occur, not how often it actually <em>does</em><sup id="fnref:quant"><a class="footnote-ref" href="#fn:quant">24</a></sup>.</p>
+<p>My best guess is that serious Streisand effects are common enough to be of concern to censors in cases that seem predisposed to them (see previous section), but rare enough that most attempts at censorship (of various kinds) do not provoke a backlash in the general media. In many cases, however, the &#8220;general media&#8221; may not be the main&nbsp;concern.</p>
+<p><a href="https://www.plagiarismtoday.com/2012/06/26/understanding-the-streisand-effect/">This article</a> describes the case of Maldives Scuba Diving, a diving company that sued the owners of a popular scuba-diving forum over allegations made by forum users that its equipment was unsafe<sup id="fnref:unsafe"><a class="footnote-ref" href="#fn:unsafe">25</a></sup>. This case did not make the national news; I hadn&#8217;t heard of it before stumbling across that article. But news of the lawsuit got &#8220;a great deal of unwelcome attention&#8221; among scuba divers, including spreading news of the company&#8217;s recent name change &#8220;far and wide in the scuba diving community at&nbsp;large&#8221;.</p>
+<p>It&#8217;s not totally clear how that case worked out (it seems to have ended in a private settlement of some kind), but the general lesson is stark: if the harm you are concerned about – to your reputation, your intellectual property, or the world – is achievable by a limited community of individuals, then your attempts at information control don&#8217;t need to trigger a dramatic, &#8220;general&#8221; Streisand effect to be counterproductive. A localised scandal that includes the communities you are concerned about will suffice. For a scuba-diving company, a scandal in the scuba-diving community is more than bad enough; the rest of the world is almost&nbsp;irrelevant.</p>
+<p>These smaller, weaker, more localised Streisand effects seem likely to be much easier to trigger than big general scandals – and hence much more common. As a result, for those whose concern <em>is</em> concentrated in particular communities<sup id="fnref:local_examples"><a class="footnote-ref" href="#fn:local_examples">26</a></sup>, these mini-Streisand incidents probably constitute the greatest&nbsp;danger.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:examples">
+<p>The <a href="https://en.wikipedia.org/wiki/Streisand_effect">Wikipedia page</a> and <a href="https://www.bbc.co.uk/news/uk-18458567">this <span class="caps">BBC</span> article</a> are two good repositories of (commonly-claimed) examples of the Streisand effect.&#160;<a class="footnote-backref" href="#fnref:examples" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:weakness">
+<p>For example, in the case of authoritarian governments, visible censorship &#8220;might signal regime weakness&#8221;, emboldening the opposition <a href="https://www.doi.org/10.1017/S0003055418000084">(Hobbs <span class="amp">&amp;</span> Roberts, 2018)</a>. For private individuals and non-authoritarian governments, meanwhile, the risk is mostly that people just dislike you more.&#160;<a class="footnote-backref" href="#fnref:weakness" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:payne">
+<p>I actually think quite a few commonly-cited examples of the Streisand effect fall primarily into this category. For example, the case of <a href="https://en.wikipedia.org/wiki/NeverSeconds">Martha Payne</a>, a Scottish student who was banned from blogging about the quality of her school meals. The ban created a lot of controversy and bad press from the local council (who had ordered the ban), and probably did spread news of her blog more widely than it otherwise would have been, but the blog had already made the national news multiple times and was moderately widely known. While the actions of the council were clearly counterproductive, I suspect more harm was done by the reputational damage than any further spreading of the blog.&#160;<a class="footnote-backref" href="#fnref:payne" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:censee">
+<p><span class="dquo">&#8220;</span>Censee&#8221; (meaning &#8220;target of censorship&#8221;) does not appear to be a generally accepted word. It is used in <a href="http://eprints.lse.ac.uk/27595/1/Censorship_and_two_types_of_self-censorship_%28LSERO%29.pdf">at least one</a> scholarly paper, though, and seems like an obvious choice with no obvious alternatives, so I&#8217;m going to use it here.&#160;<a class="footnote-backref" href="#fnref:censee" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:tacquote">
+<p>As quoted in <a href="https://ro.uow.edu.au/cgi/viewcontent.cgi?article=2890&amp;context=lhapapers">Jansen <span class="amp">&amp;</span> Martin (2015)</a>.&#160;<a class="footnote-backref" href="#fnref:tacquote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:subexamples">
+<p>Most Streisand-effect examples that made it to the national and international news combine more than one of these aspects; my aim with these examples lists is to pull out a few cases where the particular effect being discussed seems like the biggest factor.&#160;<a class="footnote-backref" href="#fnref:subexamples" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:extra">
+<p>Not to mention the fact that journalists and many others find super-injunctions (and other kinds of secret court) so offensive that they are likely to try extra-hard to unearth the information just to spite you (see next section).&#160;<a class="footnote-backref" href="#fnref:extra" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hagenbach">
+<p>One of the few academic papers to explicitly focus on the Streisand effect is <a href="https://doi.org/10.1016/j.jebo.2017.09.001">Hagenbach <span class="amp">&amp;</span> Koessler (2017)</a>, who come at the question from a game-theoretic perspective. In their (frankly fairly contrived) model, fully rational actors who appreciate the signalling value of their actions never fall into the Streisand effect (unless they make a different mistake, like misassessing the visibility of their actions), but actors who fail to appreciate the signalling effects of their actions routinely over-censor.&#160;<a class="footnote-backref" href="#fnref:hagenbach" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:obv">
+<p>This obviously links back to the first effect, that censorship is <em>interesting</em> independent of the information being censored.&#160;<a class="footnote-backref" href="#fnref:obv" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:badreview">
+<p>Note that &#8220;this business sued a customer for leaving a bad review&#8221; communicates <em>very</em> relevant information for potential customers, thus making these cases also good examples of the signalling theory.&#160;<a class="footnote-backref" href="#fnref:badreview" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:deterrent">
+<p>That is, it <em>can</em>, but doesn&#8217;t always do so: if the backlash is large enough the would-be censor can end up seeming impotent, which will vitiate any intended deterrence.&#160;<a class="footnote-backref" href="#fnref:deterrent" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:risk">
+<p>Of course, if you can better identify which attempts at censorship are likely to result in Streisand effects, you can increase their payoffs by avoiding those. On the other hand, if the rate is sufficiently low it might not be worth the cost of doing so.&#160;<a class="footnote-backref" href="#fnref:risk" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:trivial">
+<p><span class="dquo">&#8220;</span>Because consumers of media are impatient, even small increases
+in the price of information imposed by censorship can have large negative effects on information consumption.&#8221; <a href="https://www.doi.org/10.1017/S0003055418000084">(Hobbs <span class="amp">&amp;</span> Roberts 2018)</a>&#160;<a class="footnote-backref" href="#fnref:trivial" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:increase">
+<p>See, e.g., <a href="https://www.doi.org/10.1017/S0003055418000084">Hobbs <span class="amp">&amp;</span> Roberts (2018)</a>, &#8220;How Sudden Censorship Can Increase Access to Information&#8221;, which finds that &#8220;blocking of the popular social networking website Instagram in China disrupted the habits of millions of individuals accustomed to visiting that site and increased evasion of the Great Firewall&#8221;, increasing subsequent traffic to long-blocked Twitter and Facebook.&#160;<a class="footnote-backref" href="#fnref:increase" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:qual">
+<p>This broadly goes for the other strategies in this section as well.&#160;<a class="footnote-backref" href="#fnref:qual" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bullying">
+<p>It is notable how many famous cases of the Streisand effect can be accurately described as &#8220;bullying&#8221;. Barbra Streisand sues an obscure researcher for a huge sum for posting a photo of her house. A French intelligence agency hauls in a prominent Wikipedia editor with no relation to the article in question and forces him under threat of prosecution to delete it. <a href="https://en.wikipedia.org/wiki/McLibel_case">McDonald&#8217;s expends huge amounts of resources to silence a couple of unimportant activists who can&#8217;t even afford to pay their lawyers.</a> Plaintiffs in Streisand cases seldom appear sympathetic.&#160;<a class="footnote-backref" href="#fnref:bullying" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:converse">
+<p>However, in this case, you might still be in for a severe Streisand effect as the result of the first factor (conflict is interesting).&#160;<a class="footnote-backref" href="#fnref:converse" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sudden">
+<p>For government censorship, one important way for a censor to hit all three factors at once is if censorship is dramatic and sudden: for example, if a popular website goes from fully available to fully blocked all at once. This is dramatic (and thus interesting), upsetting (people&#8217;s lives and routines are badly disrupted) and provides a good signal that blocking that source of information was of urgent importance for the censors.&#160;<a class="footnote-backref" href="#fnref:sudden" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:martin_papers">
+<p>Two examples <a href="https://ro.uow.edu.au/cgi/viewcontent.cgi?article=2890&amp;context=lhapapers">here</a> and <a href="10.21153/dlr2006vol11no2art238">here</a>. There are others, but they&#8217;re all fairly similar to one another, so it&#8217;s not really necessary to read more than one.&#160;<a class="footnote-backref" href="#fnref:martin_papers" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:incident">
+<p><span class="dquo">&#8220;</span>Incident&#8221; here is a fairly general term referring to anything a powerful group might want to manage public relations about, but Martin&#8217;s papers typically focus on incidents of government repression or censorship.&#160;<a class="footnote-backref" href="#fnref:incident" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:powerful">
+<p>When the target of censorship is more powerful than, or even similarly powerful to, the would-be censor, a Streisand effect (or some other kind of censorship backfire) seems very likely.&#160;<a class="footnote-backref" href="#fnref:powerful" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hr">
+<p><a href="https://www.hollywoodreporter.com/thr-esq/why-streisand-effect-is-misunderstood-1299990">This article</a> is a rare voice of scepticism among the popular press.&#160;<a class="footnote-backref" href="#fnref:hr" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:jm_selection">
+<p><span class="dquo">&#8220;</span>To fully appreciate the capacity of powerful groups to [avoid the Streisand effect], it is necessary to examine cases that did not backfire—cases in which there was no Streisand effect. The flaw in looking only at instances of the Streisand effect is that there is no control group; the cases examined are potentially atypical.&#8221; — <a href="https://ro.uow.edu.au/cgi/viewcontent.cgi?article=2890&amp;context=lhapapers">Jansen <span class="amp">&amp;</span> Martin (2015)</a>&#160;<a class="footnote-backref" href="#fnref:jm_selection" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:quant">
+<p><a href="https://arxiv.org/abs/1411.0225">Nabi (2014)</a> finds that several prominent cases of media censorship in Turkey and Pakistan led to large (but transient) spikes in search volume for the blocked content in those countries, as well as spikes in searches for various anti-censorship tools (VPNs etc). <a href="https://doi.org/10.1515/popets-2016-0046">Xue <em>et al.</em> (2016)</a> found that republication of URLs that had been delisted on Google did not on average lead to a spike in traffic, but did in some cases. <a href="https://www.doi.org/10.1017/S0003055418000084">Hobbs <span class="amp">&amp;</span> Roberts (2018)</a> find that the sudden blockage of Instagram in mainland China decreased traffic to Instagram (i.e. not a direct Streisand effect) but <em>increased</em> traffic to Twitter and Facebook. <a href="https://doi.org/10.1017/S0003055419000650">Pan <span class="amp">&amp;</span> Siegel (2020)</a> find that imprisone;d Saudi dissenters reduced their criticism of the regime after release, but that their Twitter followers became (non-significantly) <em>more</em> critical and sought out more information on those imprisoned, while the behaviour of other dissenters did not change.&#160;<a class="footnote-backref" href="#fnref:quant" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:unsafe">
+<p>Specifically, that it had been responsible for a tainted-air incident that had killed one diver and sickened ten others, and that it had changed its name in the wake of that incident.&#160;<a class="footnote-backref" href="#fnref:unsafe" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:local_examples">
+<p>These might include companies that cater to particular interest groups; individuals who value their reputation in particular niche communities; and law-enforcement and other organisations concerned about bad actors among particular expert communities.&#160;<a class="footnote-backref" href="#fnref:local_examples" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="../category/drafts.html">drafts</a>  | Tagged as <a href="../tag/effective-altruism.html">effective altruism</a>, <a href="../tag/information-hazards.html">information hazards</a>, <a href="../tag/censorship.html">censorship</a>, <a href="../tag/streisand-effect.html">streisand effect</a></p>
+    </div>
+</div></div>
+
+<! -- Comments -->
+<div class="container">
+    <div class="article-comments col-sm-10">
+        <h3 id="disqus_title_header">Comments</h3>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'apomorphic';
+            var disqus_title = 'Exploring the Streisand&nbsp;effect';
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                    </div>
+                </div>             </div>         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>

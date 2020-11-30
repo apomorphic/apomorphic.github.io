@@ -1,0 +1,280 @@
+<!-- Single article page with comments -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>Final Version Perfected: An Underused Execution Algorithm - Apomorphic</title>
+        <meta name="description" content="">
+        <meta name="author" content="Will Bradshaw">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+            <script src="../theme/html5.js"></script>
+        <![endif]-->
+
+
+        <!-- Le styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link href="../theme/local.css" rel="stylesheet">
+        <link href="../theme/pygments.css" rel="stylesheet">
+        <link href="../theme/font-awesome.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+        <header class="blog-header">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="col-sm-8">
+                        <div class="container">
+                            <!-- Website headline -->
+                            <div class="row-fluid">
+                                <a href=".." class="brand">Apomorphic</a>
+                            </div>
+                            <!-- Website tagline/subtitle -->
+                            <div class="row-fluid">
+                                <span class="tagline">A blog about biology, self-improvement, and the future</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pages in links on right -->
+                    <div class="col-sm-4" id="blog-nav">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="../about">About</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- End of fluid row-->
+            </div>   <!-- End of Container-->
+        </header>
+
+        <main>
+        <! -- Main content of page, depending on page type -->
+        <div class="container">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="col-sm-12">
+<!-- Main article content (as on homepage) -->
+<div class="container">
+<!-- Post title -->
+<div class="row-fluid">
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="../drafts/fvp"><h1>Final Version Perfected: An Underused Execution&nbsp;Algorithm</h1></a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted on Mon 12 October 2020 by Will Bradshaw</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <ul>
+<li>Intro: Planning vs Execution&nbsp;Systems</li>
+<li>The <span class="caps">FVP</span>&nbsp;Algorithm</li>
+<li>How to do <span class="caps">FVP</span> in practice (online vs&nbsp;paper)</li>
+<li>Why I think <span class="caps">FVP</span> is so&nbsp;effective</li>
+<li>When isn&#8217;t <span class="caps">FVP</span>&nbsp;useful</li>
+</ul>
+<p>The world is awash with productivity&nbsp;systems. </p>
+<p>Sometimes it seems like everyone and their mother has come up with some byzantine new method for organising your time: how to organise your To-Do List, organise your calendar, organise your&nbsp;projects.</p>
+<p>Probably the most well-known such system is Getting Things Done (<span class="caps">GTD</span>), which is essentially an elaboration and formalisation of the To-Do List. I&#8217;ve used <span class="caps">GTD</span> extensively in the past, and many of my systems are still based around its&nbsp;advice.</p>
+<p><span class="caps">GTD</span>, though, is a planning system: its job is to make sure all the tasks you might want to do are captured and presented to you in a helpful manner. Like many productivity systems, it&#8217;s quite bad at actually helping you <em>do</em> the the right task in a given&nbsp;moment.</p>
+<p>Execution is the Last Mile Problem of productivity infrastructure. You can put as much effort as you like into organising your goals, organising your To-Do lists, organising your calendar, but sooner or later you will be presented with more than one thing you could reasonably be doing with your time. When that happens, you will need some sort of method for choosing what that thing will be, and actually getting&nbsp;started.</p>
+<p>That method needs to be quick to execute, easy to remember, and effective at actually having you do the best task for the time. It needs to be robust to your psychological weaknesses, minimising procrastination, indecision, and ugh fields. It needs to be efficient, performing only the work needed to identify the most valuable task<sup id="fnref:exhaustive"><a class="footnote-ref" href="#fn:exhaustive">1</a></sup>.</p>
+<p>Enter Final Version&nbsp;Perfected.</p>
+<h1>2. The <span class="caps">FVP</span>&nbsp;Algorithm</h1>
+<p>The algorithm for executing tasks under <span class="caps">FVP</span><sup id="fnref:name"><a class="footnote-ref" href="#fn:name">2</a></sup> is pretty simple. You can find a description of it by the designer <a href="http://markforster.squarespace.com/blog/2015/5/21/the-final-version-perfected-fvp.html">here</a><sup id="fnref:forster"><a class="footnote-ref" href="#fn:forster">3</a></sup>, but here&#8217;s my&nbsp;version:</p>
+<ol>
+<li>Put all the tasks you have to choose from<sup id="fnref:todo"><a class="footnote-ref" href="#fn:todo">4</a></sup> into one big unsorted&nbsp;list.</li>
+<li>Mark the first item on the list. <em>Don&#8217;t do it&nbsp;yet.</em></li>
+<li>For each subsequent item on the list, ask yourself, &#8220;Do I want<sup id="fnref:want"><a class="footnote-ref" href="#fn:want">5</a></sup> to do this task more than the last task I marked?&#8221; If <em>yes</em>, mark it. If <em>no</em>, don&#8217;t mark it. Move on to the next&nbsp;item.</li>
+<li>When you reach the end of the list, trace back up the list to select the lowest marked task. <strong>Do it</strong>, then cross it off the&nbsp;list.</li>
+<li>Beginning with the task <em>after the task you just crossed off</em>, repeat step 3, comparing each task to the last <em>uncrossed</em> task you marked (i.e. the one prior to the one you just crossed&nbsp;out).</li>
+<li>Go to step 4. Repeat until you run out of time or list&nbsp;items.</li>
+</ol>
+<p>[<span class="caps">TODO</span>]: Timescales, the &#8220;want&#8221; relation, pre-filtering, efficiency, exhaustiveness, effectiveness at tackling psychological&nbsp;weaknesses</p>
+<p>I&#8217;ll talk more in a moment about all the reasons why I think this algorithm is a good one, but first, an example is probably a good&nbsp;idea.</p>
+<h1>3. A Long-ish&nbsp;Example</h1>
+<p>Let&#8217;s say this is my to-do list for&nbsp;today:</p>
+<ul>
+<li>Buy&nbsp;milk</li>
+<li>Finish term&nbsp;paper</li>
+<li>Play video&nbsp;games</li>
+<li>Work&nbsp;out</li>
+<li>Save the&nbsp;world</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>I start by marking the first&nbsp;item:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li>Finish term&nbsp;paper</li>
+<li>Play video&nbsp;games</li>
+<li>Work&nbsp;out</li>
+<li>Save the&nbsp;world</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Then I compare it to the next item on the list. Which do I want to do more, finish the term paper or buy milk? Well, the term paper is due today, and I don&#8217;t need milk until tomorrow, so I decide to do the term paper&nbsp;first.</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li>Work&nbsp;out</li>
+<li>Save the&nbsp;world</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Moving on to item 3. I already decided I want to finish the term paper before buying milk, so I can ignore the milk for now. Do I want to play video games or finish my term paper? Well, in some sense I <em>want</em> to play video games more, but my all-things-considered <em>endorsement</em> is to finish the term paper first, so I leave item 3&nbsp;unmarked.</p>
+<p>Moving onto item 4: do I want to finish the term paper or work out? Well, in some sense I&#8217;d rather not do either, and in another sense the term paper is more urgent, but working out is important, I&#8217;ve heard it has cognitive benefits, and I know from experience that if I don&#8217;t do it first thing I won&#8217;t do it, so it takes&nbsp;precedence:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li><strong>× Work&nbsp;out</strong></li>
+<li>Save the&nbsp;world</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Item 5: oh yeah, I forgot, I need to save the world today. Damn. Well, I can&#8217;t work out if there&#8217;s no world to work out in, so I guess that takes&nbsp;precedence.</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li><strong>× Work&nbsp;out</strong></li>
+<li><strong>× Save the&nbsp;world</strong></li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Ditto for walking the dog: much though I love him, I won&#8217;t have anywhere to walk him if I don&#8217;t save the world first, so that takes precedence&nbsp;again.</p>
+<p>I&#8217;ve finished the list now, so it&#8217;s time to do the last item on the list. Looks like that&#8217;s saving the world. Luckily, it doesn&#8217;t take&nbsp;long:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li><strong>× Work&nbsp;out</strong></li>
+<li><em>Save the world</em> [<span class="caps">TODO</span>:&nbsp;Strikethrough]</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Now that I&#8217;ve done the highest priority task on the list, I go back to <span class="caps">FVP</span> to determine the next one. There&#8217;s actually only one comparison I need to make: work out or walk the dog? I usually walk the dog in the evening, so I can leave that for now. Time to work&nbsp;out.</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li><em>Work&nbsp;out</em></li>
+<li><em>Save the world</em> [<span class="caps">TODO</span>:&nbsp;Strikethrough]</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Again, there&#8217;s only one more comparison I need to do to determine my next top task: do I want to finish my term paper, or walk the dog? Again, walking the dog isn&#8217;t that urgent, so I spend a few hours on the term&nbsp;paper.</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><em>Finish term&nbsp;paper</em></li>
+<li>Play video&nbsp;games</li>
+<li><em>Work&nbsp;out</em></li>
+<li><em>Save the world</em> [<span class="caps">TODO</span>:&nbsp;Strikethrough]</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Now I&#8217;m all the way back to the top of the list! But now there are two more comparisons to make before I move on to the next task. First, do I want to buy milk, or play video games? I&#8217;ve worked pretty hard so far today, and buying milk isn&#8217;t that important, so let&#8217;s play games&nbsp;first:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><em>Finish term&nbsp;paper</em></li>
+<li><strong>× Play video&nbsp;games</strong></li>
+<li><em>Work&nbsp;out</em></li>
+<li><em>Save the world</em> [<span class="caps">TODO</span>:&nbsp;Strikethrough]</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Finally, do I want to walk the dog or play video games? The dog has been waiting for hours for a walk now, and I could do with some fresh air, and I&#8217;d feel guilty just gaming without taking him out, so let&#8217;s do that&nbsp;first:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><em>Finish term&nbsp;paper</em></li>
+<li><strong>× Play video&nbsp;games</strong></li>
+<li><em>Work&nbsp;out</em></li>
+<li><em>Save the world</em> [<span class="caps">TODO</span>:&nbsp;Strikethrough]</li>
+<li><strong>× Walk the&nbsp;dog</strong></li>
+</ul>
+<p>There&#8217;s no unmarked tasks in the list now, so to finish I just work up the list in order: first walking the dog, then playing games, then, finally, buying milk<sup id="fnref:milk"><a class="footnote-ref" href="#fn:milk">6</a></sup>.</p>
+<h1>3. <span class="caps">FVP</span>: Why and Why&nbsp;Not</h1>
+<p>The effectiveness of <span class="caps">FVP</span> depends on three&nbsp;assumptions:</p>
+<ul>
+<li>
+<p>Firstly, the algorithm assumes that your preferences are <strong>transitive</strong>: that, if you want to do B more than A, and C more than B, you want to do C more than A. In reality, your preferences probably aren&#8217;t quite transitive, but hopefully they&#8217;re close enough that pretending they are is reasonable. As long as transitivity holds, <span class="caps">FVP</span> is guaranteed to identify the single best task for you to do; if not, well, you have bigger&nbsp;problems.</p>
+</li>
+<li>
+<p>Secondly, it assumes that your preferences are <strong>stable</strong> over the timeframe you&#8217;re using it. If your preferences shift substantially over that period, you&#8217;ll need to throw out your previous <span class="caps">FVP</span> and start again<sup id="fnref:reset"><a class="footnote-ref" href="#fn:reset">7</a></sup>. This places some constraints on the timescale you can organise using a single <span class="caps">FVP</span> iteration: I seldom stick with the same iteration for longer than a day<sup id="fnref:new"><a class="footnote-ref" href="#fn:new">8</a></sup>.</p>
+</li>
+<li>
+<p>Thirdly, and more weakly, the value of <span class="caps">FVP</span> assumes that you are <strong>unsure</strong> about which task you should do next. I find <span class="caps">FVP</span> most useful during long, fairly unstructured periods when I have a lot of different tasks competing for my time. If my time is pre-allocated to a single, extended, fairly unitary task (say, studying a topic, or writing a chapter) <span class="caps">FVP</span> is much less useful – I already have enough context in my head to easily identify what I should be doing&nbsp;next.</p>
+</li>
+</ul>
+<p>When these three conditions are met, <span class="caps">FVP</span> is a <em>very</em> effective method for guiding action. It is both efficient and exhaustive: guaranteed to identify the top-priority task while avoiding most of the work involved in producing a complete ranking. It is a simple algorithm, easy to remember and easy to carry out – though I didn&#8217;t yet find a digital tool that is as good for <span class="caps">FVP</span> as pen-and-paper. After doing it for a while, I find it scarcely requires conscious thought – but still reliably identifies the most valuable task for me to work&nbsp;on.</p>
+<p>The biggest benefit I get from <span class="caps">FVP</span>, though, is how much easier it makes it to do <a href="https://medium.com/@robertwiblin/ugh-fields-or-why-you-can-t-even-bear-to-think-about-that-task-5941837dac62">important things I&#8217;d rather avoid</a>. There is something about a bald, pairwise comparison between two tasks that is highly effective at overcoming my aversion to difficult things. If an important but unpleasant task is nestled within a long to-do list of minor but rewarding busywork, it is easy for my eye to skip over the difficult task, defer it till tomorrow, and work on something more pleasant instead. It&#8217;s much harder to do that when comparing the important task to each minor task in&nbsp;isolation.</p>
+<p><span class="caps">FVP</span> is also good at minimising <a href="https://en.wikipedia.org/wiki/Buridan%27s_ass">time lost due to indecision</a>. When presented with a menu of tasks to choose from, it can be quite hard to select a single task to work on first. When that choice process is reduced to a series of simple pairwise comparisons, the choosing process as a whole becomes much easier. And, once I&#8217;ve finished with <span class="caps">FVP</span> and selected a single winning task, there&#8217;s an impetus towards starting that makes me much less prone to&nbsp;procrastinating.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:exhaustive">
+<p>Rather than, say, exhaustively comparing every option against every other option to produce a complete ranking.&#160;<a class="footnote-backref" href="#fnref:exhaustive" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:name">
+<p>Final Version Perfected is a slightly modified version of a similar algorithm called The Final Version, by the same author. Yes, it&#8217;s a pretty bad name.&#160;<a class="footnote-backref" href="#fnref:name" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:forster">
+<p>I don&#8217;t actually find <a href="http://markforster.squarespace.com/">Mark Forster&#8217;s website</a> all that helpful. Like most productivity gurus he tends to insist that it&#8217;s absolutely essential to approach this or that problem in <em>exactly this way</em>. I guess if you want to differentiate yourself in the productivity market you need to have arrestingly strong opinions. But your mileage may vary.&#160;<a class="footnote-backref" href="#fnref:forster" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:todo">
+<p>The timescale is up to you: it could be everything you&#8217;d like to get done this week, or everything you&#8217;d like to get done today, or everything you&#8217;d like to get done this pomodoro cycle. I tend to use <span class="caps">FVP</span> for large, relatively unstructured blocks of time – say, an afternoon – but that&#8217;s not essential. More on this later.&#160;<a class="footnote-backref" href="#fnref:todo" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:want">
+<p><a href="http://markforster.squarespace.com/blog/2015/5/21/the-final-version-perfected-fvp.html">Forster</a>: &#8220;The <span class="caps">FVP</span> algorithm uses the question &#8216;What do I want to do more than x?&#8221; to preselect a chain of tasks from the list. What exactly is meant by &#8216;want&#8217; in this context is deliberately left undefined. There may be a whole variety of reasons why you might want to do one thing more than another thing and all of them are valid.&#8221; [<span class="caps">TODO</span>: Move to main text and elaborate?]&#160;<a class="footnote-backref" href="#fnref:want" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:milk">
+<p>In practice I might pick up milk while walking the dog; <span class="caps">FVP</span> doesn&#8217;t capture these kinds of context-shift very well, but for quick minor tasks it doesn&#8217;t matter that much.&#160;<a class="footnote-backref" href="#fnref:milk" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:reset">
+<p>Unless, that is, you&#8217;re confident that your preferences will soon <em>return</em> to roughly what they were before. <span class="caps">FVP</span> can&#8217;t handle a scheduled call in the middle of the day very well, but you could reasonably do <span class="caps">FVP</span> in the morning, stop for the call, then resume from the same list afterwards.&#160;<a class="footnote-backref" href="#fnref:reset" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:new">
+<p>Note, though, that <span class="caps">FVP</span> can handle the addition of <em>new</em> tasks quite easily, as long as there is space to add them to the end. It is only shifts in preferences among tasks that have <em>already</em> been processed by the algorithm that cause problems.&#160;<a class="footnote-backref" href="#fnref:new" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="../category/drafts.html">drafts</a>  | Tagged as <a href="../tag/productivity.html">productivity</a></p>
+    </div>
+</div></div>
+
+<! -- Comments -->
+<div class="container">
+    <div class="article-comments col-sm-10">
+        <h3 id="disqus_title_header">Comments</h3>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'apomorphic';
+            var disqus_title = 'Final Version Perfected: An Underused Execution&nbsp;Algorithm';
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+                    </div>
+                </div>             </div>         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
