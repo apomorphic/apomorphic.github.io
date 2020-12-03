@@ -1,0 +1,246 @@
+<!-- tag archives -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>Self-improvement - Apomorphic</title>
+        <meta name="description" content="">
+        <meta name="author" content="Will Bradshaw">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+            <script src="https://apomorphic.com/theme/html5.js"></script>
+        <![endif]-->
+
+
+        <!-- Le styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link href="https://apomorphic.com/theme/local.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/pygments.css" rel="stylesheet">
+        <link href="https://apomorphic.com/theme/font-awesome.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+        <header class="blog-header">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="col-sm-8">
+                        <div class="container">
+                            <!-- Website headline -->
+                            <div class="row-fluid">
+                                <a href="https://apomorphic.com" class="brand">Apomorphic</a>
+                            </div>
+                            <!-- Website tagline/subtitle -->
+                            <div class="row-fluid">
+                                <span class="tagline">A blog about biology, self-improvement, and the future</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pages in links on right -->
+                    <div class="col-sm-4" id="blog-nav">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="https://apomorphic.com/about">About</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- End of fluid row-->
+            </div>   <!-- End of Container-->
+        </header>
+
+        <main>
+        <! -- Main content of page, depending on page type -->
+        <div class="container">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="col-sm-12">
+<div class="row-fluid archive-title">
+    <div class="page-title col-sm-10 col-sm-offset-1">
+        <h1>Tag archive: Self-improvement</h1>
+    </div>
+</div>
+
+<!-- Show articles in date order -->
+<div class="container">
+<!-- Post title -->
+<div class="row-fluid">
+    <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <a href="https://apomorphic.com/2020/12/03/final-version-perfected" id="title">Final Version Perfected: An Underused Execution&nbsp;Algorithm</a>
+    </div>
+</div>
+
+<!-- Post info -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted on Thu 03 December 2020 by Will Bradshaw</p>
+    </div>
+</div>
+
+<!-- Post content -->
+<div class="row-fluid">
+    <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p><em>Crossposted from <a href="https://www.lesswrong.com/posts/xfcKYznQ6B9yuxB28/final-version-perfected-an-underused-execution-algorithm">LessWrong</a>.</em></p>
+<h1><span class="caps">TLDR</span></h1>
+<ul>
+<li><a href="http://markforster.squarespace.com/blog/2015/5/21/the-final-version-perfected-fvp.html">Final Version Perfected</a> (<span class="caps">FVP</span>) is a highly effective algorithm for deciding which tasks from your To-Do lists to do in what&nbsp;order.</li>
+<li>The design of the <a href="https://www.lesswrong.com/posts/xfcKYznQ6B9yuxB28/final-version-perfected-an-underused-execution-algorithm#The_FVP_Algorithm">algorithm</a> makes it far more efficient than exhaustive ranking, while (in my experience) far more effective than just reading through the tasks and picking one&nbsp;out.</li>
+<li><span class="caps">FVP</span> is most useful when you have a large number of tasks to choose from, don’t have time to do all of them, and are initially unsure about which is&nbsp;best.</li>
+<li>I find <span class="caps">FVP</span> very effective at overcoming psychological issues like indecision, procrastination, or <a href="https://medium.com/@robertwiblin/ugh-fields-or-why-you-can-t-even-bear-to-think-about-that-task-5941837dac62">psychological aversion to particular tasks</a>.</li>
+<li>Currently there are limited online tools available, and I mostly use <span class="caps">FVP</span> with paper lists. Ideas (or tools) for better online execution of <span class="caps">FVP</span> would be very valuable to&nbsp;me.</li>
+</ul>
+<h1>Introduction</h1>
+<p>Execution is the <a href="https://en.wikipedia.org/wiki/Last_mile_(transportation)">Last Mile Problem</a> of productivity infrastructure. You can put as much effort as you like into organising your goals, organising your To-Do lists, organising your calendar, but sooner or later you will be presented with more than one thing you could reasonably be doing with your time. When that happens, you will need some sort of method for choosing what that thing will be, and actually getting&nbsp;started.</p>
+<p>Most people, I think, face this problem by either just doing the thing that is top-of-mind or looking through their To-Do list and picking something out. This works fine when the next thing to do is obvious, and you have no problems getting started on it. But when you have many potential things to do and aren’t sure which is best, or when you kind of know what the best next thing is but are avoiding it for one reason or another, you need a better&nbsp;system.</p>
+<p>That system needs to be quick to execute, easy to remember, and effective at actually having you do the best next task. It needs to be robust to your psychological weaknesses, minimising procrastination, indecision, and ugh fields. It needs to be efficient, requiring as little work as possible to identify the most valuable&nbsp;task.</p>
+<p>Enter <a href="http://markforster.squarespace.com/blog/2015/5/21/the-final-version-perfected-fvp.html">Final Version Perfected</a>.</p>
+<h1>The <span class="caps">FVP</span>&nbsp;Algorithm</h1>
+<p>The algorithm for executing tasks under <span class="caps">FVP</span> is pretty simple. You can find a description of it by the designer <a href="http://markforster.squarespace.com/blog/2015/5/21/the-final-version-perfected-fvp.html">here</a>, but here’s my&nbsp;version:</p>
+<ol>
+<li>Put all the tasks you have to choose from into one big unsorted&nbsp;list.</li>
+<li><strong>Mark</strong> the first item on the list. <strong>Don’t do it&nbsp;yet.</strong></li>
+<li>For each <em>subsequent</em> item on the list, ask yourself, &#8220;Do I want to do this task more than the <em>last task I marked</em>?&#8221; If yes, <strong>mark it</strong>. If no, <strong>don&#8217;t mark it</strong>. Move on to the next&nbsp;item.</li>
+<li>When you reach the end of the list, trace back up to find the bottom-most marked task. <strong>Do it</strong>, then <strong>cross it off</strong> the&nbsp;list.</li>
+<li>Beginning with the next unmarked task <em>after the task you just crossed off</em>, repeat step 3, comparing each task to the bottom-most uncrossed marked task (i.e. the one prior to the one you just crossed&nbsp;out).</li>
+<li>Go to step 4. Repeat until you run out of time or list&nbsp;items.</li>
+</ol>
+<p>In <span class="caps">FVP</span>, then, you perform a series of pairwise comparisons between tasks, in each case asking whether the new task is something you <em>want to do more than</em> the old task. The “want to do more than” comparison is deliberately vague: Depending on context, it might be the thing that would best move your project forward, the thing that would have the worst consequences if you didn’t do it, or the thing you would most enjoy doing. The key thing is that at each stage, you’re only comparing each task to the <em>most recent task you marked</em>, ignoring all previous&nbsp;tasks.</p>
+<p>I&#8217;ll talk more in a moment about why I think this algorithm is a good one, but first, let’s work through an example. (If you&#8217;re sure you already understand the algorithm, click <a href="https://www.lesswrong.com/posts/xfcKYznQ6B9yuxB28/final-version-perfected-an-underused-execution-algorithm#FVP__Why_and_why_not">here</a> to go straight to the pros and&nbsp;cons.)</p>
+<h1>A long-ish&nbsp;example</h1>
+<p>Let&#8217;s say this is my to-do list for&nbsp;today:</p>
+<ul>
+<li>Buy&nbsp;milk</li>
+<li>Finish term&nbsp;paper</li>
+<li>Play video&nbsp;games</li>
+<li>Work&nbsp;out</li>
+<li>Save the&nbsp;world</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>I start by marking the first&nbsp;item:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li>Finish term&nbsp;paper</li>
+<li>Play video&nbsp;games</li>
+<li>Work&nbsp;out</li>
+<li>Save the&nbsp;world</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Then I compare it to the next item on the list. Which do I want to do more, finish the term paper or buy milk? Well, the term paper is due today, and I don&#8217;t need milk until tomorrow, so I decide to do the term paper&nbsp;first.</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li>Work&nbsp;out</li>
+<li>Save the&nbsp;world</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Moving on to item 3. I already decided I want to finish the term paper before buying milk, so I can ignore the milk for now. Do I want to play video games or finish my term paper? Well, in some sense I <em>want</em> to play video games more, but my all-things-considered <em>endorsement</em> is to finish the term paper first, so I leave item 3&nbsp;unmarked.</p>
+<p>Next, item 4: do I want to finish the term paper or work out? Well, in some sense I&#8217;d rather not do either, and in another sense the term paper is more urgent, but working out is important, I&#8217;ve heard it has <a href="https://en.wikipedia.org/wiki/Neurobiological_effects_of_physical_exercise">cognitive benefits</a>, and I know from experience that if I don&#8217;t do it first thing I won&#8217;t do it, so it takes&nbsp;precedence:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li><strong>× Work&nbsp;out</strong></li>
+<li>Save the&nbsp;world</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Item 5: oh yeah, I forgot, I need to save the world today. Damn. Well, I can&#8217;t work out if there&#8217;s no world to work out in, so I guess I’ll do that&nbsp;first.</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li><strong>× Work&nbsp;out</strong></li>
+<li><strong>× Save the&nbsp;world</strong></li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Ditto for walking the dog: much though I love him, I won&#8217;t have anywhere to walk him if I don&#8217;t save the world first, so that takes precedence&nbsp;again.</p>
+<p>I&#8217;ve finished the list now, so it&#8217;s time to do the last item on the list. Looks like that&#8217;s saving the world. Luckily, it doesn&#8217;t take&nbsp;long:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li><strong>× Work&nbsp;out</strong></li>
+<li><s>× Save the world</s>  ✓</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Now that I&#8217;ve done the highest priority task on the list, I go back to <span class="caps">FVP</span> to determine the next one. There&#8217;s actually only one comparison I need to make: work out or walk the dog? Walking the dog can wait until the evening, so it’s time to head to the&nbsp;gym.</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><strong>× Finish term&nbsp;paper</strong></li>
+<li>Play video&nbsp;games</li>
+<li><s>× Work out</s>  ✓</li>
+<li><s>× Save the world</s>  ✓</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Again, there&#8217;s only one more comparison I need to do to determine my next top task: do I want to finish my term paper, or walk the dog? And again, walking the dog isn&#8217;t that urgent, so I spend a few hours on the term&nbsp;paper.</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><s>× Finish term paper</s>  ✓</li>
+<li>Play video&nbsp;games</li>
+<li><s>× Work out</s>  ✓</li>
+<li><s>× Save the world</s>  ✓</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Now I&#8217;m all the way back to the top of the list! But now there are <em>two</em> more comparisons to make to decide on the next task. First, do I want to buy milk, or play video games? I&#8217;ve worked pretty hard so far today, and buying milk isn&#8217;t that important, so let&#8217;s play games&nbsp;first:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><s>× Finish term paper</s>  ✓</li>
+<li><strong>× Play video&nbsp;games</strong></li>
+<li><s>× Work out</s>  ✓</li>
+<li><s>× Save the world</s>  ✓</li>
+<li>Walk the&nbsp;dog</li>
+</ul>
+<p>Finally, do I want to walk the dog or play video games? The dog has been waiting for hours for a walk now, and I could do with some fresh air, and I&#8217;d feel guilty just gaming without taking him out, so let&#8217;s do that&nbsp;first:</p>
+<ul>
+<li><strong>× Buy&nbsp;milk</strong></li>
+<li><s>× Finish term paper</s>  ✓</li>
+<li><strong>× Play video&nbsp;games</strong></li>
+<li><s>× Work out</s>  ✓</li>
+<li><s>× Save the world</s>  ✓</li>
+<li><strong>× Walk the&nbsp;dog</strong></li>
+</ul>
+<p>There&#8217;s no unmarked tasks in the list now, so to finish I just work up the list in order: first walking the dog, then playing games, then, finally, buying&nbsp;milk.</p>
+<h1><span class="caps">FVP</span>: Why and why&nbsp;not</h1>
+<p>The usefulness of <span class="caps">FVP</span> depends on a few key&nbsp;assumptions.</p>
+<ul>
+<li>Firstly, the algorithm assumes your preferences are <a href="https://en.wikipedia.org/wiki/Transitive_relation#Examples">transitive</a>, and that you can accurately assess the value of each task according to your preferences. These are pretty fundamental assumptions that will be integral to almost any list-based execution system. In reality, your preferences probably aren’t quite transitive, but hopefully they are close enough that pretending they are is reasonable. As for accurately assessing each task, well, no execution algorithm can prevent you from making any mistakes, but <span class="caps">FVP</span> is more effective than most at eliciting your best&nbsp;guesses.</li>
+<li>Secondly, <span class="caps">FVP</span> assumes that your preferences are <strong>stable</strong> over the timeframe you&#8217;re using it. If your preferences shift substantially over that period, such that you need to re-prioritise among the existing tasks on your list, you&#8217;ll need to throw out your previous <span class="caps">FVP</span> and start again. This places some constraints on the timescale you can organise using a single <span class="caps">FVP</span> iteration: I seldom stick with the same iteration for longer than a day. (Note, though, that <span class="caps">FVP</span> can handle the addition of <em>new</em> tasks quite easily, as long as they don’t alter the existing&nbsp;order.)</li>
+<li>Thirdly, the value of <span class="caps">FVP</span> is greatest when you are <strong>unsure</strong> about which task you should do next, and especially when you don’t have time to do every task you might want to do that day. I find <span class="caps">FVP</span> most useful when I have a lot of different tasks competing for my time; it is much less useful when my time is pre-allocated to a single, well-planned-out&nbsp;task.</li>
+</ul>
+<p>When these conditions are met, <span class="caps">FVP</span> is a <em>very</em> effective method for guiding action. It is both efficient and exhaustive: guaranteed to identify the top-priority task while avoiding most of the work involved in producing a complete ranking. It is a simple algorithm, easy to remember and quick to perform. After doing it for a while, I find it scarcely requires conscious thought – but still reliably identifies the most valuable task for me to work&nbsp;on.</p>
+<p>The biggest benefit I get from <span class="caps">FVP</span>, though, is how much easier it makes it to <a href="https://medium.com/@robertwiblin/ugh-fields-or-why-you-can-t-even-bear-to-think-about-that-task-5941837dac62">do important things I&#8217;d rather avoid</a>. There is something about a bald, pairwise comparison between two tasks that is highly effective at overcoming my aversion to difficult things. If an important but unpleasant task is nestled within a long to-do list of minor-but-rewarding busywork, it is easy for my eye to skip over the difficult task, defer it till tomorrow, and work on something more pleasant instead. It&#8217;s much harder to do that when comparing the important task to each minor task in&nbsp;isolation.</p>
+<p><span class="caps">FVP</span> is also good at minimising <a href="https://en.wikipedia.org/wiki/Buridan%27s_ass">time lost due to indecision</a>. When presented with a menu of tasks to choose from, it can be quite hard to select a single task to work on first. When that choice process is reduced to a series of simple pairwise comparisons, the choosing process as a whole becomes much easier. And, once I&#8217;ve finished with <span class="caps">FVP</span> and selected a single winning task, there&#8217;s an impetus towards starting that makes me much less prone to&nbsp;procrastination.</p>
+<p>One last brief note on infrastructure: due to its relative obscurity, I haven’t found great online tools for <span class="caps">FVP</span>. <a href="http://complice.co/">Complice</a>’s starred-task system can be passably adapted to the algorithm, but in general I’ve found physical paper lists to work best. When I was at work I would print off my Todoist task lists and use those; now I’m working from home I mostly write them out by hand. This is kind of time-consuming and redundant, so if you dislike paper notes and don’t have access to a printer it might be a significant mark against <span class="caps">FVP</span>.</p>
+<p>I’d really love it if someone created a great online tool for <span class="caps">FVP</span> or integrated it more formally into an existing productivity application, but I don’t expect that to happen any time soon. In the meantime, if you have ideas for existing ways to execute <span class="caps">FVP</span> online, I’d love to hear about&nbsp;them!</p>
+    </div>
+</div>
+
+<!-- Tags and categories -->
+<div class="row-fluid">
+    <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/rationality.html">rationality</a>, <a href="https://apomorphic.com/tag/productivity.html">productivity</a>, <a href="https://apomorphic.com/tag/self-improvement.html">self-improvement</a></p>
+    </div>
+</div></div>
+<div class="container">
+    <div class="row-fluid">
+        <div class="article-comment-btn col-sm-10 col-sm-offset-1">
+            <a class="btn btn-mini xsmall" href="https://apomorphic.com/2020/12/03/final-version-perfected">
+                <i class="icon-comment"></i> Comment </a>
+        </div>
+    </div>
+</div>
+<hr class="post-sep"/>
+
+
+  
+
+                    </div>
+                </div>             </div>         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>

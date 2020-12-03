@@ -48,8 +48,8 @@ body {font-family: "Source Serif Pro"; font-size: 19px; line-height: 1.4em; padd
 p { font-family: "Source Serif Pro"; font-size: 19px; line-height: 1.4em; margin-top: 0.8em; margin-bottom: 0.8em; text-align: justify; box-sizing:border-box;   width: 100% }
 li { line-height: 1.6em; }
 h3 { font-family: 'Alegreya SC', 'Garamond', 'Georgia'; font-weight: normal}
-h2 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal;}
-h1 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal;}
+h2 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal; font-size: 28px}
+h1 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal; font-size: 34px}
 h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0.8em; margin-top: 0.8em}
 h4 {
     font-size: 19px;
@@ -80,7 +80,10 @@ h4 {
 /* Styling for articles */
 .article { padding-bottom:15px }
 .content-title { margin-bottom: 30px; }
-.article-title { margin-top: 15px; margin-bottom: 10px;}
+.article-title {
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
 .article-info p {
     color: #999 ;
     margin-top: 0;
@@ -178,4 +181,10 @@ div.container {
 
 #disqus_title_header {
     margin-bottom: 1ex;
+}
+a#title{
+    font-size: 42px;
+    font-family: 'Alegreya SC', 'Garamond', 'Georgia';
+    font-weight: normal;
+    color: #000001;
 }
