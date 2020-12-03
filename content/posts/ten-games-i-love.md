@@ -6,7 +6,7 @@ Status: published
 
 Over the course of this all-too-solitary year, a few different people have asked me for video game recommendations. I generally responded with overwhelmingly long lists that probably did more to scare them away than anything else. But with a long, dark winter approaching and the pandemic still keeping most of us at home, it seems like a better time than ever to explore a few new corners of the digital world. So, here's a shorter list, in no particular order, of ten not-too-long, more-than-minimally-obscure games I really, *really* think you should play.
 
-## Return of the Obra Dinn
+# Return of the Obra Dinn
 
 ![If I could reproduce the theme tune in writing here, I would](https://steamcdn-a.akamaihd.net/steam/apps/653530/capsule_616x353.jpg?t=1581420578)
 
@@ -29,7 +29,7 @@ In essence, *Return of the Obra Dinn* is one huge puzzle – perhaps my favourit
 
 I played Obra Dinn straight through in about seven hours, while bedridden with a nasty cold. My incapacitated state made me take more leaps of guesswork than I might otherwise have done, which I will regret forever: the characters etch themselves into your brain so deeply that the game is basically unplayable, so I'll never get the chance to discover those answers the right way. If you take me up on this recommendation, learn from my example, and approach this game with the patience it deserves. It'll probably still take you less than 10 hours (though no shame if it's longer!), and It's well worth the effort.
 
-## The Stanley Parable
+# The Stanley Parable
 
 "When Stanley came to a set of two open doors, he entered the door on his left."
 
@@ -55,7 +55,7 @@ There is, it is rumoured, an [expanded version in the works][ultra], but since t
 
 [ultra]: https://www.stanleyparable.com/
 
-## Shadowrun: Dragonfall and Shadowrun: Hong Kong
+# Shadowrun: Dragonfall and Shadowrun: Hong Kong
 
 ![Want to play as a badass orc soldier/shaman double team? Sure, why not?](https://steamcdn-a.akamaihd.net/steam/apps/346940/header.jpg?t=1589903402)
 
@@ -82,7 +82,7 @@ More important than the missions, though, is the world they inhabit, and it's he
 
 In terms of setting and storyline, *Hong Kong* is probably the better game; in terms of combat I think *Dragonfall* offers a more interesting challenge, though that might just be because I built my character better in *Hong Kong*. Both are well worth your time and money.
 
-## To The Moon
+# To The Moon
 
 ![If you could hear the music playing you'd be hooked already](https://steamcdn-a.akamaihd.net/steam/apps/206440/ss_23b844b452cacfaaef177f78f99793ae527bb273.1920x1080.jpg?t=1579718439)
 
@@ -108,7 +108,7 @@ Telling a story backwards is not a new trope, but it's one that's difficult to p
 
 There are wrinkles. I still don't get on well with the graphics style, or the game engine. The humour is a mixed bag, sometimes charming and sometimes irritating. The game can't quite bring itself to be a pure walking simulator, and insists on wedging in silly minigames that add nothing to the overall experience. But I'm willing to let all of these annoyances slide, because the thing in its entirety is so beautiful.
 
-## Dear Esther
+# Dear Esther
 
 ![The clouds are a metaphor for my soul](https://steamcdn-a.akamaihd.net/steam/apps/520720/ss_c4975fc5de1b03e2df8bc5df1d573f4e5796f829.1920x1080.jpg?t=1591106858)
 
@@ -131,7 +131,7 @@ The game also rewards replaying: because it's so short, because the narrator's a
 
 The rest is spoilers. Your mileage may vary. Perhaps it won't speak to you. But it's one of my favourite games, and it's short enough and cheap enough that I think it's worth trying.
 
-## Spider and Web
+# Spider and Web
 
 ![This is literally the only picture associated with the game. It's a text adventure, what do you expect?](https://ifdb.tads.org/showimage?id=4%3A1270)
 
@@ -194,7 +194,7 @@ All in all *Disco Elysium* is my favourite new game since...well, since *Return 
 
 [zaum]: https://zaumstudio.com/
 
-## Primordia
+# Primordia
 
 In the world of modern-but-retro point-and-click adventure games – a world that's been undergoing a modest revival over the past decade or so – [Wadjet Eye Games][wadjet] is king. As a fan of such games I've played and liked most of their line-up, both as developer and as publisher, so picking a game to recommend here was a conundrum. Their *best* game is probably [*Technobabylon*][technobabylon], a huge and sprawling cyberpunk mystery story with many characters and many – perhaps too many – creative mechanics. But *Technobabylon* isn't my *favourite* Wadjet Eye game. *That* honour would have to go to [*Primordia*][primordia].
 
@@ -228,7 +228,7 @@ I hear the [developers][wormwood] have a new game out soon, also published by Wa
 
 [wormwood]: http://www.wormwoodstudios.com/
 
-## Journey
+# Journey
 
 As this blog post makes clear, there are many games I'm very happy to evangelise about. But there's only one game I've ever more-or-less forced my friends and significant others to play. Last but not least, let's talk about [*Journey*][journey].
 
