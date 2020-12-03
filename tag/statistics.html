@@ -10,15 +10,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
-            <script src="https://apomorphic.com/theme/html5.js"></script>
+            <script src="../theme/html5.js"></script>
         <![endif]-->
 
 
         <!-- Le styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-        <link href="https://apomorphic.com/theme/local.css" rel="stylesheet">
-        <link href="https://apomorphic.com/theme/pygments.css" rel="stylesheet">
-        <link href="https://apomorphic.com/theme/font-awesome.css" rel="stylesheet">
+        <link href="../theme/local.css" rel="stylesheet">
+        <link href="../theme/pygments.css" rel="stylesheet">
+        <link href="../theme/font-awesome.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
 
     </head>
@@ -31,7 +31,7 @@
                         <div class="container">
                             <!-- Website headline -->
                             <div class="row-fluid">
-                                <a href="https://apomorphic.com" class="brand">Apomorphic</a>
+                                <a href=".." class="brand">Apomorphic</a>
                             </div>
                             <!-- Website tagline/subtitle -->
                             <div class="row-fluid">
@@ -43,7 +43,7 @@
                     <!-- Pages in links on right -->
                     <div class="col-sm-4" id="blog-nav">
                         <ul class="nav nav-pills pull-right">
-                            <li><a href="https://apomorphic.com/about">About</a></li>
+                            <li><a href="../about">About</a></li>
                         </ul>
                     </div>
                 </div> <!-- End of fluid row-->
@@ -67,7 +67,7 @@
 <!-- Post title -->
 <div class="row-fluid">
     <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-        <a href="https://apomorphic.com/2019/12/31/effective-population-size" id="title">An addendum on effective population&nbsp;size</a>
+        <a href="../2019/12/31/effective-population-size" id="title">An addendum on effective population&nbsp;size</a>
     </div>
 </div>
 
@@ -174,13 +174,13 @@ Lesson 2: Never assume people will read the footnotes.&#160;<a class="footnote-b
 <!-- Tags and categories -->
 <div class="row-fluid">
     <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-        <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/evolution.html">evolution</a>, <a href="https://apomorphic.com/tag/statistics.html">statistics</a></p>
+        <p>Posted in <a href="../category/posts.html">posts</a>  | Tagged as <a href="../tag/evolution.html">evolution</a>, <a href="../tag/statistics.html">statistics</a></p>
     </div>
 </div></div>
 <div class="container">
     <div class="row-fluid">
         <div class="article-comment-btn col-sm-10 col-sm-offset-1">
-            <a class="btn btn-mini xsmall" href="https://apomorphic.com/2019/12/31/effective-population-size">
+            <a class="btn btn-mini xsmall" href="../2019/12/31/effective-population-size">
                 <i class="icon-comment"></i> Comment </a>
         </div>
     </div>
@@ -192,7 +192,7 @@ Lesson 2: Never assume people will read the footnotes.&#160;<a class="footnote-b
 <!-- Post title -->
 <div class="row-fluid">
     <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-        <a href="https://apomorphic.com/2019/12/12/evolution-is-sampling-error" id="title">Evolution is sampling&nbsp;error</a>
+        <a href="../2019/12/12/evolution-is-sampling-error" id="title">Evolution is sampling&nbsp;error</a>
     </div>
 </div>
 
@@ -210,23 +210,23 @@ Lesson 2: Never assume people will read the footnotes.&#160;<a class="footnote-b
 <p>Today I&#8217;m going to lay out a useful framework that I hope makes this fact more intuitive, which might in turn help non-experts build better intuitive models of evolutionary processes. This will come in handy when I try to explain non-adaptive theories of ageing later&nbsp;on.</p>
 <h2>Sampling error and genetic&nbsp;drift</h2>
 <p>We can think of evolution as <em>sampling error</em>: deviation in the genetic composition of the offspring in a population relative to their parents. To illustrate this, let&#8217;s imagine a simple, asexual population, evenly divided between two gene variants (alleles) which produce no difference in fitness<sup id="fnref:assumptions"><a class="footnote-ref" href="#fn:assumptions">1</a></sup>:</p>
-<p><img alt="Ten dots representing individuals, stacked vertically and coloured to represent their genotype: five red and five blue" src="https://apomorphic.com/images/coalescent-0.png"></p>
+<p><img alt="Ten dots representing individuals, stacked vertically and coloured to represent their genotype: five red and five blue" src="../images/coalescent-0.png"></p>
 <p>These individuals will reproduce, giving rise to the next generation. Since all the individuals are genetically identical and have the same chance of reproducing, we can think of these offspring being randomly sampled, with replacement, from the previous&nbsp;generation:</p>
-<p><img alt="Two columns of ten dots, stacked vertically, with lines between the columns representing parentage. Some individuals produce no offspring, some one, and some more than one." src="https://apomorphic.com/images/coalescent-1-keep.png"></p>
+<p><img alt="Two columns of ten dots, stacked vertically, with lines between the columns representing parentage. Some individuals produce no offspring, some one, and some more than one." src="../images/coalescent-1-keep.png"></p>
 <p>Since there is a great deal of randomness involved in who reproduces successfully and whose offspring survive, not all individuals will produce the same number of offspring in the next generation, even though they all had the same probability of reproducing to begin with. As a result, even in the absence of selection effects, the allele distribution of the new generation is likely to differ from that of the previous generation; this random, unbiased change in allele distribution is known as <em><a href="https://en.wikipedia.org/wiki/Genetic_drift">genetic drift</a></em>.</p>
 <p>As a result of genetic drift, the allele distribution will fluctuate up and down stochastically; sooner or later, one or the other will be eliminated from the population, resulting in <em>fixation</em>:</p>
-<p><img alt="Twenty columns of ten dots, stacked vertically, with lines between the columns representing parentage. The red allele reaches fixation at generation 14." src="https://apomorphic.com/images/coalescent-mid-keep.png"></p>
+<p><img alt="Twenty columns of ten dots, stacked vertically, with lines between the columns representing parentage. The red allele reaches fixation at generation 14." src="../images/coalescent-mid-keep.png"></p>
 <p>The time to fixation depends on the population size<sup id="fnref:effpop"><a class="footnote-ref" href="#fn:effpop">2</a></sup> and some other population parameters; here&#8217;s an example plot for a population with a carrying capacity of 200 instead of&nbsp;10:</p>
-<p><img alt="A plot of the allele frequency distribution of a larger population, reaching fixation at roughly generation 350." src="https://apomorphic.com/images/coalescent-200-neutral-keep.png"></p>
+<p><img alt="A plot of the allele frequency distribution of a larger population, reaching fixation at roughly generation 350." src="../images/coalescent-200-neutral-keep.png"></p>
 <p>Fairly dramatic genetic changes, then, can accumulate in a population based purely on genetic drift; there&#8217;s not necessarily any need to invoke selection to explain why genetic differences between populations accumulate over time. That said, what happens when we add selection into the&nbsp;mix?</p>
 <h2>Natural selection is sampling&nbsp;bias</h2>
 <p>Suppose that one of the starting alleles in the population is less <em>fit</em> than the other: individuals with that allele are less likely to produce reproductively-successful offspring. What happens&nbsp;now?</p>
 <p>If one allele is <em>much</em> less fit than the other, the individuals bearing it will probably die without issue, producing a very boring&nbsp;plot:</p>
-<p><img alt="Another twenty-column plot, this time in green and purple. The single initial purple individual produces no offspring, so the purple lineage dies out immediately." src="https://apomorphic.com/images/coalescent-vdel.png"></p>
+<p><img alt="Another twenty-column plot, this time in green and purple. The single initial purple individual produces no offspring, so the purple lineage dies out immediately." src="../images/coalescent-vdel.png"></p>
 <p>So far, so trivial. The interesting cases occur when the fitness of one genotype is close to (either a bit higher or a bit lower than) the old one. In this case, thanks to genetic drift, the less-fit allele (here in purple) can persist in the population for a surprisingly long&nbsp;time&#8230;</p>
-<p><img alt="Another twenty-stage green-and-purple plot, this time representing two alleles with only a small difference in fitness. The less-fit purple allele persists until stage 18, then is lost." src="https://apomorphic.com/images/coalescent-sdel-persist.png"></p>
+<p><img alt="Another twenty-stage green-and-purple plot, this time representing two alleles with only a small difference in fitness. The less-fit purple allele persists until stage 18, then is lost." src="../images/coalescent-sdel-persist.png"></p>
 <p>&#8230;or even&nbsp;fix!</p>
-<p><img alt="An independent run of the scenario from the previous figure. This time, the slightly-less-fit purple allele reaches fixation at stage 6." src="https://apomorphic.com/images/coalescent-sdel-fixed.png"></p>
+<p><img alt="An independent run of the scenario from the previous figure. This time, the slightly-less-fit purple allele reaches fixation at stage 6." src="../images/coalescent-sdel-fixed.png"></p>
 <p>Overall, under these conditions (carrying capacity = 10, relative fitness ~ 0.9) the less-fit allele will reach fixation about a quarter of the time; more than enough for 100% the population to be bearing many deleterious&nbsp;alleles.</p>
 <p>These results are a pretty trivial application of statistics, but they have very important implications for how we should view evolution. Thanks to genetic drift, beneficial mutations will often die out and deleterious ones reach fixation. <em>How</em> often this occurs depends on various factors, the most obvious of which is the magnitude of the mutation&#8217;s effect on fitness &#8212; the more dramatic the effect, the greater selection&#8217;s ability to overcome drift and eliminate the less-fit&nbsp;allele.</p>
 <p>However, another crucial variable, underappreciated outside evolutionary biology, is population&nbsp;size.</p>
@@ -234,7 +234,7 @@ Lesson 2: Never assume people will read the footnotes.&#160;<a class="footnote-b
 <p>According to the <a href="https://en.wikipedia.org/wiki/Law_of_large_numbers">law of large numbers</a>, the average of a sample converges in probability towards its expected value as sample size increases: the larger the sample, the smaller the expected relative mean absolute difference between the sample mean and the expected value<sup id="fnref:rad"><a class="footnote-ref" href="#fn:rad">3</a></sup>. If you flip a coin ten times, the chance of deviating from the expected value (five heads) by at least 20% is more than 75%, whereas it&#8217;s only 5% if you flip 100 times and virtually zero if you flip 1000 times. The larger the sample, the more likely you are to see roughly what you&nbsp;expect.</p>
 <p>In our framework of evolution as sampling error, natural selection determines the expected value: the number of offspring of each genotype we expect to see in the next generation, given the distribution in the current generation. But the smaller the population, the more likely it is to deviate substantially from this expectation – that is, for random genetic drift to overwhelm the bias imposed by natural&nbsp;selection. </p>
 <p>If you combine this sample-size-dependent variability with the <a href="https://en.wikipedia.org/wiki/Markov_chain#Absorbing_states">absorbing</a> nature of fixation and elimination (that is, once an allele has been eliminated, it isn&#8217;t coming back), you obtain the result that <strong>the larger the population, the more likely it is that the fitter allele is actually the one that gets fixed</strong>, all else equal. We can see this in our toy model from earlier, where the green allele is 10% fitter than the purple allele and both start with 50% prevalence in the&nbsp;population:</p>
-<p><img alt="A plot of population size vs probability of fixation for two competing alleles, one of which is 10% fitter than the other. The fitter allele fixes at just over 50% when population size is very small, rising to 100% at population sizes of 100 or larger." src="https://apomorphic.com/images/coalescent-fix-even.png"></p>
+<p><img alt="A plot of population size vs probability of fixation for two competing alleles, one of which is 10% fitter than the other. The fitter allele fixes at just over 50% when population size is very small, rising to 100% at population sizes of 100 or larger." src="../images/coalescent-fix-even.png"></p>
 <p>When population size is very small, the chance that the fitter (green) allele is the one that eventually fixes is close to 50%; as population size increases, this probability increases, until for sufficiently-large populations it is virtually certain. Smaller differences in fitness would require larger population sizes to consistently fix the fitter allele<sup id="fnref:1percent"><a class="footnote-ref" href="#fn:1percent">4</a></sup>.</p>
 <p>Population size, then, is a crucial factor affecting the optimisation power of evolution: the larger the population size, the greater the capacity of natural selection to select for beneficial mutations and eliminate deleterious ones. This is why <a href="https://en.wikipedia.org/wiki/Population_bottleneck">bottlenecks</a> and <a href="https://en.wikipedia.org/wiki/Founder_effect">founder effects</a> are so important in evolution: by reducing the size of the population, they both increase the relative prevalence of rare mutations and decrease the relative strength of natural selection, resulting in very powerful drift. The results of this can be quite striking: on the tiny Micronesian island of <a href="https://en.wikipedia.org/wiki/Pingelap#Total_color_blindness">Pingelap</a>, for example, almost 10% of the population are completely colourblind, a condition that is extremely rare elsewhere<sup id="fnref:rare"><a class="footnote-ref" href="#fn:rare">5</a></sup>. This is believed to be the result of a typhoon in 1775 that left only 20 survivors, one of whom was a carrier of the condition<sup id="fnref:carrier"><a class="footnote-ref" href="#fn:carrier">6</a></sup>.</p>
 <h2>Implications</h2>
@@ -251,12 +251,12 @@ Lesson 2: Never assume people will read the footnotes.&#160;<a class="footnote-b
 </li>
 <li id="fn:rad">
 <p>In fact, the <span class="caps">RMD</span> looks like it might vary as a power law of sample size:
-<img alt="A log-log plot of relative mean absolute difference vs sample size, showing a very linear-looking relationship" src="https://apomorphic.com/images/rmd-log-log.png">
+<img alt="A log-log plot of relative mean absolute difference vs sample size, showing a very linear-looking relationship" src="../images/rmd-log-log.png">
 I noticed this from simulations and haven&#8217;t bothered to tease out the underlying mathematics here, but still, kinda cool.&#160;<a class="footnote-backref" href="#fnref:rad" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:1percent">
 <p>See e.g. this plot for a 1% difference in fitness:
-<img alt="A plot of population size vs probability of fixation for two competing alleles, one of which is 1% fitter than the other. The fitter allele fixes at roughly 50% when population size is very small, rising to about 95% at a population size of 300. The rise in fixation rate is much slower than when the fitness difference was 10%." src="https://apomorphic.com/images/coalescent-fix-even-1percent.png">&#160;<a class="footnote-backref" href="#fnref:1percent" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<img alt="A plot of population size vs probability of fixation for two competing alleles, one of which is 1% fitter than the other. The fitter allele fixes at roughly 50% when population size is very small, rising to about 95% at a population size of 300. The rise in fixation rate is much slower than when the fitness difference was 10%." src="../images/coalescent-fix-even-1percent.png">&#160;<a class="footnote-backref" href="#fnref:1percent" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:rare">
 <p>According to Wikipedia, the proportion of Americans with the same condition is 0.003%.&#160;<a class="footnote-backref" href="#fnref:rare" title="Jump back to footnote 5 in the text">&#8617;</a></p>
@@ -275,13 +275,13 @@ I noticed this from simulations and haven&#8217;t bothered to tease out the unde
 <!-- Tags and categories -->
 <div class="row-fluid">
     <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-        <p>Posted in <a href="https://apomorphic.com/category/posts.html">posts</a>  | Tagged as <a href="https://apomorphic.com/tag/evolution.html">evolution</a>, <a href="https://apomorphic.com/tag/statistics.html">statistics</a></p>
+        <p>Posted in <a href="../category/posts.html">posts</a>  | Tagged as <a href="../tag/evolution.html">evolution</a>, <a href="../tag/statistics.html">statistics</a></p>
     </div>
 </div></div>
 <div class="container">
     <div class="row-fluid">
         <div class="article-comment-btn col-sm-10 col-sm-offset-1">
-            <a class="btn btn-mini xsmall" href="https://apomorphic.com/2019/12/12/evolution-is-sampling-error">
+            <a class="btn btn-mini xsmall" href="../2019/12/12/evolution-is-sampling-error">
                 <i class="icon-comment"></i> Comment </a>
         </div>
     </div>
@@ -292,7 +292,7 @@ I noticed this from simulations and haven&#8217;t bothered to tease out the unde
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-    <li class="active"><a href="https://apomorphic.com/tag/statistics.html">1</a></li>
+    <li class="active"><a href="../tag/statistics.html">1</a></li>
 
     <li class="next disabled"><a href="#">&rarr; Next</a></li>
 

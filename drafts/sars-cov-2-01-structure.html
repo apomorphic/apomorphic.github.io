@@ -10,15 +10,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
-            <script src="https://apomorphic.com/theme/html5.js"></script>
+            <script src="../theme/html5.js"></script>
         <![endif]-->
 
 
         <!-- Le styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-        <link href="https://apomorphic.com/theme/local.css" rel="stylesheet">
-        <link href="https://apomorphic.com/theme/pygments.css" rel="stylesheet">
-        <link href="https://apomorphic.com/theme/font-awesome.css" rel="stylesheet">
+        <link href="../theme/local.css" rel="stylesheet">
+        <link href="../theme/pygments.css" rel="stylesheet">
+        <link href="../theme/font-awesome.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
 
     </head>
@@ -31,7 +31,7 @@
                         <div class="container">
                             <!-- Website headline -->
                             <div class="row-fluid">
-                                <a href="https://apomorphic.com" class="brand">Apomorphic</a>
+                                <a href=".." class="brand">Apomorphic</a>
                             </div>
                             <!-- Website tagline/subtitle -->
                             <div class="row-fluid">
@@ -43,7 +43,7 @@
                     <!-- Pages in links on right -->
                     <div class="col-sm-4" id="blog-nav">
                         <ul class="nav nav-pills pull-right">
-                            <li><a href="https://apomorphic.com/about">About</a></li>
+                            <li><a href="../about">About</a></li>
                         </ul>
                     </div>
                 </div> <!-- End of fluid row-->
@@ -61,7 +61,7 @@
 <!-- Post title -->
 <div class="row-fluid">
     <div class="article-title col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-        <a href="https://apomorphic.com/drafts/sars-cov-2-01-structure" id="title">An introduction to <span class="caps">SARS</span>-CoV-2, part 1:&nbsp;Structure</a>
+        <a href="../drafts/sars-cov-2-01-structure" id="title">An introduction to <span class="caps">SARS</span>-CoV-2, part 1:&nbsp;Structure</a>
     </div>
 </div>
 
@@ -77,7 +77,7 @@
     <div class="article-content col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
         <p><em>[<span class="caps">NB</span>: This was a very difficult document to pitch correctly. I reserve the right to shuffle content around between the footnotes as the main text to aid understanding, and am keen for non-expert&nbsp;feedback.]</em></p>
 <p>Behold, a machine of great and terrible&nbsp;power:</p>
-<p><img alt="Transmission electron micrograph of SARS-CoV-2 virions" src="https://apomorphic.com/images/sars-cov-2-tem.jpg"></p>
+<p><img alt="Transmission electron micrograph of SARS-CoV-2 virions" src="../images/sars-cov-2-tem.jpg"></p>
 <p>This<sup id="fnref:TEM"><a class="footnote-ref" href="#fn:TEM">1</a></sup> is <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2"><span class="caps">SARS</span>-CoV-2</a><sup id="fnref:name"><a class="footnote-ref" href="#fn:name">2</a></sup>, the virus responsible for the <a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">current <span class="caps">COVID19</span> pandemic</a>, which is shaping up to be the worst in a century. Lots of people are going all-out trying to model the disease and predict what will happen next; I&#8217;ve been taking a somewhat different approach, starting with the virus itself and moving out from there. This has been mostly for my own education, but  I&#8217;m sharing what I&#8217;ve learned here as well; it&#8217;s often more motivating to work on something when you have an audience in&nbsp;mind.</p>
 <p>Today I&#8217;ll focus on the structure of the <span class="caps">SARS</span>-CoV-2 virion: what it&#8217;s made of and how it works. The next post will talk about how the virus gets into cells and discuss its replication cycle, with all the usual entertaining viral tricks. I hope for future posts to cover things like the pathology of the virus, how it interacts with the immune system, and how the various known and proposed countermeasures work. There&#8217;s some chance I drop all this to jump on the epidemiology/modelling bandwagon in the near future&nbsp;instead.</p>
 <p>Take a closer look at the particles in the image above. In the middle of each virion<sup id="fnref:virion"><a class="footnote-ref" href="#fn:virion">3</a></sup> is a large red area. That&#8217;s the <strong>nucleocapsid</strong>, containing the packaged-up viral <strong>genome</strong>. Surrounding the nucleocapsid are two dense layers stained in yellow; that&#8217;s the viral <strong>envelope</strong>, made of cellular membrane stolen from the host cell. The two dense layers are the two sides of the phosolipid bilayer. Finally, the blue <strong>corona</strong> surrounding the virion comprises the heads of spike proteins projecting from the envelope; these proteins are responsible for recognising and orchestrating invasion of host cells and so are key to the viral replication process. As is so often repeated in the news media, it&#8217;s these spike proteins that give the coronaviruses their distinctive appearance, and their&nbsp;name.</p>
@@ -94,11 +94,11 @@
 </ul>
 <p>The <span class="caps">SARS</span>-CoV-2 genome is about 30,000 bases (30 kb) in length, long for an <span class="caps">RNA</span> virus but in line with other coronaviruses. For comparison, <span class="caps">HIV</span>-1 has a genome of about 10kb, influenza A’s genome is ~14kb, and polio’s is ~7.5kb<sup id="fnref:genomes"><a class="footnote-ref" href="#fn:genomes">12</a></sup>, while those of <span class="caps">SARS</span>-CoV and <span class="caps">MERS</span>-CoV are both very close in size to <span class="caps">SARS</span>-CoV-2.</p>
 <p>So much for the viral genome as a molecule. What about its actual content? If you look for diagrams of the genome structure for <span class="caps">SARS</span>-CoV-2, you find things like&nbsp;this:</p>
-<p><img alt="A map of the SARS-CoV-2 genome" src="https://apomorphic.com/images/sars2-genome-zhou.jpg"></p>
+<p><img alt="A map of the SARS-CoV-2 genome" src="../images/sars2-genome-zhou.jpg"></p>
 <p>Or&nbsp;this:</p>
-<p><img alt="A map of the SARS-CoV-2 genome" src="https://apomorphic.com/images/sars2-genome-lu.jpg"></p>
+<p><img alt="A map of the SARS-CoV-2 genome" src="../images/sars2-genome-lu.jpg"></p>
 <p>Or&nbsp;this:</p>
-<p><img alt="A map of the SARS-CoV-2 genome" src="https://apomorphic.com/images/sars2-genome-wu.jpg"></p>
+<p><img alt="A map of the SARS-CoV-2 genome" src="../images/sars2-genome-wu.jpg"></p>
 <p>This tells us that the scientists in the field have yet to reach complete consensus on structure, nomenclature, or basic standards of graphic design. I&#8217;m going to go with the last version<sup id="fnref:scale"><a class="footnote-ref" href="#fn:scale">13</a></sup>, which <a href="https://www.cell.com/cell-host-microbe/abstract/S1931-3128(20)30072-X">came out</a> less than a week ago at the time of writing and is hopefully fairly up-to-date<sup id="fnref:speed"><a class="footnote-ref" href="#fn:speed">14</a></sup>. That paper finds 14 <a href="https://en.wikipedia.org/wiki/Open_reading_frame">open reading frames</a> (coding sequences, more-or-less<sup id="fnref:frame"><a class="footnote-ref" href="#fn:frame">15</a></sup>) encoding 27 different viral proteins. Some of these ORFs overlap with or are embedded in others<sup id="fnref:overlap"><a class="footnote-ref" href="#fn:overlap">16</a></sup>, which is exactly the kind of dirty trick you expect from viral genomes – they&#8217;re under extreme pressure to fit a lot of information into a very small&nbsp;space. </p>
 <p>The star of the show, though, is the gigantic <span class="caps">ORF</span> taking up the first two-thirds of the genome, labelled variously ORF1a/1b, pp1ab, or in some sources rep1a/1b. This is the gene that is <a href="https://en.wikipedia.org/wiki/Translation_(biology)">translated</a> into protein immediately upon cell entry, and that has to co-ordinate expression of all the other viral genes. To do this you need a lot more than one functional protein, but only the first <span class="caps">ORF</span> in the genome gets translated &#8220;for free&#8221; by the cellular machinery. To solve this problem, the first <span class="caps">ORF</span> produces a gigantic polyprotein comprising many different important proteins strung together. This polyprotein contains two different protease (protein-cutting) domains, which it uses to cut <em>itself</em> into fifteen different functional&nbsp;pieces. </p>
 <p>(Some of you may be confused by the fact that the diagram above shows two different ORFs, labelled pp1a and pp1ab. This is more viral genome deviousness; I&#8217;ll explain in more detail next time. Focus just on pp1ab for now and forget about pp1a for a&nbsp;bit.)</p>
@@ -114,7 +114,7 @@
 <li>The <strong>membrane protein</strong> (M) is the most abundant&nbsp;of </li>
 </ul>
 <p>is the primary protein responsible for inducing and maintaining membrane curvature in order to make and maintain the viral envelope. It also interacts with the nucleocapsid to attach the viral genome to the envelope. It&nbsp;is </p>
-<p><img alt="Sketches of the four core structural proteins of the SARS-CoV-2 genome: S, M, E and N" src="https://apomorphic.com/images/sars2-structurals.png"></p>
+<p><img alt="Sketches of the four core structural proteins of the SARS-CoV-2 genome: S, M, E and N" src="../images/sars2-structurals.png"></p>
 <div class="footnote">
 <hr>
 <ol>
@@ -174,7 +174,7 @@
 <!-- Tags and categories -->
 <div class="row-fluid">
     <div class="article-info col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-        <p>Posted in <a href="https://apomorphic.com/category/drafts.html">drafts</a>  | Tagged as <a href="https://apomorphic.com/tag/biology.html">biology</a>, <a href="https://apomorphic.com/tag/virology.html">virology</a>, <a href="https://apomorphic.com/tag/covid19.html">covid19</a></p>
+        <p>Posted in <a href="../category/drafts.html">drafts</a>  | Tagged as <a href="../tag/biology.html">biology</a>, <a href="../tag/virology.html">virology</a>, <a href="../tag/covid19.html">covid19</a></p>
     </div>
 </div></div>
 
