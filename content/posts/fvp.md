@@ -1,5 +1,5 @@
 Title: Final Version Perfected: An Underused Execution Algorithm
-Date: 2020-12-03
+Date: 2020-12-02
 Tags: rationality, productivity, self-improvement
 Slug: final-version-perfected
 Status: published
