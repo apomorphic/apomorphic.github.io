@@ -27,7 +27,7 @@ In essence, *Return of the Obra Dinn* is one huge puzzle – perhaps my favourit
 ![Dithering!](https://obradinn.com/img/shots/Book-04.png)
 [dithering]: https://en.wikipedia.org/wiki/Dither
 
-I played Obra Dinn straight through in about seven hours, while bedridden with a nasty cold. My incapacitated state made me take more leaps of guesswork than I might otherwise have done, which I will regret forever: the characters etch themselves into your brain so deeply that the game is basically unplayable, so I'll never get the chance to discover those answers the right way. If you take me up on this recommendation, learn from my example, and approach this game with the patience it deserves. It'll probably still take you less than 10 hours (though no shame if it's longer!), and It's well worth the effort.
+I played Obra Dinn straight through in about seven hours, while bedridden with a nasty cold. My incapacitated state made me take more leaps of guesswork than I might otherwise have done, which I will regret forever: the characters etch themselves into your brain so deeply that the game is basically un-replayable, so I'll never get the chance to discover those answers the right way. If you take me up on this recommendation, learn from my example, and approach this game with the patience it deserves. It'll probably still take you less than 10 hours (though no shame if it's longer!), and It's well worth the effort.
 
 # The Stanley Parable
 
